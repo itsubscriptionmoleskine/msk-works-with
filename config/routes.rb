@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :testimonials
+  resources :works_withs
+  resources :example_images
+  resources :offerings
+  resources :use_cases
+  resources :distributor_links
+  resources :distributors
+  resources :apps
+  resources :applications
   resources :developers
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

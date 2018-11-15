@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181115164919) do
+ActiveRecord::Schema.define(version: 20181115192644) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -38,10 +38,75 @@ ActiveRecord::Schema.define(version: 20181115164919) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "apps", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "info_url"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "developers", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "url"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "distributor_links", force: :cascade do |t|
+    t.string "link"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "distributors", force: :cascade do |t|
+    t.string "name"
+    t.string "badge_image_url"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "example_images", force: :cascade do |t|
+    t.string "image_url"
+    t.text "caption"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "offerings", force: :cascade do |t|
+    t.string "name"
+    t.string "shop_link"
+    t.text "description"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "use_cases", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "works_withs", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

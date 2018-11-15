@@ -1,0 +1,2 @@
+class WorksWith < ApplicationRecord
+end

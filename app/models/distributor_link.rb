@@ -1,0 +1,2 @@
+class DistributorLink < ApplicationRecord
+end
