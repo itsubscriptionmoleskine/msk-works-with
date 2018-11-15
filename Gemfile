@@ -33,8 +33,9 @@ group :development, :test do
   gem 'chromedriver-helper', '~> 2.1'
   gem 'database_cleaner', '~> 1.7'
   gem 'erb2haml', '~> 0.1.5'  #rake haml:replace_erbs / rake haml:convert_erbs
-  gem 'factory_bot', '~> 4.11'
+  gem 'factory_bot_rails', '~> 4.11'
   gem 'faker', '~> 1.9'
+  gem 'rails-controller-testing', '~> 1.0'
   gem 'rspec-rails'
   gem 'seed_dump', '~> 3.3' # rake db:seed:dump
   gem 'selenium-webdriver', '~> 3.141'
@@ -53,7 +54,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 
 
 
