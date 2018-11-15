@@ -1,0 +1,19 @@
+%h1 Listing works_withs
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @works_withs.each do |works_with|
+      %tr
+        %td= link_to 'Show', works_with
+        %td= link_to 'Edit', edit_works_with_path(works_with)
+        %td= link_to 'Destroy', works_with, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Works with', new_works_with_path

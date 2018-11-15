@@ -1,0 +1,2 @@
+module DistributorLinksHelper
+end

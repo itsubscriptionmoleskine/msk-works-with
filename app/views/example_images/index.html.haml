@@ -1,0 +1,19 @@
+%h1 Listing example_images
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @example_images.each do |example_image|
+      %tr
+        %td= link_to 'Show', example_image
+        %td= link_to 'Edit', edit_example_image_path(example_image)
+        %td= link_to 'Destroy', example_image, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Example image', new_example_image_path

@@ -1,0 +1,19 @@
+%h1 Listing distributor_links
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @distributor_links.each do |distributor_link|
+      %tr
+        %td= link_to 'Show', distributor_link
+        %td= link_to 'Edit', edit_distributor_link_path(distributor_link)
+        %td= link_to 'Destroy', distributor_link, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Distrubtor link', new_distributor_link_path
