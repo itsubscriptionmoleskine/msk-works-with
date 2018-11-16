@@ -1,2 +1,3 @@
 class Testimonial < ApplicationRecord
+  belongs_to :works_with
 end

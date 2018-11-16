@@ -7,8 +7,15 @@ FactoryBot.define do
     description {Faker::Lorem.sentence}
     info_url {Faker::Internet.url}
     is_live {true}
+    developer
     trait :wip do
       is_live {false}
+    end
+    after (:create) do |app|
+      o = build(:offering)
+      d = build(:distributor)
+      create :works_with, app: app, offering: o
+      create :distributor_link, app: app, distributor: d
     end
   end
 end

@@ -9,5 +9,9 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
+    after (:create) do |distrubtor|
+      a = build(:app)
+      create :distributor_link, app: a, distributor: distrubtor
+    end
   end
 end

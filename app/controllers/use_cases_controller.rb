@@ -64,6 +64,6 @@ class UseCasesController < ApplicationController
   end
 
   def use_case_params
-    params.require(:use_case).permit(:name, :description, :url, :is_live)
+    params.require(:use_case).permit(:title, :description, :developer_id, :is_live)
   end
 end

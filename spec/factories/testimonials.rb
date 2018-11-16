@@ -6,6 +6,7 @@ FactoryBot.define do
     title {:testimonial_title}
     description {Faker::Lorem.sentence}
     is_live {true}
+    works_with
     trait :wip do
       is_live {false}
     end
