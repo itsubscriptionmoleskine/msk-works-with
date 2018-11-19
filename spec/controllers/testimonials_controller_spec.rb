@@ -17,27 +17,6 @@ RSpec.describe TestimonialsController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
-    context 'with valid params' do
-      it 'creates a new Testimonial' do
-        expect {
-          post :create, params: {:testimonial => FactoryBot.attributes_for(:testimonial)}
-        }.to change(Testimonial, :count).by(1)
-      end
-
-      it 'assigns a newly created testimonial as @testimonial' do
-        post :create, params: {:testimonial => FactoryBot.attributes_for(:testimonial)}
-        expect(assigns(:testimonial)).to be_a(Testimonial)
-        expect(assigns(:testimonial)).to be_persisted
-      end
-
-      it 'redirects to the created testimonial' do
-        post :create, params: {:testimonial => FactoryBot.attributes_for(:testimonial)}
-        expect(response).to redirect_to(Testimonial.last)
-      end
-    end
-
-  end
 
   describe 'PUT #update' do
     context 'with valid params' do

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181115192644) do
+ActiveRecord::Schema.define(version: 20181116181812) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20181115192644) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "developer_id"
+    t.index ["developer_id"], name: "index_apps_on_developer_id"
   end
 
   create_table "developers", force: :cascade do |t|
@@ -61,6 +63,11 @@ ActiveRecord::Schema.define(version: 20181115192644) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "distributor_id"
+    t.integer "app_id"
+    t.index ["app_id"], name: "index_distributor_links_on_app_id"
+    t.index ["distributor_id", "app_id"], name: "index_distributor_links_on_distributor_id_and_app_id"
+    t.index ["distributor_id"], name: "index_distributor_links_on_distributor_id"
   end
 
   create_table "distributors", force: :cascade do |t|
@@ -77,6 +84,8 @@ ActiveRecord::Schema.define(version: 20181115192644) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "works_with_id"
+    t.index ["works_with_id"], name: "index_example_images_on_works_with_id"
   end
 
   create_table "offerings", force: :cascade do |t|
@@ -94,6 +103,8 @@ ActiveRecord::Schema.define(version: 20181115192644) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "works_with_id"
+    t.index ["works_with_id"], name: "index_testimonials_on_works_with_id"
   end
 
   create_table "use_cases", force: :cascade do |t|
@@ -102,6 +113,8 @@ ActiveRecord::Schema.define(version: 20181115192644) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "works_with_id"
+    t.index ["works_with_id"], name: "index_use_cases_on_works_with_id"
   end
 
   create_table "works_withs", force: :cascade do |t|
@@ -110,6 +123,11 @@ ActiveRecord::Schema.define(version: 20181115192644) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "app_id"
+    t.integer "offering_id"
+    t.index ["app_id"], name: "index_works_withs_on_app_id"
+    t.index ["offering_id", "app_id"], name: "index_works_withs_on_offering_id_and_app_id"
+    t.index ["offering_id"], name: "index_works_withs_on_offering_id"
   end
 
 end

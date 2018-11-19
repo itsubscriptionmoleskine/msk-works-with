@@ -64,6 +64,6 @@ class ExampleImagesController < ApplicationController
   end
 
   def example_image_params
-    params.require(:example_image).permit(:name, :description, :url, :is_live)
+    params.require(:example_image).permit(:image_url, :caption, :developer_id, :is_live)
   end
 end

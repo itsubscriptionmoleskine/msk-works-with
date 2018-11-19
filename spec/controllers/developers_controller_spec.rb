@@ -17,27 +17,6 @@ RSpec.describe DevelopersController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
-    context 'with valid params' do
-      it 'creates a new Developer' do
-        expect {
-          post :create, params: {:developer => FactoryBot.attributes_for(:developer)}
-        }.to change(Developer, :count).by(1)
-      end
-
-      it 'assigns a newly created developer as @developer' do
-        post :create, params: {:developer => FactoryBot.attributes_for(:developer)}
-        expect(assigns(:developer)).to be_a(Developer)
-        expect(assigns(:developer)).to be_persisted
-      end
-
-      it 'redirects to the created developer' do
-        post :create, params: {:developer => FactoryBot.attributes_for(:developer)}
-        expect(response).to redirect_to(Developer.last)
-      end
-    end
-
-  end
 
   describe 'PUT #update' do
     context 'with valid params' do

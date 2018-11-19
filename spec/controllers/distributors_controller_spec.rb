@@ -17,27 +17,6 @@ RSpec.describe DistributorsController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
-    context 'with valid params' do
-      it 'creates a new Distributor' do
-        expect {
-          post :create, params: {:distributor => FactoryBot.attributes_for(:distributor)}
-        }.to change(Distributor, :count).by(1)
-      end
-
-      it 'assigns a newly created distributor as @distributor' do
-        post :create, params: {:distributor => FactoryBot.attributes_for(:distributor)}
-        expect(assigns(:distributor)).to be_a(Distributor)
-        expect(assigns(:distributor)).to be_persisted
-      end
-
-      it 'redirects to the created distributor' do
-        post :create, params: {:distributor => FactoryBot.attributes_for(:distributor)}
-        expect(response).to redirect_to(Distributor.last)
-      end
-    end
-
-  end
 
   describe 'PUT #update' do
     context 'with valid params' do

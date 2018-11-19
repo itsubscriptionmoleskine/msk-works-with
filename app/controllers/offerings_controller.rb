@@ -64,6 +64,6 @@ class OfferingsController < ApplicationController
   end
 
   def offering_params
-    params.require(:offering).permit(:name, :description, :url, :is_live)
+    params.require(:offering).permit(:name, :description, :shop_link, :is_live)
   end
 end
