@@ -17,27 +17,6 @@ RSpec.describe ExampleImagesController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
-    context 'with valid params' do
-      it 'creates a new ExampleImage' do
-        expect {
-          post :create, params: {:example_image => FactoryBot.attributes_for(:example_image)}
-        }.to change(ExampleImage, :count).by(1)
-      end
-
-      it 'assigns a newly created example_image as @example_image' do
-        post :create, params: {:example_image => FactoryBot.attributes_for(:example_image)}
-        expect(assigns(:example_image)).to be_a(ExampleImage)
-        expect(assigns(:example_image)).to be_persisted
-      end
-
-      it 'redirects to the created example_image' do
-        post :create, params: {:example_image => FactoryBot.attributes_for(:example_image)}
-        expect(response).to redirect_to(ExampleImage.last)
-      end
-    end
-
-  end
 
   describe 'PUT #update' do
     context 'with valid params' do

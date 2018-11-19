@@ -10,5 +10,9 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
+    after (:create) do |offering|
+      a = build(:app)
+      create :works_with, app: a, offering: offering
+    end
   end
 end

@@ -64,6 +64,6 @@ class AppsController < ApplicationController
   end
 
   def app_params
-    params.require(:app).permit(:name, :description, :url, :is_live)
+    params.require(:app).permit(:name, :description, :url, :is_live, :developer_id)
   end
 end

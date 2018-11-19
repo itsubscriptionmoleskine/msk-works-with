@@ -3,7 +3,7 @@ class WorksWithsController < ApplicationController
   before_action :set_works_with, only: [:show, :edit, :update, :destroy]
 
   def index
-    @works_withs = WorksWith.all.where(is_live: true)
+    @works_withs = WorksWith.all
     respond_to do |format|
       format.html { render :index}
       format.json { render :json => @works_withs}
@@ -64,6 +64,6 @@ class WorksWithsController < ApplicationController
   end
 
   def works_with_params
-    params.require(:works_with).permit(:name, :description, :url, :is_live)
+    params.require(:works_with).permit(:title, :description, :app_id, :offering_id, :is_live)
   end
 end

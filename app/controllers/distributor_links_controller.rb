@@ -64,6 +64,6 @@ class DistributorLinksController < ApplicationController
   end
 
   def distributor_link_params
-    params.require(:distributor_link).permit(:name, :description, :url, :is_live)
+    params.require(:distributor_link).permit(:link, :distributor_id, :app_id)
   end
 end

@@ -17,28 +17,6 @@ RSpec.describe AppsController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
-    context 'with valid params' do
-      it 'creates a new App' do
-        expect {
-          post :create, params: {:app => FactoryBot.attributes_for(:app)}
-        }.to change(App, :count).by(1)
-      end
-
-      it 'assigns a newly created app as @app' do
-        post :create, params: {:app => FactoryBot.attributes_for(:app)}
-        expect(assigns(:app)).to be_a(App)
-        expect(assigns(:app)).to be_persisted
-      end
-
-      it 'redirects to the created app' do
-        post :create, params: {:app => FactoryBot.attributes_for(:app)}
-        expect(response).to redirect_to(App.last)
-      end
-    end
-
-  end
-
   describe 'PUT #update' do
     context 'with valid params' do
       it 'updates the requested app' do

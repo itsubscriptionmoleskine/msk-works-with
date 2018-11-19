@@ -17,28 +17,6 @@ RSpec.describe UseCasesController, type: :controller do
     end
   end
 
-  describe 'POST #create' do
-    context 'with valid params' do
-      it 'creates a new UseCase' do
-        expect {
-          post :create, params: {:use_case => FactoryBot.attributes_for(:use_case)}
-        }.to change(UseCase, :count).by(1)
-      end
-
-      it 'assigns a newly created use_case as @use_case' do
-        post :create, params: {:use_case => FactoryBot.attributes_for(:use_case)}
-        expect(assigns(:use_case)).to be_a(UseCase)
-        expect(assigns(:use_case)).to be_persisted
-      end
-
-      it 'redirects to the created use_case' do
-        post :create, params: {:use_case => FactoryBot.attributes_for(:use_case)}
-        expect(response).to redirect_to(UseCase.last)
-      end
-    end
-
-  end
-
   describe 'PUT #update' do
     context 'with valid params' do
       it 'updates the requested use_case' do
