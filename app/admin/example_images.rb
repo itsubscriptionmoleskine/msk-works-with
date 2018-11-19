@@ -4,7 +4,8 @@ ActiveAdmin.register ExampleImage do
 
   form(:html => {:multipart => true}) do |f|
     f.inputs do
-      f.input :image_url
+      f.input :image_url, :as => :file
+      f.input :image_url_cache, :as => :hidden
       f.input :caption, :input_html => {:class => 'tinymce'}, :label => 'Description'
       f.input :developer_id, :label => 'Which "Works With" does this belong to?', :as => :select, :collection => Developer.all.map{|a| ["#{a.name}", a.id]}
       f.input :is_live, :label => 'Publish?', :as => :radio
