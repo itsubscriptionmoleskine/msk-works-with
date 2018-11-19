@@ -3,7 +3,7 @@ class WorksWithsController < ApplicationController
   before_action :set_works_with, only: [:show, :edit, :update, :destroy]
 
   def index
-    @works_withs = WorksWith.all.where(is_live: true)
+    @works_withs = WorksWith.all
     respond_to do |format|
       format.html { render :index}
       format.json { render :json => @works_withs}
