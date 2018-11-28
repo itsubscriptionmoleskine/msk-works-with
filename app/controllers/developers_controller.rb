@@ -3,6 +3,8 @@ class DevelopersController < ApplicationController
   before_action :set_developer, only: [:show, :edit, :update, :destroy]
 
   def index
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Developers', developers_path
     @developers = Developer.all.where(is_live: true)
     respond_to do |format|
       format.html { render :index}
@@ -11,6 +13,9 @@ class DevelopersController < ApplicationController
   end
 
   def show
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Developers', developers_path
+    add_breadcrumb @developer.name, developer_path(@developer.id)
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @developer}

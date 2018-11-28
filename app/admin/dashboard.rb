@@ -9,16 +9,5 @@ ActiveAdmin.register_page "Dashboard" do
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
     end
-    columns do
-      column do
-        panel "Recent Posts" do
-          ul do
-            Post.recent(5).map do |post|
-              li link_to(post.title, admin_post_path(post))
-            end
-          end
-        end
-      end
-    end
-  end # content
+  end
 end

@@ -1,1 +1,39 @@
-.home
+.breadcrumb
+  = render_breadcrumbs
+%section
+  %article
+    .introduction
+      %h1
+        = Faker::Lorem.sentence
+      %p
+        - Faker::Lorem.paragraphs(8).each do |fp|
+          = fp
+%section
+  - ww = WorksWith.where(is_live: true)
+  - ww.each do |w|
+    .box
+      %a{:href => works_with_path(w.id)}
+        = w.title
+      %p
+        = w.description
+      %ul
+        %li
+          = w.offering.name
+        %li
+          = w.app.name
+%section
+  %h2
+    = Faker::Lorem.sentence
+  - testimonials = Testimonial.where(is_live: true)
+  - testimonials.each do |t|
+    .box
+      %a{:href => testimonial_path(t.id)}
+        = t.title
+      %p
+        = t.description
+      %ul
+        %li
+          = t.works_with.title
+          = t.works_with.app.name
+          = t.works_with.offering.name
+

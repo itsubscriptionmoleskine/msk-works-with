@@ -1,0 +1,8 @@
+$breadcrumb-layout-grid:(
+        columns: 1,
+        gutter: 1rem
+);
+
+.breadcrumbs{
+  @include grid-column(1, $breadcrumb-layout-grid);
+}

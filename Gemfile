@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem "carrierwave-google-storage", "~> 0.9.0"
+
+gem "breadcrumbs_on_rails", "~> 3.0"
