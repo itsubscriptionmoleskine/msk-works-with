@@ -3,6 +3,8 @@ class TestimonialsController < ApplicationController
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
 
   def index
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Testimonials', testimonials_path
     @testimonials = Testimonial.all.where(is_live: true)
     respond_to do |format|
       format.html { render :index}
@@ -11,6 +13,9 @@ class TestimonialsController < ApplicationController
   end
 
   def show
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Testimonials', testimonials_path
+    add_breadcrumb @testimonial.title, testimonial_path(@testimonial.id)
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @testimonial}

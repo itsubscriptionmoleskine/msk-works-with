@@ -3,6 +3,8 @@ class AppsController < ApplicationController
   before_action :set_app, only: [:show, :edit, :update, :destroy]
 
   def index
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Apps', apps_path
     @apps = App.all.where(is_live: true)
     respond_to do |format|
       format.html { render :index}
@@ -11,6 +13,9 @@ class AppsController < ApplicationController
   end
 
   def show
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Apps', apps_path
+    add_breadcrumb @app.name, apps_path(@app.id)
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @app}

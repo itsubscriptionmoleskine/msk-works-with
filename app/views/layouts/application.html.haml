@@ -5,5 +5,10 @@
     %title Works With Moleskine +
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
+    %link{:rel => 'stylesheet', :href => 'https://use.typekit.net/qbi3bum.css'}
+
   %body
-    = yield
+    .body-container
+      = render 'components/navigation'
+      = yield
+      = render 'components/footer'

@@ -3,6 +3,8 @@ class WorksWithsController < ApplicationController
   before_action :set_works_with, only: [:show, :edit, :update, :destroy]
 
   def index
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Works With', works_withs_path
     @works_withs = WorksWith.all
     respond_to do |format|
       format.html { render :index}
@@ -11,6 +13,9 @@ class WorksWithsController < ApplicationController
   end
 
   def show
+    add_breadcrumb 'Home', home_path
+    add_breadcrumb 'Works With', works_withs_path
+    add_breadcrumb  @works_with.title, works_with_path(@works_with.id)
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @works_with}

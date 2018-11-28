@@ -1,6 +1,16 @@
-%p#notice= notice
+.breadcrumb
+  = render_breadcrumbs
+%section
+  -#%img{:src=> @works_with.example_image.image_url}
+  %h1
+    = @works_with.title
+  -#%p
+  -#  = @works_with.description
+  -#%a{:href=> @works_with.distributor_link}
+  -#  = @works_with.distributor.name
+  -#%a{:href=> @works_with.developer.link}
+  -#  = @works_with.developer.name
+
+  -#ToDo: Made with group
 
 
-= link_to 'Edit', edit_works_with_path(@works_with)
-\|
-= link_to 'Back', works_withs_path

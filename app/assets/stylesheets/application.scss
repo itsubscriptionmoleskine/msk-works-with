@@ -1,2 +1,16 @@
 @import "bourbon";
 @import "neat";
+
+//Globals
+@import "global/grid";
+@import "global/palette";
+@import "global/typography";
+
+//Elements
+@import "elements/breadcrumbs";
+
+// Layouts
+@import "layouts/apps";
+@import "layouts/developers";
+@import "layouts/testimonials";
+@import "layouts/works_withs";
