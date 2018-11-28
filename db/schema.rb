@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181116181812) do
+ActiveRecord::Schema.define(version: 2018_11_16_181812) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
@@ -45,7 +48,7 @@ ActiveRecord::Schema.define(version: 20181116181812) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "developer_id"
+    t.bigint "developer_id"
     t.index ["developer_id"], name: "index_apps_on_developer_id"
   end
 
@@ -63,8 +66,8 @@ ActiveRecord::Schema.define(version: 20181116181812) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "distributor_id"
-    t.integer "app_id"
+    t.bigint "distributor_id"
+    t.bigint "app_id"
     t.index ["app_id"], name: "index_distributor_links_on_app_id"
     t.index ["distributor_id", "app_id"], name: "index_distributor_links_on_distributor_id_and_app_id"
     t.index ["distributor_id"], name: "index_distributor_links_on_distributor_id"
@@ -84,7 +87,7 @@ ActiveRecord::Schema.define(version: 20181116181812) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "works_with_id"
+    t.bigint "works_with_id"
     t.index ["works_with_id"], name: "index_example_images_on_works_with_id"
   end
 
@@ -103,7 +106,7 @@ ActiveRecord::Schema.define(version: 20181116181812) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "works_with_id"
+    t.bigint "works_with_id"
     t.index ["works_with_id"], name: "index_testimonials_on_works_with_id"
   end
 
@@ -113,7 +116,7 @@ ActiveRecord::Schema.define(version: 20181116181812) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "works_with_id"
+    t.bigint "works_with_id"
     t.index ["works_with_id"], name: "index_use_cases_on_works_with_id"
   end
 
@@ -123,8 +126,8 @@ ActiveRecord::Schema.define(version: 20181116181812) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "app_id"
-    t.integer "offering_id"
+    t.bigint "app_id"
+    t.bigint "offering_id"
     t.index ["app_id"], name: "index_works_withs_on_app_id"
     t.index ["offering_id", "app_id"], name: "index_works_withs_on_offering_id_and_app_id"
     t.index ["offering_id"], name: "index_works_withs_on_offering_id"

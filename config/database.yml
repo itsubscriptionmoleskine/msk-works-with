@@ -1,0 +1,34 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: works_with_development
+  user: postgres
+  password: amops
+
+test:
+  <<: *default
+  database: works_with_test
+  user: postgres
+  password: amops
+
+#production:
+#  <<: *default
+#  database: msk-works-with_production
+#  username: msk-works-with
+#  password: <%= ENV['MSK-WORKS-WITH_DATABASE_PASSWORD'] %>
+
+postgresql_settings: &postgresql_settings
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: "postgres"
+  password: "u2xrMBSMvssv"
+  database: "works-with-postgresql"
+  host:   "/cloudsql/works-with-postgresql-vm"
