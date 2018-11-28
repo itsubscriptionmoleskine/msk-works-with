@@ -229,4 +229,6 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 
+.idea/msk-works-with.iml
+
 # End of https://www.gitignore.io/api/rubymine
