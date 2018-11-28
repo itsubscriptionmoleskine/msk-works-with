@@ -1,3 +1,7 @@
+if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('2.0.0.pre.1')
+  abort "Bundler version >= 2.0.0.pre.1is required"
+end
+
 source 'https://rubygems.org'
 ruby '~> 2.5.3'
 
