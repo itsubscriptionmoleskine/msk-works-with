@@ -14,10 +14,7 @@ postgresql_settings: &postgresql_settings
   database: works_with_postgresql
 
 development:
-  <<: *default
-  database: works_with_development
-  user: postgres
-  password: amops
+  <<: *postgresql_settings
 
 test:
   <<: *default
