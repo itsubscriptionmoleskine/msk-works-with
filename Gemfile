@@ -9,6 +9,8 @@ gem 'activeadmin', '~> 1.3'
 gem 'appengine', '~> 0.4.1'
 gem 'autoprefixer-rails', '~> 9.3'
 gem 'bourbon', '~> 5.1'
+gem 'breadcrumbs_on_rails', '~> 3.0'
+gem 'carrierwave-google-storage', '~> 0.9.0'
 gem 'devise', '~> 4.5'
 gem 'haml-rails', '~> 1.0'
 gem 'jbuilder', '~> 2.5'
@@ -18,7 +20,7 @@ gem 'mini_racer', '~> 0.2.4'
 gem 'neat', '~> 3.0'
 gem 'pg', '~> 0.21.0'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.3'
+gem 'rails', '~> 5.2.1.1'
 gem 'sass-rails', '~> 5.0'
 gem 'sqlite3'
 gem 'stackdriver', '~> 0.15.0'
@@ -57,6 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 
-gem "carrierwave-google-storage", "~> 0.9.0"
 
-gem "breadcrumbs_on_rails", "~> 3.0"
+
+
