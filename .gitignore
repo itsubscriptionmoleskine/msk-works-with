@@ -230,8 +230,8 @@ fabric.properties
 .idea/sonarlint
 
 .idea/msk-works-with.iml
-config/master.key
-
 # End of https://www.gitignore.io/api/rubymine
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/credentials.yml.enc
