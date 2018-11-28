@@ -8,10 +8,10 @@ postgresql_settings: &postgresql_settings
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: "postgres"
-  password: "u2xrMBSMvssv"
-  database: "works-with-postgresql"
-  host:   "/cloudsql/works-with-postgresql-vm"
+  username: postgres
+  password: u2xrMBSMvssv
+  host:   35.245.10.148
+  database: works_with_postgresql
 
 development:
   <<: *default
