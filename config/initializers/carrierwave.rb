@@ -9,6 +9,6 @@ CarrierWave.configure do |config|
   }
   config.gcloud_credentials = {
     gcloud_project: 'works-with-222514',
-    gcloud_keyfile: '../works-with-0fe8b833e4b5.json'
+    gcloud_keyfile: 'works-with.json'
   }
 end
