@@ -235,4 +235,3 @@ fabric.properties
 /config/credentials.yml.enc
 
 /.idea
-app.yaml
