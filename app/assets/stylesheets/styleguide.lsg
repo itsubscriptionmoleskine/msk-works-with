@@ -1,4 +1,4 @@
 @scss application.scss
 @title Moleskine Works With StyleGuide
-@import **/*.lsg
+@import */*.lsg
 

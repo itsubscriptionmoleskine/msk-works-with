@@ -4,4 +4,11 @@ body, html {
   font-family: $body-font-family;
   font-weight: 400;
   font-style: normal;
+  color: $grey-2;
+  a{
+    color: $grey-2;
+    &:hover{
+      color: $orange;
+    }
+  }
 }
