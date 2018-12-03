@@ -1,14 +1,11 @@
 source 'https://rubygems.org'
-ruby '~> 2.5.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activeadmin', '~> 1.3'
-gem 'appengine', '~> 0.4.1'
-gem 'autoprefixer-rails', '~> 9.3'
+gem 'activeadmin', '~> 1.4'
 gem 'bourbon', '~> 5.1'
 gem 'breadcrumbs_on_rails', '~> 3.0'
 gem 'carrierwave-google-storage', '~> 0.9.0'
@@ -19,13 +16,12 @@ gem 'jquery-rails', '~> 4.3'
 gem 'livingstyleguide', '~> 2.0'
 gem 'mini_racer', '~> 0.2.4'
 gem 'neat', '~> 3.0'
-gem 'pg', '~> 0.21.0'
+gem 'pg', '~> 1.1'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.2.1.1'
+gem 'rails', '~> 5.1.2'
 gem 'sass-rails', '~> 5.0'
-gem 'sqlite3'
 gem 'stackdriver', '~> 0.15.0'
-gem 'tinymce-rails', '~> 4.8'
+gem 'tinymce-rails', '~> 4.9'
 gem 'turbolinks', '~> 5.2'
 gem 'uglifier', '~> 4.1'
 
@@ -56,10 +52,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
-
-
-
-
-

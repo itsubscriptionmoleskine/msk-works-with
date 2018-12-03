@@ -9,4 +9,3 @@ Testimonial.create(title: Faker::Lorem.sentence, description:Faker::Lorem.senten
 UseCase.create(title:Faker::Lorem.sentence, description: Faker::Lorem.sentence, is_live: true, works_with_id: 1)
 ExampleImage.create(image_url:Faker::Internet.url, caption: Faker::Lorem.sentence, works_with_id:1, is_live:true)
 TestimonialSlide.create(image_url:Faker::Internet.url, caption: Faker::Lorem.sentence, testimonial_id:1, sequence_number: 1, is_live:true)
-
