@@ -1,21 +1,37 @@
 .breadcrumb
   = render_breadcrumbs
-.testimonial
-  .main
-    %h1
+.testimonial-layout-grid-layout
+  .testimonial-layout__main
+    %h1{:class=> 'testimonial-title'}
       = @testimonial.title
-    %h2
-      by MISSING DATA,
+    %h2{:class=> 'testimonial-byline'}
       = @testimonial.created_at.strftime('%b %e %Y')
-    -#ToDo: Testimonials need attribution
     -#ToDo: Testimonials need publish date
+    - if @testimonial.video_embed
+      .video-container
+        = @testimonial.video_embed.html_safe
     %p
-      = @testimonial.description
-    -#ToDo: Controller must handle logic of parsing inline image
-    -#ToDo: No way to associate inline image.
-  .right-rail
-    %h3
+      - if @testimonial.testimonial_slides
+        - t = @testimonial.description.split('</p>')
+        - midway = (t.length/2).floor
+        - paragraph_tracker = 0
+        - t.each do |tp|
+          - paragraph_tracker = paragraph_tracker + 1
+          -if paragraph_tracker == midway
+            - @testimonial.testimonial_slides.each do |slide|
+              %img{:src=> slide.image_url}
+          -#ToDo: Slide JS
+          - tp = tp + '</p>'
+          = tp.html_safe
+      - else
+        = @testimonial.description.html_safe
+  .testimonial-layout__sidebar
+    -#ToDo: Fix Responsive Layou
+    %h3{:class=>'works-with-sidebar-title'}
       %a{:href=> works_with_path(@testimonial.works_with.id.to_s)}
         = @testimonial.works_with.title
-      %ul
-        -#Controller must provide distributor links
+    %ul{:class=>'distributor-links'}
+      - @testimonial.works_with.app.distributor_links.each do |dl|
+        %li
+          %a{:href=> dl.link }
+            = dl.distributor.name
