@@ -1,6 +1,6 @@
 ActiveAdmin.register Testimonial do
 
-  permit_params :title, :description, :works_with_id, :is_live
+  permit_params :title, :description, :works_with_id, :is_live, :video_embed
 
   form(:html => {:multipart => true}) do |f|
     f.inputs do

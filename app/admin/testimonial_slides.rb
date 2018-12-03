@@ -1,13 +1,14 @@
-ActiveAdmin.register ExampleImage do
+ActiveAdmin.register TestimonialSlide do
 
-  permit_params :image_url, :caption, :works_with_id, :is_live
+  permit_params :image_url, :caption, :testimonial_id, :sequence_number, :is_live
 
   form(:html => {:multipart => true}) do |f|
     f.inputs do
       f.input :image_url, :as => :file
       f.input :image_url_cache, :as => :hidden
       f.input :caption, :input_html => {:class => 'tinymce'}, :label => 'Caption'
-      f.input :works_with_id, :label => 'Which "Works With" does this belong to?', :as => :select, :collection => WorksWith.all.map{|a| ["#{a.title}", a.id]}
+      f.input :sequence_number, :label => 'Sequence'
+      f.input :testimonial_id, :label => 'Which "Testimonial" does this belong to?', :as => :select, :collection => Testimonial.all.map{|a| ["#{a.title}", a.id]}
       f.input :is_live, :label => 'Publish?', :as => :radio
     end
     f.actions
@@ -16,16 +17,16 @@ ActiveAdmin.register ExampleImage do
 end
 
 
-ActiveAdmin.register ExampleImage do
+ActiveAdmin.register TestimonialSlide do
   show do
     attributes_table do
       row :image_url do |i|
         img src:i.image_url
       end
       row :caption
-      row :works_with_id
+      row :testimonial_id
     end
   end
 end
 
-#ToDo: Use Works With Titles instead of ids.
+#ToDo: Use Testimonial Titles instead of ids.

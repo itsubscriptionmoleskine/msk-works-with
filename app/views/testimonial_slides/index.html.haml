@@ -1,0 +1,19 @@
+%h1 Listing testimonial_slides
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @testimonial_slides.each do |testimonial_slide|
+      %tr
+        %td= link_to 'Show', testimonial_slide
+        %td= link_to 'Edit', edit_testimonial_slide_path(testimonial_slide)
+        %td= link_to 'Destroy', testimonial_slide, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Testimonial slide', new_testimonial_slide_path
