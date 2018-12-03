@@ -1,0 +1,54 @@
+// Moleskine Color Palette
+//
+// Colors based on Moleskine Style Guide.
+//
+// moleskine.styleguide.palette
+
+$moleskine_pallette: (
+        'indigo': (base:rgb(95, 91, 150), dark: rgb(69, 66, 109)),
+        'blue': (base:rgb(59, 97, 179), dark:rgb(50, 82, 152)),
+        'cyan': (base:rgb(41, 175, 222), dark:rgb(38, 163, 207)),
+        'aqua': (base:rgb(75, 178, 185), dark:rgb(67, 159, 165)),
+        'green': (base:rgb(102, 169, 72), dark:rgb(89, 147, 63)),
+        'lime': (base:rgb(200, 186, 50), dark:rgb(184, 171, 46)),
+        'creme': (base:rgb(255, 238, 215), dark:rgb(240, 240, 202)),
+        'clay': (base:rgb(187, 180, 157), dark:rgb(167, 161, 135)),
+        'olive': (base:rgb(87, 90, 68), dark:rgb(55, 57, 43)),
+        'magenta': (base:rgb(197, 54, 137), dark:rgb(177, 48, 123)),
+        'crimson': (base:rgb(193, 43, 52), dark:rgb(160, 35, 43)),
+        'red-orange': (base:rgb(255, 102, 48), dark:rgb(230, 92, 43)),
+        'orange': (base:rgb(252, 140, 42), dark:rgb(220, 122, 37)),
+        'sienna': (base:rgb(211, 148, 69), dark:rgb(193, 128, 60)),
+        'gold': (base:rgb(255, 202, 53), dark:rgb(226, 179, 47)),
+        'grey': (base:rgb(175, 175, 175), dark:rgb(149, 149, 149), darker:rgb(96,96,96), darkerstill:rgb(87,87,87), darkest:rgb(38,38,38)),
+        'gunmetal': (base:rgb(127, 141, 146), dark:rgb(149, 149, 149)),
+        'taupe': (base:rgb(146, 127, 111), dark:rgb(129, 112, 98)),
+        'brown': (base:rgb(133, 100, 68), dark:rgb(105, 79, 54)),
+        'black': (base:rgb(0, 0, 0), light:rgb(24, 24, 24)),
+        'white': (base:rgb(255, 255, 255), dark:rgb(250, 250, 250)),
+        'light-orange': (base:rgb(255, 148, 101), dark:rgb(255, 148, 101)),
+        'space-grey': (base:rgb(50, 50, 50), dark:rgb(50, 50, 50)),
+        'classic-grey': (base:rgb(100,100, 100), dark:rgb(100, 100, 100)),
+        'silver-grey': (base:rgb(149,148,148), dark:rgb(149,148,148)),
+        'blue-pet': (base:rgb(84,157,194), dark:rgb(84,157,194)),
+        'salmon': (base:rgb(226,124,125), dark:rgb(226,124,125))
+);
+
+@function setcolor($scheme, $tone: base) {
+  @return map-get(map-get($moleskine_pallette, $scheme), $tone);
+}
+
+$background-grey: rgba(0,0,0,0.8);
+$ghostly-grey: rgba(127, 141, 146, 80%);
+
+$orange: setcolor('red-orange','dark');
+$ivory: setcolor('creme');
+$gunmetal: setcolor('gunmetal');
+$black: setcolor('black');
+$white: setcolor('white');
+$grey-0: setcolor('grey');
+$grey-1: setcolor('grey', dark);
+$grey-2: setcolor('grey', darker);
+$grey-3: setcolor('grey', darkerstill);
+$grey-4: setcolor('grey', darkest);
+$blue: setcolor('blue-pet');

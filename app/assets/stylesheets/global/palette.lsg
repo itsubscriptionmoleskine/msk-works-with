@@ -1,0 +1,6 @@
+# Palette
+
+@colors {
+    $orange $ivory $gunmetal $blue
+    $white $grey-0 $grey-1 $grey-2 $grey-3 $grey-4  $black
+}

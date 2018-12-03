@@ -1,3 +1,7 @@
 .body-container{
   @include grid-container;
 }
+
+html, body{
+  background-color: $ivory;
+}

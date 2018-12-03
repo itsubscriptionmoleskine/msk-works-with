@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_181812) do
+ActiveRecord::Schema.define(version: 2018_12_03_164228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,6 +100,17 @@ ActiveRecord::Schema.define(version: 2018_11_16_181812) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "testimonial_slides", force: :cascade do |t|
+    t.string "image_url"
+    t.text "caption"
+    t.boolean "is_live"
+    t.integer "sequence_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "testimonial_id"
+    t.index ["testimonial_id"], name: "index_testimonial_slides_on_testimonial_id"
+  end
+
   create_table "testimonials", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -107,6 +118,7 @@ ActiveRecord::Schema.define(version: 2018_11_16_181812) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "works_with_id"
+    t.text "video_embed"
     t.index ["works_with_id"], name: "index_testimonials_on_works_with_id"
   end
 

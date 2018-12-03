@@ -3,6 +3,11 @@ $breadcrumb-layout-grid:(
         gutter: 1rem
 );
 
-.breadcrumbs{
+.breadcrumb{
   @include grid-column(1, $breadcrumb-layout-grid);
+  text-transform: uppercase;
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }

@@ -2,12 +2,14 @@
 @import "neat";
 
 //Globals
-@import "global/grid";
 @import "global/palette";
+@import "global/grid";
 @import "global/typography";
 
 //Elements
 @import "elements/breadcrumbs";
+@import "elements/header";
+@import "elements/footer";
 
 // Layouts
 @import "layouts/apps";

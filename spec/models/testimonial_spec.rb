@@ -5,4 +5,5 @@ RSpec.describe Testimonial, type: :model do
     expect(build(:testimonial)).to be_valid
   end
   it { should belong_to(:works_with)}
+  it { should have_many(:testimonial_slides)}
 end
