@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :testimonial_slides
   resources :testimonials
   resources :works_withs
   resources :example_images

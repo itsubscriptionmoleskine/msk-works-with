@@ -5,4 +5,5 @@ RSpec.describe App, type: :model do
     expect(build(:app)).to be_valid
   end
   it { should belong_to(:developer)}
+  it { should have_many(:distributor_links)}
 end

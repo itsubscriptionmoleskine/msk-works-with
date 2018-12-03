@@ -1,3 +1,68 @@
-// Place all the styles related to the Testimonials controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$testimonial-layout-grid: (
+        columns: 1,
+        gutter: 2rem,
+);
+
+$testimonial-layout-grid--tablet-up: (
+        columns: 5,
+        gutter: 2rem,
+        media: "(min-width: 768px)",
+);
+
+.testimonial-layout-grid-layout {
+  @include grid-container;
+}
+
+.testimonial-layout-grid-layout__hero {
+  @include grid-column(1, $testimonial-layout-grid);
+  margin-bottom: 2rem;
+}
+
+.testimonial-layout__sidebar {
+  @include grid-column(1, $testimonial-layout-grid);
+  margin-bottom: 2rem;
+
+  @include grid-media($testimonial-layout-grid--tablet-up) {
+    @include grid-column(2);
+  }
+  h3.works-with-sidebar-title{
+    font-weight: 400;
+    font-size: 1.5rem;
+    a{
+      text-decoration: none;
+      &:hover{
+        color: $blue;
+      }
+    }
+  }
+  ul.distributor-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+
+      a{
+        text-decoration: none;
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+.testimonial-layout__main {
+  @include grid-column(1, $testimonial-layout-grid);
+  @include grid-media($testimonial-layout-grid--tablet-up) {
+    @include grid-column(3);
+  }
+  h1.testimonial-title{
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+  h2.testimonial-byline{
+    font-weight: 200;
+    font-size: 1.25rem;
+    margin: 0 0 0 0;
+  }
+}

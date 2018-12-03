@@ -69,6 +69,6 @@ class TestimonialsController < ApplicationController
   end
 
   def testimonial_params
-    params.require(:testimonial).permit(:name, :description, :url, :is_live)
+    params.require(:testimonial).permit(:name, :description, :url, :is_live, :video_embed)
   end
 end
