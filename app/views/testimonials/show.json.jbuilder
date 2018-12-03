@@ -1,1 +1,1 @@
-json.partial! "testimonials/testimonial", testimonial: @testimonial
+json.extract! @testimonial, :id, :description, :is_live, :works_with_id, :created_at, :updated_at

@@ -1,2 +1,21 @@
 .breadcrumb
   = render_breadcrumbs
+.testimonial
+  .main
+    %h1
+      = @testimonial.title
+    %h2
+      by MISSING DATA,
+      = @testimonial.created_at.strftime('%b %e %Y')
+    -#ToDo: Testimonials need attribution
+    -#ToDo: Testimonials need publish date
+    %p
+      = @testimonial.description
+    -#ToDo: Controller must handle logic of parsing inline image
+    -#ToDo: No way to associate inline image.
+  .right-rail
+    %h3
+      %a{:href=> works_with_path(@testimonial.works_with.id.to_s)}
+        = @testimonial.works_with.title
+      %ul
+        -#Controller must provide distributor links

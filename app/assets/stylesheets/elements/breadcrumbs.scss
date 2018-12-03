@@ -5,6 +5,7 @@ $breadcrumb-layout-grid:(
 
 .breadcrumb{
   @include grid-column(1, $breadcrumb-layout-grid);
+  text-transform: uppercase;
   a{
     text-transform: uppercase;
     text-decoration: none;
