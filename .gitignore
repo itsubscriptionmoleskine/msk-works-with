@@ -236,3 +236,5 @@ fabric.properties
 
 /.idea
 
+build/truffleHug.json
+config/secrets.yml.key

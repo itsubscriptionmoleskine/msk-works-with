@@ -4,8 +4,9 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{ :name=>'viewport', :content => 'width=device-width, initial-scale=1.0'}
     %title Works With Moleskine +
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all'
     %link{:rel => 'stylesheet', :href => 'https://use.typekit.net/qbi3bum.css'}
 
   %body

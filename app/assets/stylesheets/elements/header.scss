@@ -1,5 +1,50 @@
-nav{
-  display: none;
+@import "neat/grid/media";
+.navigation-wrapper{
+  @include outer-container();
+  background-color: setcolor('creme','alt');
 }
 
-//ToDo: Styling blocked
+.moleskine-header{
+  display: flex;
+  justify-content: space-between;
+  background-color: setcolor('gunmetal','dark');
+  padding: 0.75rem;
+  .moleskine-logo{
+    fill: $white;
+  }
+  .navigation-menu-button{
+    color: $white;
+    #mobile-nav-icon{
+      font-size: 1.45rem;
+    }
+    @include media($large-screen){
+      display: none;
+    }
+  }
+}
+nav{
+  ul.navigation-menu{
+    list-style: none;
+    display: none;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-left: 1rem;
+    &.show{
+      display: flex;
+    }
+    max-width: 50%;
+    @include media ($large-screen) {
+      display: flex;
+    }
+    li{
+      color: $black;
+      a{
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.857rem;
+      }
+    }
+  }
+
+}

@@ -1,7 +1,9 @@
 .body-container{
-  @include grid-container;
+  @include outer-container(100%);
 }
 
 html, body{
+  margin: 0;
+  padding: 0;
   background-color: $ivory;
 }
