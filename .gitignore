@@ -235,4 +235,6 @@ fabric.properties
 /config/credentials.yml.enc
 
 /.idea
-app.yaml
+
+build/truffleHug.json
+config/secrets.yml.key

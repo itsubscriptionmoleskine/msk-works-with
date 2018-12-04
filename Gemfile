@@ -1,21 +1,21 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+  repo_name = '#{repo_name}/#{repo_name}' unless repo_name.include?('/')
+  'https://github.com/#{repo_name}.git'
 end
 
 gem 'activeadmin', '~> 1.4'
-gem 'bourbon', '~> 5.1'
 gem 'breadcrumbs_on_rails', '~> 3.0'
 gem 'carrierwave-google-storage', '~> 0.9.0'
 gem 'devise', '~> 4.5'
+gem 'font-awesome-sass', '~> 5.5'
 gem 'haml-rails', '~> 1.0'
+gem 'inline_svg', '~> 1.3'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3'
 gem 'livingstyleguide', '~> 2.0'
 gem 'mini_racer', '~> 0.2.4'
-gem 'neat', '~> 3.0'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.2'
@@ -52,3 +52,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+
+
+

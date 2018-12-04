@@ -4,7 +4,7 @@ $breadcrumb-layout-grid:(
 );
 
 .breadcrumb{
-  @include grid-column(1, $breadcrumb-layout-grid);
+  @include outer-container(100%);
   text-transform: uppercase;
   a{
     text-transform: uppercase;

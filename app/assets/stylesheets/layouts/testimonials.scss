@@ -10,20 +10,20 @@ $testimonial-layout-grid--tablet-up: (
 );
 
 .testimonial-layout-grid-layout {
-  @include grid-container;
+  @include outer-container(100%);
 }
 
 .testimonial-layout-grid-layout__hero {
-  @include grid-column(1, $testimonial-layout-grid);
+  @include span-columns(1);
   margin-bottom: 2rem;
 }
 
 .testimonial-layout__sidebar {
-  @include grid-column(1, $testimonial-layout-grid);
+  @include span-columns(1);
   margin-bottom: 2rem;
 
-  @include grid-media($testimonial-layout-grid--tablet-up) {
-    @include grid-column(2);
+  @include media($large-screen) {
+    @include span-columns(2);
   }
   h3.works-with-sidebar-title{
     font-weight: 400;
@@ -52,9 +52,9 @@ $testimonial-layout-grid--tablet-up: (
 }
 
 .testimonial-layout__main {
-  @include grid-column(1, $testimonial-layout-grid);
-  @include grid-media($testimonial-layout-grid--tablet-up) {
-    @include grid-column(3);
+  @include span-columns(1);
+  @include media($large-screen) {
+    @include span-columns(3);
   }
   h1.testimonial-title{
     font-size: 3rem;
