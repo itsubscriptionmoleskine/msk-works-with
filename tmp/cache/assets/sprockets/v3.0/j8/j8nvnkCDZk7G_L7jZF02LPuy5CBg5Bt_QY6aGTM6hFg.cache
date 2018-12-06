@@ -1,11 +1,0 @@
-{:uriI"…file://app/assets/stylesheets/global/typography.lsg?type=text/lsg&id=df1d639725f9d5355076d986c24a93202f29a69f84f5c44cbceeab5e4d383be0:ET:load_pathI"app/assets/stylesheets;T:filenameI"1app/assets/stylesheets/global/typography.lsg;T:	nameI"global/typography;T:logical_pathI"global/typography.lsg;T:content_typeI"text/lsg;T:sourceI"»# Typography
-
-<script src="https://use.typekit.net/qbi3bum.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-
-@font-example 16px brandon-grotesque, sans-serif;;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"0processors:type=text/lsg&file_type=text/lsg;TTI"?file-digest://app/assets/stylesheets/global/typography.lsg;TTF:charsetI"
-utf-8;F:digest"%?…‚G®itŠª7è=X)ä‡‡Æ	¼BÃA!¥cª(€:lengthi»:dependencies_digest"%6w‡ðÎDk	A´‘…¬ÂTË¯|ômCÇR”O1Woù~:idI"Edf1d639725f9d5355076d986c24a93202f29a69f84f5c44cbceeab5e4d383be0;F:
-mtimel+ÕËÿ[

@@ -3,3 +3,4 @@
 config/secrets.yml.key
 .gcp-keyfile.json
 /config/application.yml
+tmp

@@ -1,9 +1,0 @@
-{:uriI"~file://app/assets/stylesheets/styleguide.lsg?type=text/lsg&id=c7aa7cb0d18a69190005588acd4d3c7764255ea8bbcbe5c6ddb433953a887dd1:ET:load_pathI"app/assets/stylesheets;T:filenameI"*app/assets/stylesheets/styleguide.lsg;T:	nameI"styleguide;T:logical_pathI"styleguide.lsg;T:content_typeI"text/lsg;T:sourceI"T@scss application.scss
-@title Moleskine Works With StyleGuide
-@import */*.lsg
-
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"0processors:type=text/lsg&file_type=text/lsg;TTI"8file-digest://app/assets/stylesheets/styleguide.lsg;TTF:charsetI"
-utf-8;F:digest"%•‘çKçŸë¼ü™™ƒxJ¬—ˆ¤¯8€šˆx{ƒ:lengthiT:dependencies_digest"%	‘)=p«©A*pº¸±‘ú9‡ı{S(e"“-’.P²ÿ:idI"Ec7aa7cb0d18a69190005588acd4d3c7764255ea8bbcbe5c6ddb433953a887dd1;F:
-mtimel+w\
