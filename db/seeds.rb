@@ -5,7 +5,7 @@ Distributor.create(name: Faker::Dessert.variety, badge_image_url:Faker::Internet
 DistributorLink.create(link:Faker::Internet.url, distributor_id:1, app_id: 1, is_live: true)
 Offering.create(name: Faker::Fallout.character, description: Faker::Lorem.sentence, shop_link:Faker::Internet.url, is_live:true)
 WorksWith.create(title:Faker::Lorem.sentence, description: Faker::Lorem.sentence, is_live: true, offering_id:1, app_id: 1)
-Testimonial.create(title: Faker::Lorem.sentence, description:Faker::Lorem.sentence, is_live: true, works_with_id: 1)
+Testimonial.create(title: Faker::Lorem.sentence, description:Faker::Lorem.sentence, promo_text:Faker::Lorem.sentence, promo_image_url:Faker::Internet.url, is_live: true, works_with_id: 1, publish_date: Faker::Date.backward(2))
 UseCase.create(title:Faker::Lorem.sentence, description: Faker::Lorem.sentence, is_live: true, works_with_id: 1)
 ExampleImage.create(image_url:Faker::Internet.url, caption: Faker::Lorem.sentence, works_with_id:1, is_live:true)
 TestimonialSlide.create(image_url:Faker::Internet.url, caption: Faker::Lorem.sentence, testimonial_id:1, sequence_number: 1, is_live:true)

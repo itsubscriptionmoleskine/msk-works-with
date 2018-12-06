@@ -7,8 +7,7 @@
     %h1{:class=> 'testimonial-title'}
       = @testimonial.title
     %h2{:class=> 'testimonial-byline'}
-      = @testimonial.created_at.strftime('%b %e %Y')
-    -#ToDo: Testimonials need publish date
+      = @testimonial.publish_date.strftime('%b %e %Y')
     - if @testimonial.video_embed
       .video-container
         .video
