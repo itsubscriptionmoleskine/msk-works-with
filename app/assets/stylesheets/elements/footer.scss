@@ -5,7 +5,6 @@ footer{
   @include media($medium-screen-up){
     text-align: center;
   }
-  @include outer-container();
   .first-row{
     @include media($large-screen){
       display: flex;

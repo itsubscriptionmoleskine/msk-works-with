@@ -1,68 +1,54 @@
-$testimonial-layout-grid: (
-        columns: 1,
-        gutter: 2rem,
-);
-
-$testimonial-layout-grid--tablet-up: (
-        columns: 5,
-        gutter: 2rem,
-        media: "(min-width: 768px)",
-);
-
-.testimonial-layout-grid-layout {
-  @include outer-container(100%);
-}
-
-.testimonial-layout-grid-layout__hero {
-  @include span-columns(1);
-  margin-bottom: 2rem;
-}
-
-.testimonial-layout__sidebar {
-  @include span-columns(1);
-  margin-bottom: 2rem;
-
-  @include media($large-screen) {
-    @include span-columns(2);
-  }
-  h3.works-with-sidebar-title{
-    font-weight: 400;
-    font-size: 1.5rem;
-    a{
-      text-decoration: none;
-      &:hover{
-        color: $blue;
-      }
+.testimonial{
+  margin:1rem;
+  .testimonial-sidebar {
+    @include media($large-screen) {
+      @include span-columns(4);
     }
-  }
-  ul.distributor-links{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li{
-
+    @include span-columns(12);
+    h3.works-with-sidebar-title{
+      font-weight: 400;
+      font-size: 1.5rem;
       a{
         text-decoration: none;
         &:hover{
-          color: $orange;
+          color: $blue;
+        }
+      }
+    }
+    ul.distributor-links{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+
+        a{
+          text-decoration: none;
+          &:hover{
+            color: $orange;
+          }
         }
       }
     }
   }
+
+  .testimonial-article {
+    @include media($large-screen) {
+      @include span-columns(8);
+      margin-bottom: 2rem;
+    }
+    @include row();
+    h1.testimonial-title{
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+    h2.testimonial-byline{
+      font-weight: 200;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .video-container{
+      @include video-wrapper(1920px);
+    }
+  }
 }
 
-.testimonial-layout__main {
-  @include span-columns(1);
-  @include media($large-screen) {
-    @include span-columns(3);
-  }
-  h1.testimonial-title{
-    font-size: 3rem;
-    margin-bottom: 0;
-  }
-  h2.testimonial-byline{
-    font-weight: 200;
-    font-size: 1.25rem;
-    margin: 0 0 0 0;
-  }
-}

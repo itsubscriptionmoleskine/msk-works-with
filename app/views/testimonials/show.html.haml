@@ -1,7 +1,9 @@
+-content_for :head do
+  %meta{:name =>"turbolinks-cache-control", :content=>"no-cache"}
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
-.testimonial-layout-grid-layout
-  .testimonial-layout__main
+.testimonial
+  .testimonial-article
     %h1{:class=> 'testimonial-title'}
       = @testimonial.title
     %h2{:class=> 'testimonial-byline'}
@@ -9,7 +11,8 @@
     -#ToDo: Testimonials need publish date
     - if @testimonial.video_embed
       .video-container
-        = @testimonial.video_embed.html_safe
+        .video
+          = @testimonial.video_embed.html_safe
     %p
       - if @testimonial.testimonial_slides
         - t = @testimonial.description.split('</p>')
@@ -18,15 +21,25 @@
         - t.each do |tp|
           - paragraph_tracker = paragraph_tracker + 1
           -if paragraph_tracker == midway
-            - @testimonial.testimonial_slides.each do |slide|
-              %img{:src=> slide.image_url}
-          -#ToDo: Slide JS
+            - slide_number = @testimonial.testimonial_slides.length
+            - if slide_number > 1
+              .slider
+                - @testimonial.testimonial_slides.each do |slide|
+                  .slide
+                    %img{:src=> slide.image_url}
+                    %p
+                      =slide.caption
+            - else
+              - @testimonial.testimonial_slides.each do |slide|
+                .slide-single
+                  %img{:src=> slide.image_url}
+                  %p
+                    =slide.caption
           - tp = tp + '</p>'
           = tp.html_safe
       - else
         = @testimonial.description.html_safe
-  .testimonial-layout__sidebar
-    -#ToDo: Fix Responsive Layou
+  .testimonial-sidebar
     %h3{:class=>'works-with-sidebar-title'}
       %a{:href=> works_with_path(@testimonial.works_with.id.to_s)}
         = @testimonial.works_with.title

@@ -1,6 +1,5 @@
 @import "neat/grid/media";
 .navigation-wrapper{
-  @include outer-container();
   background-color: setcolor('creme','alt');
 }
 

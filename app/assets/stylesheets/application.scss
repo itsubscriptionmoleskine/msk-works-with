@@ -1,7 +1,9 @@
-@import "neat/neat";
 @import "bourbon/bourbon";
+@import "neat/neat";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import 'slick';
+@import 'slick-theme';
 
 //Globals
 @import "global/palette";
@@ -13,6 +15,7 @@
 @import "elements/breadcrumbs";
 @import "elements/header";
 @import "elements/footer";
+@import "elements/video-wrapper";
 
 // Layouts
 @import "layouts/apps";

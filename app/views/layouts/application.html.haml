@@ -6,9 +6,10 @@
     %title Works With Moleskine +
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
     %link{:rel => 'stylesheet', :href => 'https://use.typekit.net/qbi3bum.css'}
-
+    = csrf_meta_tags
+    - if content_for?(:head)
+      = yield(:head)
   %body
     .body-container
       = render 'components/navigation'
