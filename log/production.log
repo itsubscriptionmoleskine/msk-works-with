@@ -1,2 +1,0 @@
-D, [2018-11-30T06:41:50.314650 #29713] DEBUG -- :   [1m[35m (11.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-D, [2018-11-30T06:42:34.087899 #29724] DEBUG -- :   [1m[35m (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
