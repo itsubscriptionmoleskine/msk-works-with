@@ -1,13 +1,19 @@
-$breadcrumb-layout-grid:(
-        columns: 1,
-        gutter: 1rem
-);
-
-.breadcrumb{
-  @include outer-container(100%);
-  text-transform: uppercase;
-  a{
+ul.breadcrumb{
+  margin: 0.25rem 0 2rem 1rem;
+  list-style: none;
+  padding: 0;
+  font-size: 0.75rem;
+  li{
     text-transform: uppercase;
-    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1rem;
+    a{
+      text-decoration: none;
+      font-weight: 400;
+    }
   }
+  @include media($large-screen){
+    display: flex;
+  }
+  display: none;
 }
