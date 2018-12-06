@@ -1,5 +1,14 @@
 %section
   %footer
-    %ul{:class=> 'footer'}
-      %li{:class=> 'item'}
-        %a{:href=> home_path, :tab_index=> 0, :class=>'link'} Home
+    .first-row
+      .logo
+        %a{:href=> 'https://www.moleskine.com/', :tab_index=> 0, :class=>'link'}
+          = inline_svg 'logo-no-monogram.svg', class: 'moleskine-logo-footer'
+      %ul{:class=> 'footer-links'}
+        %li{:class=> 'item'}
+          %a{:href=> tos_path, :tab_index=> 0, :class=>'link'} Terms of Service
+        %li{:class=> 'item'}
+          %a{:href=> privacy_path, :tab_index=> 0, :class=>'link'} Privacy Policy
+    .second-row
+      .trademark
+        Moleskine &reg; is a registered trademark of Moleskine Srl a socio unico

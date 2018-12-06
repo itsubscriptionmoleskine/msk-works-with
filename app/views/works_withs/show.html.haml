@@ -1,5 +1,5 @@
-.breadcrumb
-  = render_breadcrumbs
+%ul.breadcrumb
+  = render_breadcrumbs :tag=> :li, :separator => ""
 %section
   -#%img{:src=> @works_with.example_image.image_url}
   %h1
