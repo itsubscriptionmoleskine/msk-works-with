@@ -1,0 +1,10 @@
+{:uriI"‚file://app/assets/stylesheets/global/palette.lsg?type=text/lsg&id=fd247b29ff1f0f1b1b4e68867a6b2e5074f96115adb0be528ab6d925a31bbb27:ET:load_pathI"app/assets/stylesheets;T:filenameI".app/assets/stylesheets/global/palette.lsg;T:	nameI"global/palette;T:logical_pathI"global/palette.lsg;T:content_typeI"text/lsg;T:sourceI"y# Palette
+
+@colors {
+    $orange $ivory $gunmetal $blue
+    $white $grey-0 $grey-1 $grey-2 $grey-3 $grey-4  $black
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"0processors:type=text/lsg&file_type=text/lsg;TTI"<file-digest://app/assets/stylesheets/global/palette.lsg;TTF:charsetI"
+utf-8;F:digest"%¤? 5÷¸if?ýÚ¶;•7Ñû®õ¡ºéHß:lengthiy:dependencies_digest"%$±žèÃP­½DØeŸ¥ýÑ©§rß7uË5wR?Îã:idI"Efd247b29ff1f0f1b1b4e68867a6b2e5074f96115adb0be528ab6d925a31bbb27;F:
+mtimel+w\

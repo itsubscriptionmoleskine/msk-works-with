@@ -1,5 +1,5 @@
-.breadcrumb
-  = render_breadcrumbs
+%ul.breadcrumb
+  = render_breadcrumbs :tag=> :li, :separator => ""
 .testimonial-layout-grid-layout
   .testimonial-layout__main
     %h1{:class=> 'testimonial-title'}

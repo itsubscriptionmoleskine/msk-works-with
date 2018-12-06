@@ -1,5 +1,44 @@
 footer{
-  display: none;
-}
+  background-color: $grey-4;
+  padding: 1rem;
+  flex-shrink: 0;
+  @include media($medium-screen-up){
+    text-align: center;
+  }
+  @include outer-container();
+  .first-row{
+    @include media($large-screen){
+      display: flex;
+      justify-content: space-between;
+    }
+    .logo{
+      fill: $white;
+      @include media($medium-screen-up){
+        margin: 0 auto 0 auto;
+      }
+      @include media($large-screen){
+        width: 16rem;
+        margin: 0;
+      }
+      width: 10rem;
+    }
+    .footer-links{
+      @include media($large-screen){
+        display: flex;
+      }
 
-//ToDo: Styling blocked
+      list-style:none;
+      li{
+        margin-right: 1rem;
+      }
+    }
+  }
+  .second-row{
+    @include row();
+    .trademark{
+      color: $white;
+      font-weight: 100;
+      font-size: 0.75rem;
+    }
+  }
+}
