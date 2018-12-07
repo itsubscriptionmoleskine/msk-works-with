@@ -2,33 +2,29 @@ footer{
   background-color: $grey-4;
   padding: 1rem;
   flex-shrink: 0;
-  @include media($tablet){
+  @include media($md-min){
     text-align: center;
   }
   .first-row{
-    @include responsive-border();
-    @include media($desktop){
+    @include media($lg-min){
       display: flex;
       justify-content: space-between;
     }
     .logo{
       fill: $white;
-      @include responsive-border();
-      @include media($tablet){
+      @include media($md-min){
         margin: 0 auto 0 auto;
       }
-      @include media($desktop){
+      @include media($lg-min){
         width: 16rem;
         margin: 0;
       }
       width: 10rem;
     }
     .footer-links{
-      @include responsive-border();
-      @include media($desktop){
+      @include media($lg-min){
         display: flex;
       }
-
       list-style:none;
       li{
         margin-right: 1rem;

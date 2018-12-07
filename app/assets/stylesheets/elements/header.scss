@@ -16,8 +16,7 @@
     #mobile-nav-icon{
       font-size: 1.45rem;
     }
-    @include responsive-border();
-    @include media($desktop){
+    @include media($lg-min){
       display: none;
     }
   }
@@ -33,8 +32,7 @@ nav{
       display: flex;
     }
     max-width: 50%;
-    @include responsive-border();
-    @include media ($desktop) {
+    @include media ($lg-min) {
       display: flex;
     }
     li{

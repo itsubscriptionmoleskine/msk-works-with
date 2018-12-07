@@ -1,5 +1,4 @@
 .testimonials {
-  @include responsive-border();
   margin: 1rem;
   h1.page-title{
     font-size: 2.875rem;
@@ -8,7 +7,6 @@
     display: flex;
     .image{
       @include span-columns(6);
-      @include responsive-border();
       .testimonial-promo-image{
         width: 100%;
       }
@@ -16,7 +14,6 @@
     .text{
       @include span-columns(6);
       .testimonial-promo-title{
-        @include responsive-border();
         font-size: 2rem;
         font-weight: 200;
       }
@@ -31,12 +28,10 @@
 
 .testimonial{
   margin:1rem;
-  @include responsive-border();
   .testimonial-sidebar {
-    @include media($desktop) {
+    @include media($lg-min) {
       @include span-columns(4);
     }
-    @include responsive-border();
     @include span-columns(12);
     h3.works-with-sidebar-title{
       font-weight: 400;
@@ -65,9 +60,8 @@
   }
 
   .testimonial-article {
-    @include media($desktop) {
+    @include media($lg-min) {
       @include span-columns(8);
-      @include responsive-border();
       margin-bottom: 2rem;
     }
     @include row();

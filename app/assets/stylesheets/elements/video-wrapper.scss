@@ -5,7 +5,6 @@
     position: relative;
     padding-bottom: 57%;
     height: 0;
-    @include responsive-border();
     iframe{
       position: absolute;
       top: 0;
