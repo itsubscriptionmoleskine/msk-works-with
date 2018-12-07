@@ -23,38 +23,57 @@
 
 .works-with {
   .main{
-    @include responsive-border();
+    display:flex;
     .left{
-      @include responsive-border();
+      @include span-columns(4);
+      .slider{
+        .slide{
+            max-height: 300px;
+        }
+      }
     }
     .right{
-      @include responsive-border();
+      @include span-columns(8);
       h1.page-title{
-
+        font-size: 2rem;
       }
       .right-columns{
-        @include responsive-border();
+        display: flex;
         .description-column{
-          @include responsive-border();
+          @include span-columns(7);
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
           .description{
-            @include responsive-border();
+            font-weight: 200;
           }
-          .developer{
-            @include responsive-border();
-            .developer-link{
-              @include responsive-border();
+          .developer-promotion{
+            .developer-promotion-attribution{
+              font-size: 1.75rem;
+              font-weight: 200;
+              margin-right: 1rem;
+            }
+            .developer-promotion-link{
+              font-size: 1.75rem;
+              font-weight: 600;
+              text-decoration: none;
             }
           }
         }
         .download-column{
-          @include responsive-border();
+          @include span-columns(5);
+          padding: 0 1rem;
           h3.download-header{
-
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
           }
-          ul{
+          ul.download-app-links{
+            list-style: none;
+            margin: 0;
             li{
               a{
-
+                font-size: 1.25rem;
               }
             }
           }
@@ -63,15 +82,52 @@
     }
   }
   .related{
-    @include responsive-border();
-    h2.made-with-related{
+    margin: 2rem 0 0 0;
+    background-color: $grey-3;
+    padding: 2rem;
 
-    }
-    .works-with-card-holder{
-      @include responsive-border();
-      .works-with-card{
-        @include responsive-border();
+    .related-inner{
+      @include outer-container();
+      h2.made-with-related-title{
+        font-size: 2rem;
+        color: $white;
+        background-color: $black;
+        padding: 0.5rem 0 0.5rem 1rem;
+      }
+      .works-with-card-holder{
+        display: flex;
+        flex-wrap: nowrap;
+        @include media($md-min) {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-around;
+        }
+        flex-direction: column;
+        .works-with-card{
+          flex-grow: 1;
+          text-align: center;
+          h2{
+            color: $white;
+          }
+          @include media($md-min) {
+            width: 100%;
+          }
+          @include responsive-border();
+          @include media($md-min) {
+            &:nth-child(1){
+              margin-right: 1rem;
+            }
+            &:nth-child(2){
+              margin:0 1rem 0 1rem;
+            }
+            &:nth-child(3){
+              margin-left: 1rem;
+            }
+          }
+        }
       }
     }
+
+
   }
 }

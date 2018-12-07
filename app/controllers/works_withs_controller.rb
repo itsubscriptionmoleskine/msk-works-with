@@ -16,6 +16,11 @@ class WorksWithsController < ApplicationController
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Works With', works_withs_path
     add_breadcrumb  @works_with.title, works_with_path(@works_with.id)
+
+    #ToDo: When more content is available this should use UseCase to build related works with
+
+    @related_works_with = WorksWith.all.last(3)
+
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @works_with}
