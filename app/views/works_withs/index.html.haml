@@ -1,2 +1,21 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
+.works-withs
+  %h1.page-title
+    Works With Moleskine+
+  -@works_withs.each do |works_with|
+    .works-with-promo-listing
+      .combo
+        App:
+        %a{:href => apps_path + '/' + works_with.app.id.to_s, :class=> 'combo-link'}
+          = works_with.app.name
+        Product:
+        %a{:href =>  works_with.offering.shop_link, :class=> 'combo-link'}
+          = works_with.offering.name
+      .text
+        %h2{:class => 'works-with-title'}
+          = works_with.title
+        %p
+          = works_with.description
+        %a{:href => works_withs_path + '/' + works_with.id.to_s, :class=> 'view-more-link'}
+          View More

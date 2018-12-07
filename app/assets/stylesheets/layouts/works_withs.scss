@@ -1,3 +1,77 @@
-// Place all the styles related to the WorksWiths controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.works-withs{
+  margin: 1rem;
+  h1.page-title{
+    font-size: 2.875rem;
+  }
+  .works-with-promo-listing{
+    display: flex;
+    .combo{
+      @include span-columns(4);
+      border: 1px solid;
+      display: flex;
+      flex-direction: column;
+    }
+    .text{
+      @include span-columns(8);
+      .works-with-title{
+        font-size: 2rem;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.works-with {
+  .main{
+    @include responsive-border();
+    .left{
+      @include responsive-border();
+    }
+    .right{
+      @include responsive-border();
+      h1.page-title{
+
+      }
+      .right-columns{
+        @include responsive-border();
+        .description-column{
+          @include responsive-border();
+          .description{
+            @include responsive-border();
+          }
+          .developer{
+            @include responsive-border();
+            .developer-link{
+              @include responsive-border();
+            }
+          }
+        }
+        .download-column{
+          @include responsive-border();
+          h3.download-header{
+
+          }
+          ul{
+            li{
+              a{
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .related{
+    @include responsive-border();
+    h2.made-with-related{
+
+    }
+    .works-with-card-holder{
+      @include responsive-border();
+      .works-with-card{
+        @include responsive-border();
+      }
+    }
+  }
+}

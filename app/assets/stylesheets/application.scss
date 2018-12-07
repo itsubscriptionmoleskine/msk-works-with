@@ -6,6 +6,7 @@
 @import 'slick-theme';
 
 //Globals
+@import "global/development";
 @import "global/palette";
 @import "global/grid";
 @import "global/typography";
@@ -20,5 +21,6 @@
 // Layouts
 @import "layouts/apps";
 @import "layouts/developers";
+@import "layouts/home";
 @import "layouts/testimonials";
 @import "layouts/works_withs";

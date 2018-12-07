@@ -1,0 +1,23 @@
+// Mixins used only during the development process
+@import "../base/grid-settings";
+
+@mixin responsive-border(){
+  @media (max-width: $xs-max) {
+    border: 2px solid green;
+  }
+  @media (min-width: $sm-min) and (max-width: $sm-max) {
+    border: 2px solid yellow;
+  }
+  @media (min-width:$md-min) and (max-width: $md-max) {
+    border: 2px solid orange;
+  }
+  @media (min-width: $lg-min) {
+    border: 2px solid red;
+  }
+}
+
+.responsive-example{
+  height: 2rem;
+  width: 2rem;
+  @include responsive-border();
+}

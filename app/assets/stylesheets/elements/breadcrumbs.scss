@@ -12,7 +12,7 @@ ul.breadcrumb{
       font-weight: 400;
     }
   }
-  @include media($large-screen){
+  @include media($desktop){
     display: flex;
   }
   display: none;

@@ -1,16 +1,29 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
-%section
-  -#%img{:src=> @works_with.example_image.image_url}
-  %h1
-    = @works_with.title
-  -#%p
-  -#  = @works_with.description
-  -#%a{:href=> @works_with.distributor_link}
-  -#  = @works_with.distributor.name
-  -#%a{:href=> @works_with.developer.link}
-  -#  = @works_with.developer.name
-
-  -#ToDo: Made with group
-
-
+.works-with
+  .main
+    .left
+      image
+    .right
+      %h1.page-title
+        = @works_with.title
+      .right-columns
+        .description-column
+          .description
+            = @works_with.description
+          .developer
+            %a{:href=>'#', :class=>'developer-link'}
+              =@works_with.app.developer.name
+        .download-column
+          %h3{:class=>'download-header'}
+            CTA
+          %ul
+            - @works_with.app.distributor_links.each do |store_link|
+              %li
+                %a{:href=> store_link.link}
+                  = store_link.distributor.name
+  .related
+    %h2.made-with-title Made with Moleskine+
+    .works-with-card-holder
+      .works-with-card
+        card
