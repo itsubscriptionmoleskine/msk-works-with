@@ -40,10 +40,10 @@
         = @testimonial.description.html_safe
   .testimonial-sidebar
     %h3{:class=>'works-with-sidebar-title'}
-      %a{:href=> works_with_path(@testimonial.works_with.id.to_s)}
+      %a{:href=> works_with_path(@testimonial.works_with.id.to_s), :tab_index=> 0}
         = @testimonial.works_with.title
     %ul{:class=>'distributor-links'}
       - @testimonial.works_with.app.distributor_links.each do |dl|
         %li
-          %a{:href=> dl.link }
+          %a{:href=> dl.link, :tab_index=> 0}
             = dl.distributor.name

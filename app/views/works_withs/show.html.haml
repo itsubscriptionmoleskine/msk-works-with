@@ -21,7 +21,7 @@
             %span{:class=>'developer-promotion-attribution'}
               = @works_with.app.name
               created by:
-            %a{:href=>'#', :class=>'developer-promotion-link'}
+            %a{:href=>'#', :class=>'developer-promotion-link', :tab_index=> 0}
               =@works_with.app.developer.name
         .download-column
           %h3{:class=>'download-header'}
@@ -31,17 +31,16 @@
             - @works_with.app.distributor_links.each do |store_link|
               %li
                 =icon('fab', 'apple')
-                %a{:href=> store_link.link}
+                %a{:href=> store_link.link, :tab_index=> 0}
                   = store_link.distributor.name
   -#ToDo: Check for length
-  -#ToDo: works with relates to component
   - if @related_works_with
     .works-with-related
       .related-inner
         %h2.made-with-related-title
-          Made with Moleskine+
+          Get more out of Moleskine+
         .works-with-card-holder
           -@related_works_with.each do |card|
-            .works-with-card{:style => "background-image:url(#{card.promo_image_url})", :onclick =>"location.href='#{card.promo_image_url}'"}
+            .works-with-card{:style => "background-image:url(#{card.promo_image_url})", :onclick =>"location.href='#{card.promo_image_url}'", :tab_index=> 0}
               %h2.card-title
                 = card.title

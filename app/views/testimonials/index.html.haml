@@ -8,14 +8,14 @@
     -if promo_counter%2 != 0
       .testimonial-promo-listing
         .image
-          %a{:href => testimonials_path+'/'+(testimonail.id.to_s)}
+          %a{:href => testimonials_path+'/'+(testimonail.id.to_s), :tab_index=> 0}
             %img{:src => testimonail.promo_image_url, :class=> 'testimonial-promo-image'}
         .text
           %h2{:class => 'testimonial-promo-title'}
             = testimonail.title
           %p
             = testimonail.promo_text.html_safe
-          %a{:href => testimonials_path+'/'+(testimonail.id.to_s), :class=>'view-more'}
+          %a{:href => testimonials_path+'/'+(testimonail.id.to_s), :class=>'view-more', :tab_index=> 0}
             View
     -else
       .testimonial-promo-listing
@@ -24,8 +24,8 @@
             = testimonail.title
           %p
             = testimonail.promo_text.html_safe
-          %a{:href => testimonials_path+'/'+(testimonail.id.to_s), :class=>'view-more'}
+          %a{:href => testimonials_path+'/'+(testimonail.id.to_s), :class=>'view-more', :tab_index=> 0}
             View
         .image
-          %a{:href => testimonials_path+'/'+(testimonail.id.to_s)}
+          %a{:href => testimonials_path+'/'+(testimonail.id.to_s), :tab_index=> 0}
             %img{:src => testimonail.promo_image_url, :class=> 'testimonial-promo-image'}
