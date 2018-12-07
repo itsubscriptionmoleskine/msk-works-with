@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_164228) do
+ActiveRecord::Schema.define(version: 20181207155315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -119,6 +119,9 @@ ActiveRecord::Schema.define(version: 2018_12_03_164228) do
     t.datetime "updated_at", null: false
     t.bigint "works_with_id"
     t.text "video_embed"
+    t.string "promo_image_url"
+    t.text "promo_text"
+    t.date "publish_date"
     t.index ["works_with_id"], name: "index_testimonials_on_works_with_id"
   end
 
@@ -140,6 +143,8 @@ ActiveRecord::Schema.define(version: 2018_12_03_164228) do
     t.datetime "updated_at", null: false
     t.bigint "app_id"
     t.bigint "offering_id"
+    t.string "promo_image_url"
+    t.text "promo_text"
     t.index ["app_id"], name: "index_works_withs_on_app_id"
     t.index ["offering_id", "app_id"], name: "index_works_withs_on_offering_id_and_app_id"
     t.index ["offering_id"], name: "index_works_withs_on_offering_id"

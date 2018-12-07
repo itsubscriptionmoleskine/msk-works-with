@@ -1,0 +1,87 @@
+@import "palette";
+@import "animation";
+@mixin box-shadow( $horiz : 1rem , $vert : .875rem , $blur : 1rem , $spread : -5px , $color : transparentize($black, 0.87) ){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+.example-box-shadow{
+  height: 100px;
+  width: 100px;
+  @include box-shadow();
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/// Gives a card depth effect.
+/// @param {Number} $depth - depth level (between 1 and 5)
+/// @link http://www.google.com/design/spec/layout/layout-principles.html#layout-principles-dimensionality Google Design
+/// @requires {function} top-shadow
+/// @requires {function} bottom-shadow
+@mixin card($depth) {
+  @if $depth < 1 {
+    box-shadow: none;
+  } @else if $depth > 5 {
+    @warn "Invalid $depth `#{$depth}` for mixin `card`.";
+  } @else {
+    box-shadow: bottom-shadow($depth), top-shadow($depth);
+    @include transition(box-shadow .3s ease);
+  }
+}
+
+/// Computes a top-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+/// Computes a bottom-shadow for a card effect.
+/// @param {Number} $depth - depth level
+/// @return {List}
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+.example-card-1{
+  height: 100px;
+  width: 100px;
+  @include card(1);
+}
+
+.example-card-2{
+  height: 100px;
+  width: 100px;
+  @include card(2);
+}
+
+.example-card-3{
+  height: 100px;
+  width: 100px;
+  @include card(3);
+}
+
+.example-card-4{
+  height: 100px;
+  width: 100px;
+  @include card(4);
+}
+
+.example-card-5{
+  height: 100px;
+  width: 100px;
+  @include card(5);
+}

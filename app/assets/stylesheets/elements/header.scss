@@ -1,6 +1,5 @@
 @import "neat/grid/media";
 .navigation-wrapper{
-  @include outer-container();
   background-color: setcolor('creme','alt');
 }
 
@@ -17,7 +16,7 @@
     #mobile-nav-icon{
       font-size: 1.45rem;
     }
-    @include media($large-screen){
+    @include media($lg-min){
       display: none;
     }
   }
@@ -33,7 +32,7 @@ nav{
       display: flex;
     }
     max-width: 50%;
-    @include media ($large-screen) {
+    @include media ($lg-min) {
       display: flex;
     }
     li{

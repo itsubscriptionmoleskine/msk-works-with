@@ -1,16 +1,46 @@
+-content_for :head do
+  %meta{:name =>"turbolinks-cache-control", :content=>"no-cache"}
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
-%section
-  -#%img{:src=> @works_with.example_image.image_url}
-  %h1
-    = @works_with.title
-  -#%p
-  -#  = @works_with.description
-  -#%a{:href=> @works_with.distributor_link}
-  -#  = @works_with.distributor.name
-  -#%a{:href=> @works_with.developer.link}
-  -#  = @works_with.developer.name
-
-  -#ToDo: Made with group
-
-
+.works-with
+  .main
+    .left
+      .slider
+        -@works_with.example_images.each do |e|
+          .slide
+            %img{:src=> e.image_url}
+    .right
+      %h1.page-title
+        = @works_with.title
+      .right-columns
+        .description-column
+          .description
+            = @works_with.description.html_safe
+          %hr{:class=>'description-column-rule'}
+          .developer-promotion
+            %span{:class=>'developer-promotion-attribution'}
+              = @works_with.app.name
+              created by:
+            %a{:href=>'#', :class=>'developer-promotion-link', :tab_index=> 0}
+              =@works_with.app.developer.name
+        .download-column
+          %h3{:class=>'download-header'}
+            Download
+            = @works_with.app.name
+          %ul{:class => 'download-app-links'}
+            - @works_with.app.distributor_links.each do |store_link|
+              %li
+                =icon('fab', 'apple')
+                %a{:href=> store_link.link, :tab_index=> 0}
+                  = store_link.distributor.name
+  -#ToDo: Check for length
+  - if @related_works_with
+    .works-with-related
+      .related-inner
+        %h2.made-with-related-title
+          Get more out of Moleskine+
+        .works-with-card-holder
+          -@related_works_with.each do |card|
+            .works-with-card{:style => "background-image:url(#{card.promo_image_url})", :onclick =>"location.href='#{card.promo_image_url}'", :tab_index=> 0}
+              %h2.card-title
+                = card.title
