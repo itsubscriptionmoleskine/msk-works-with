@@ -6,4 +6,5 @@ class WorksWith < ApplicationRecord
   belongs_to :offering
   accepts_nested_attributes_for :app
   accepts_nested_attributes_for :offering
+  mount_uploader :promo_image_url, ImageUploader
 end

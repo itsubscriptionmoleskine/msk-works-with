@@ -6,9 +6,12 @@
 @import 'slick-theme';
 
 //Globals
+@import "global/accessibility";
+@import "global/borders";
 @import "global/development";
 @import "global/palette";
 @import "global/grid";
+@import "global/lighting";
 @import "global/typography";
 @import "base/base";
 

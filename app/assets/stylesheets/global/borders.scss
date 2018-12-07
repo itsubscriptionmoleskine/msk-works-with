@@ -1,0 +1,17 @@
+@mixin border-radius ( $tl: 0.5rem, $tr: 0.5rem, $br: 0.5rem, $bl: 0.5rem) {
+  border-top-left-radius: $tl;
+  border-top-right-radius: $tr;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $bl;
+  -webkit-border-top-left-radius: $tl;
+  -webkit-border-top-right-radius: $tr;
+  -webkit-border-bottom-right-radius: $br;
+  -webkit-border-bottom-left-radius: $bl;
+  --moz-border-top-left-radius: $tl;
+  --moz-border-top-right-radius: $tr;
+  --moz-border-bottom-right-radius: $br;
+  --moz-border-bottom-left-radius: $bl;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
