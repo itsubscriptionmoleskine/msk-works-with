@@ -2,30 +2,29 @@ footer{
   background-color: $grey-4;
   padding: 1rem;
   flex-shrink: 0;
-  @include media($medium-screen-up){
+  @include media($md-min){
     text-align: center;
   }
   .first-row{
-    @include media($large-screen){
+    @include media($lg-min){
       display: flex;
       justify-content: space-between;
     }
     .logo{
       fill: $white;
-      @include media($medium-screen-up){
+      @include media($md-min){
         margin: 0 auto 0 auto;
       }
-      @include media($large-screen){
+      @include media($lg-min){
         width: 16rem;
         margin: 0;
       }
       width: 10rem;
     }
     .footer-links{
-      @include media($large-screen){
+      @include media($lg-min){
         display: flex;
       }
-
       list-style:none;
       li{
         margin-right: 1rem;

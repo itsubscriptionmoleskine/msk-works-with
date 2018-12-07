@@ -16,6 +16,11 @@ class WorksWithsController < ApplicationController
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Works With', works_withs_path
     add_breadcrumb  @works_with.title, works_with_path(@works_with.id)
+
+    #ToDo: When more content is available this should use UseCase to build related works with
+
+    @related_works_with = WorksWith.all.last(3)
+
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @works_with}
@@ -69,6 +74,6 @@ class WorksWithsController < ApplicationController
   end
 
   def works_with_params
-    params.require(:works_with).permit(:title, :description, :app_id, :offering_id, :is_live)
+    params.require(:works_with).permit(:title, :description, :app_id, :offering_id, :is_live, :promo_image_url, :promo_text)
   end
 end

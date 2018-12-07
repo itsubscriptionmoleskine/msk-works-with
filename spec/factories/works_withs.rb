@@ -8,8 +8,16 @@ FactoryBot.define do
     is_live {true}
     offering
     app
+    promo_image_url {Faker::Internet.url}
+    promo_text {Faker::Lorem.sentence}
     trait :wip do
       is_live {false}
+    end
+    trait :no_promo_image do
+      promo_image_url {}
+    end
+    trait :no_promo_text do
+      promo_text {}
     end
   end
 end

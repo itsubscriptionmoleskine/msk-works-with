@@ -19,7 +19,6 @@ FactoryBot.define do
     end
     trait :no_promo_image do
       promo_image_url {}
-
     end
     trait :no_promo_text do
       promo_text {}

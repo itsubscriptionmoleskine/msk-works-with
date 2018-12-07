@@ -29,7 +29,7 @@
 .testimonial{
   margin:1rem;
   .testimonial-sidebar {
-    @include media($large-screen) {
+    @include media($lg-min) {
       @include span-columns(4);
     }
     @include span-columns(12);
@@ -60,7 +60,7 @@
   }
 
   .testimonial-article {
-    @include media($large-screen) {
+    @include media($lg-min) {
       @include span-columns(8);
       margin-bottom: 2rem;
     }
