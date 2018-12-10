@@ -28,9 +28,10 @@
             Download
             = @works_with.app.name
           %ul{:class => 'download-app-links'}
+            -#ToDo: Badges?-
             - @works_with.app.distributor_links.each do |store_link|
               %li
-                =icon('fab', 'apple')
+                =icon('fab', store_link.distributor.icon_id)
                 %a{:href=> store_link.link, :tab_index=> 0}
                   = store_link.distributor.name
   -#ToDo: Check for length
@@ -41,6 +42,6 @@
           Get more out of Moleskine+
         .works-with-card-holder
           -@related_works_with.each do |card|
-            .works-with-card{:style => "background-image:url(#{card.promo_image_url})", :onclick =>"location.href='#{card.promo_image_url}'", :tab_index=> 0}
+            .works-with-card{:style => "background-image:url(#{card.promo_image_url})", :onclick =>"location.href='#{works_withs_path + '/' + card.id.to_s}'", :tab_index=> 0}
               %h2.card-title
                 = card.title

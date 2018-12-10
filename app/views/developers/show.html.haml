@@ -1,2 +1,17 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
+.developer
+  .developer-logo-image{:style =>  "background-image:url(#{@developer.logo_image_url})"}
+  .developer-promo-info
+    %h1.page-title
+      = @developer.name
+    %p
+      = @developer.description.html_safe
+    %h2
+      Created by
+      = @developer.name
+    %ul.apps-by-this-developer
+      -@developer_works_withs.each do |w|
+        %li
+          %a{:href=> works_withs_path + "/" + w.id.to_s}
+            = w.title

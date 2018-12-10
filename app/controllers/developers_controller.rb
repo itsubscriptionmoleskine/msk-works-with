@@ -16,6 +16,16 @@ class DevelopersController < ApplicationController
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Developers', developers_path
     add_breadcrumb @developer.name, developer_path(@developer.id)
+
+    @developer_works_withs = []
+
+    @developer.apps.each do |app|
+      w = WorksWith.all.where(app_id: app.id)
+      w.each do |ww|
+        @developer_works_withs.append(ww)
+      end
+    end
+
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @developer}
@@ -69,6 +79,6 @@ class DevelopersController < ApplicationController
   end
 
   def developer_params
-    params.require(:developer).permit(:name, :description, :url, :is_live)
+    params.require(:developer).permit(:name, :description, :url, :is_live, :logo_image_url)
   end
 end

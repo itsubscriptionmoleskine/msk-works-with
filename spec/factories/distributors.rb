@@ -5,6 +5,7 @@ FactoryBot.define do
   factory :distributor do
     name {:distributor_name}
     badge_image_url {Faker::Internet.url}
+    icon_id {'apple'}
     is_live {true}
     trait :wip do
       is_live {false}

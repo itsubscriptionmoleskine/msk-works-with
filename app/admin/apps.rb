@@ -1,6 +1,6 @@
 ActiveAdmin.register App do
 
-  permit_params :name, :description, :url, :is_live, :developer_id
+  permit_params :name, :description, :info_url, :is_live, :developer_id
 
   form(:html => {:multipart => true}) do |f|
     f.inputs do
