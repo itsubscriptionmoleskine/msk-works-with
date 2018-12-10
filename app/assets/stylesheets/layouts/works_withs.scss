@@ -5,12 +5,18 @@
   }
   .works-with-promo-listing{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    @include media($lg-min) {
+      flex-direction: row;
+    }
     .visual-side{
       $visual-side-border-radius: 0.875rem;
       background-color: $grey-3;
       @include border-radius($visual-side-border-radius  $visual-side-border-radius  $visual-side-border-radius  $visual-side-border-radius);
-      @include span-columns(4);
+      @include span-columns(12);
+      @include media($lg-min) {
+        @include span-columns(4);
+      }
       @include box-shadow();
       display: flex;
       flex-direction: column;
@@ -34,7 +40,12 @@
       }
     }
     .text-side{
-      @include span-columns(8);
+      @include span-columns(12);
+      margin-top:1rem;
+      @include media($lg-min) {
+        @include span-columns(8);
+        margin-top:0;
+      }
       .works-with-title{
         font-size: 2rem;
         font-weight: 200;
@@ -45,8 +56,15 @@
 .works-with {
   .main{
     display:flex;
+    flex-direction: column;
+    @include media($lg-min) {
+      flex-direction: row;
+    }
     .left{
-      @include span-columns(4);
+      @include media($lg-min) {
+        @include span-columns(4);
+      }
+      @include span-columns(12);
       .slider{
         .slide{
             max-height: 300px;
@@ -54,7 +72,10 @@
       }
     }
     .right{
-      @include span-columns(8);
+      @include span-columns(12);
+      @include media($lg-min) {
+        @include span-columns(8);
+      }
       h1.page-title{
         font-size: 2rem;
       }
