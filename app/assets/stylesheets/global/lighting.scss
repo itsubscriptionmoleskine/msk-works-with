@@ -1,6 +1,6 @@
 @import "palette";
 @import "animation";
-@mixin box-shadow( $horiz : 1rem , $vert : .875rem , $blur : 1rem , $spread : -5px , $color : transparentize($black, 0.87) ){
+@mixin box-shadow( $horiz : 0.5rem , $vert : .5rem , $blur: 0.51rem , $spread : -2px , $color : transparentize($brown, 0.75) ){
   -webkit-box-shadow: $horiz $vert $blur $spread $color;
   -moz-box-shadow: $horiz $vert $blur $spread $color;
   box-shadow: $horiz $vert $blur $spread $color;
@@ -41,7 +41,6 @@
   $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
   $blur: nth(1.5 3 10 14 19, $depth) * 4px;
   $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
-
   @return 0 $primary-offset $blur $color;
 }
 
