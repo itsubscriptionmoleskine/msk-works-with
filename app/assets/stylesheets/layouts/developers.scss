@@ -1,7 +1,40 @@
 .developers{
-  @include responsive-border();
+  margin-left: 1rem;
+ h1.page-title{
+   font-size: 3rem;
+ }
+  .developers-promo-container{
+    @include span-columns(5);
+    h2.developer-promo-title{
+      font-size: 2rem;
+      font-weight: 200;
+    }
+    .view-more{
+      float: right;
+    }
+  }
 }
 
 .developer{
-  @include responsive-border();
+  margin-left: 1rem;
+  display: flex;
+  margin-bottom: 2rem;
+  .developer-logo-image{
+    @include media($lg-min) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include span-columns(5);
+      display: inline;
+    }
+    display: none;
+  }
+  .developer-promo-info{
+    @include span-columns(7);
+    h1.page-title{
+      font-size: 2rem;
+    }
+    ul.apps-by-this-developer{
+      list-style: none;
+    }
+  }
 }

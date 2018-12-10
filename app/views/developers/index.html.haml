@@ -1,2 +1,13 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
+.developers
+  %h1.page-title Partners
+  - @developers.each do |developer|
+    .developers-promo-container
+      .developer-promo-image{:style =>  "background-image:url(#{developer.logo_image_url})"}
+      %h2.developer-promo-title
+        = developer.name
+      %p
+        = developer.description.html_safe
+      %a{:href => developers_path + "/" + developer.id.to_s, :class=> 'view-more'}
+        View

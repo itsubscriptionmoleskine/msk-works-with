@@ -64,6 +64,6 @@ class DistributorsController < ApplicationController
   end
 
   def distributor_params
-    params.require(:distributor).permit(:name, :badge_image_url, :is_live)
+    params.require(:distributor).permit(:name, :badge_image_url, :is_live, :icon_id)
   end
 end
