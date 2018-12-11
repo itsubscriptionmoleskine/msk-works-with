@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_prefixer.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _prefixer.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/addons/_prefixer.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>@charset “UTF-8”;</p>
+
+<p>/// A mixin for generating vendor prefixes on non-standardized properties.
+/// /// @param {String} $property ///   Property to prefix /// /// @param
+{*} $value ///   Value to use /// /// @param {List} $prefixes ///  
+Prefixes to define /// /// @example scss - Usage ///   .element { ///    
+@include prefixer(border-radius, 10px, webkit ms spec); ///   } /// ///
+@example css - CSS Output ///   .element { ///     -webkit-border-radius:
+10px; ///     -moz-border-radius: 10px; ///     border-radius: 10px; ///  
+} /// /// @require {variable} $prefix-for-webkit /// @require {variable}
+$prefix-for-mozilla /// @require {variable} $prefix-for-microsoft ///
+@require {variable} $prefix-for-opera /// @require {variable}
+$prefix-for-spec</p>
+
+<p>@mixin prefixer($property, $value, $prefixes) {</p>
+
+<pre><code>@each $prefix in $prefixes {
+  @if $prefix == webkit {
+    @if $prefix-for-webkit {
+      -webkit-#{$property}: $value;
+    }
+  } @else if $prefix == moz {
+    @if $prefix-for-mozilla {
+      -moz-#{$property}: $value;
+    }
+  } @else if $prefix == ms {
+    @if $prefix-for-microsoft {
+      -ms-#{$property}: $value;
+    }
+  } @else if $prefix == o {
+    @if $prefix-for-opera {
+      -o-#{$property}: $value;
+    }
+  } @else if $prefix == spec {
+    @if $prefix-for-spec {
+      #{$property}: $value;
+    }
+  } @else  {
+    @warn &quot;Unrecognized prefix: #{$prefix}&quot;;
+  }
+}
+</code></pre>
+
+<p>}</p>
+
+<p>@mixin disable-prefix-for-all() {</p>
+
+<pre><code>$prefix-for-webkit:    false !global;
+$prefix-for-mozilla:   false !global;
+$prefix-for-microsoft: false !global;
+$prefix-for-opera:     false !global;
+$prefix-for-spec:      false !global;
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>index.html.haml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            index.html.haml
+        </h1>
+        <ul class="files">
+            <li>app/views/works_withs/index.html.haml</li>
+            <li>Last modified: 2018-12-07 13:59:33 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>%ul.breadcrumb</p>
+
+<pre><code>= render_breadcrumbs :tag=&gt; :li, :separator =&gt; &quot;&quot;
+</code></pre>
+
+<p>.works-withs</p>
+
+<pre><code>%h1.page-title
+  Works With Moleskine+
+-@works_withs.each do |works_with|
+  .works-with-promo-listing
+    .visual-side
+      .img-container{:style =&gt; &quot;background-image:url(#{works_with.promo_image_url})&quot;}
+      .combo
+        %a{:href =&gt; apps_path + &#39;/&#39; + works_with.app.id.to_s, :class=&gt; &#39;combo-link&#39;, :tab_index=&gt; 0}
+          = works_with.app.name
+        %span
+          works with
+        %a{:href =&gt;  works_with.offering.shop_link, :class=&gt; &#39;combo-link&#39;, :tab_index=&gt; 0}
+          = works_with.offering.name
+    .text-side
+      %h2{:class =&gt; &#39;works-with-title&#39;}
+        = works_with.title
+      %p
+        = works_with.promo_text.html_safe
+      %a{:href =&gt; works_withs_path + &#39;/&#39; + works_with.id.to_s, :class=&gt; &#39;view-more-link&#39;, :tab_index=&gt; 0}
+        View More
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

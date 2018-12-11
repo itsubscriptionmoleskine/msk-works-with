@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>plugin.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            plugin.js
+        </h1>
+        <ul class="files">
+            <li>public/assets/tinymce/plugins/preview/plugin.js</li>
+            <li>Last modified: 2018-12-04 12:31:01 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>!function(){“use strict”;var
+e=tinymce.util.Tools.resolve(“tinymce.PluginManager”),r=tinymce.util.Tools.resolve(“tinymce.Env”),c=function(e){return
+parseInt(e.getParam(“plugin_preview_width”,“650”),10)},a=function(e){return
+parseInt(e.getParam(“plugin_preview_height”,“500”),10)},s=function(e){return
+e.getParam(“content_style”,“”)},d=tinymce.util.Tools.resolve(“tinymce.util.Tools”),l=function(t){var
+n=“”,i=t.dom.encode,e=s(t);n+=&#39;&lt;bitters
+href=“&#39;+i(t.documentBaseURI.getURI())+&#39;”&gt;&#39;,e&amp;&amp;(n+=&#39;&lt;style
+type=“text/css”&gt;&#39;<code>e</code>“&lt;/style&gt;”),d.each(t.contentCSS,function(e){n+=&#39;&lt;link
+type=“text/css” rel=“stylesheet”
+href=“&#39;+i(t.documentBaseURI.toAbsolute(e))+&#39;”&gt;&#39;});var <a
+href="t.id">o=t.settings.body_id||“tinymce”;-1!==o.indexOf(“=”)&&(o=(o=t.getParam(“body_id”,“”,“hash”))</a>||o);var
+<a
+href="t.id">r=t.settings.body_class||“”;-1!==r.indexOf(“=”)&&(r=(r=t.getParam(“body_class”,“”,“hash”))</a>||“”);var
+c=t.settings.directionality?&#39;
+dir=“&#39;<code>t.settings.directionality</code>&#39;”&#39;:“”;return“&lt;!DOCTYPE
+html&gt;&lt;html&gt;&lt;head&gt;”<code>n</code>&#39;&lt;/head&gt;&lt;body
+id=“&#39;+i(o)+&#39;” class=“mce-content-body
+&#39;+i®+&#39;”&#39;+i©+“&gt;”+t.getContent()+&#39;&lt;script&gt;document.addEventListener
+&amp;&amp; document.addEventListener(“click”, function(e) {for (var elm =
+e.target; elm; elm = elm.parentNode) {if (elm.nodeName === “A”)
+{e.preventDefault();}}}, false);&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;&#39;},m=function(e,t,n){var
+i=l(e);if(n)t.src=“data:text/html;charset=utf-8,”+encodeURIComponent(i);else{var
+o=t.contentWindow.document;o.open(),o.write(i),o.close()}},t=function(n){var
+i=!r.ie,e=&#39;&lt;iframe src=“” frameborder=“0”&#39;+(i?&#39;
+sandbox=“allow-scripts”&#39;:“”)+“&gt;&lt;/iframe&gt;”,t=c(n),o=a(n);n.windowManager.open({title:“Preview”,width:t,height:o,html:e,buttons:{text:“Close”,onclick:function(e){e.control.parent().parent().close()}},onPostRender:function(e){var
+t=e.control.getEl(“body”).firstChild;m(n,t,i)}})},n=function(e){e.addCommand(“mcePreview”,function(){t(e)})},i=function(e){e.addButton(“preview”,{title:“Preview”,cmd:“mcePreview”}),e.addMenuItem(“preview”,{text:“Preview”,cmd:“mcePreview”,context:“view”})};e.add(“preview”,function(e){n(e),i(e)})}();</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

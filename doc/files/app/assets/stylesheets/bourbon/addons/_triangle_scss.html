@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_triangle.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _triangle.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/addons/_triangle.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>@mixin triangle($size, $color, $direction) {</p>
+
+<pre><code>$width: nth($size, 1);
+$height: nth($size, length($size));
+$foreground-color: nth($color, 1);
+$background-color: if(length($color) == 2, nth($color, 2), transparent);
+height: 0;
+width: 0;
+
+@if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+  $width: $width / 2;
+  $height: if(length($size) &gt; 1, $height, $height/2);
+
+  @if $direction == up {
+    border-bottom: $height solid $foreground-color;
+    border-left: $width solid $background-color;
+    border-right: $width solid $background-color;
+  } @else if $direction == right {
+    border-bottom: $width solid $background-color;
+    border-left: $height solid $foreground-color;
+    border-top: $width solid $background-color;
+  } @else if $direction == down {
+    border-left: $width solid $background-color;
+    border-right: $width solid $background-color;
+    border-top: $height solid $foreground-color;
+  } @else if $direction == left {
+    border-bottom: $width solid $background-color;
+    border-right: $height solid $foreground-color;
+    border-top: $width solid $background-color;
+  }
+} @else if ($direction == up-right) or ($direction == up-left) {
+  border-top: $height solid $foreground-color;
+
+  @if $direction == up-right {
+    border-left:  $width solid $background-color;
+  } @else if $direction == up-left {
+    border-right: $width solid $background-color;
+  }
+} @else if ($direction == down-right) or ($direction == down-left) {
+  border-bottom: $height solid $foreground-color;
+
+  @if $direction == down-right {
+    border-left:  $width solid $background-color;
+  } @else if $direction == down-left {
+    border-right: $width solid $background-color;
+  }
+} @else if ($direction == inset-up) {
+  border-color: $background-color $background-color $foreground-color;
+  border-style: solid;
+  border-width: $height $width;
+} @else if ($direction == inset-down) {
+  border-color: $foreground-color $background-color $background-color;
+  border-style: solid;
+  border-width: $height $width;
+} @else if ($direction == inset-right) {
+  border-color: $background-color $background-color $background-color $foreground-color;
+  border-style: solid;
+  border-width: $width $height;
+} @else if ($direction == inset-left) {
+  border-color: $background-color $foreground-color $background-color $background-color;
+  border-style: solid;
+  border-width: $width $height;
+}
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

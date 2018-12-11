@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_background-image.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _background-image.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/css3/_background-image.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>/                                                                        
+// // Background-image property for adding multiple background images with
+// gradients, or for stringing multiple gradients together. //             
+/</p>
+
+<p>@mixin background-image($images…) {</p>
+
+<pre><code>$webkit-images: ();
+$spec-images: ();
+
+@each $image in $images {
+  $webkit-image: ();
+  $spec-image: ();
+
+  @if (type-of($image) == string) {
+    $url-str:       str-slice($image, 1, 3);
+    $gradient-type: str-slice($image, 1, 6);
+
+    @if $url-str == &quot;url&quot; {
+      $webkit-image: $image;
+      $spec-image:   $image;
+    }
+
+    @else if $gradient-type == &quot;linear&quot; {
+      $gradients: _linear-gradient-parser($image);
+      $webkit-image:  map-get($gradients, webkit-image);
+      $spec-image:    map-get($gradients, spec-image);
+    }
+
+    @else if $gradient-type == &quot;radial&quot; {
+      $gradients: _radial-gradient-parser($image);
+      $webkit-image: map-get($gradients, webkit-image);
+      $spec-image:   map-get($gradients, spec-image);
+    }
+  }
+
+  $webkit-images: append($webkit-images, $webkit-image, comma);
+  $spec-images:   append($spec-images,   $spec-image,   comma);
+}
+
+background-image: $webkit-images;
+background-image: $spec-images;
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

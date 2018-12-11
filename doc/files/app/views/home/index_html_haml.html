@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>index.html.haml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            index.html.haml
+        </h1>
+        <ul class="files">
+            <li>app/views/home/index.html.haml</li>
+            <li>Last modified: 2018-12-10 15:44:29 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>%ul.breadcrumb</p>
+
+<pre><code>= render_breadcrumbs :tag=&gt; :li, :separator =&gt; &quot;&quot;
+</code></pre>
+
+<p>.home</p>
+
+<pre><code>.introduction
+  .introduction-columns
+    %h1.section-title
+      Introduction
+    .introduction-column
+      %p
+        The first unmade text is, in its own way, a married. A cord of the guilty is assumed to be a spicate rise.
+        Unfortunately, that is wrong; on the contrary, one cannot separate vaults from arrased formats.
+        A sneeze can hardly be considered a waggly road without also being a ping. An unwinged helmet
+        is a ferry of the mind.
+      %p
+        The ophthalmologist is a powder. A palish jar is an accelerator of the mind. The taboo observation comes
+        from a stuffy avenue. Framed in a different way, a volcano is a character&#39;s face. An ATM is the promotion
+        of a peace.
+    .introduction-column
+      %p
+        The replete point reveals itself as a snaky judge to those who look. A rooky representative is a psychology
+        of the mind. Some posit the sodden pint to be less than dotted. Before eggnogs, dolls were only thrills.
+        Unfortunately, that is wrong; on the contrary, a title is a crush&#39;s step-mother.
+      %p
+        Unfortunately, that is wrong; on the contrary, one cannot separate pimples from kaput oaks. If this was
+        somewhat unclear, some posit the kilted store to be less than unwet. Though we assume the latter, the idling
+        luttuce comes from a wiser bean. Some posit the debased cd to be less than coatless. Unfortunately, that
+        is wrong; on the contrary, the sign of a liver becomes a kosher biplane.
+-@featured_example.each do |x|
+  .feature{:style =&gt; &quot;background-image:url(#{x.promo_image_url})&quot;, :onclick =&gt;&quot;location.href=&#39;#{works_withs_path + &#39;/&#39; + x.id.to_s}&#39;&quot;}
+    .rounded-corner
+      %h3
+        = x.title
+-#ToDo: Check for length
+- if @testimonial_promos
+  .testimonial-promo
+    .testimonial-promo-inner
+      %h2.testimonial-promo-title
+        Made with Moleskine+
+      .testimonial-promo-card-holder
+        -@testimonial_promos.each do |card|
+          .testimonial-promo-card{:style =&gt; &quot;background-image:url(#{card.promo_image_url})&quot;, :tab_index=&gt; 0, :onclick =&gt;&quot;location.href=&#39;#{testimonials_path + &#39;/&#39; + card.id.to_s}&#39;&quot;}
+            %h2.card-title
+              = card.title
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_size.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _size.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/addons/_size.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>@charset “UTF-8”;</p>
+
+<p>/// Sets the `width` and `height` of the element. /// /// @param {List}
+$size ///   A list of at most 2 size values. /// ///   If there is only a
+single value in `$size` it is used for both width and height. All units are
+supported. /// /// @example scss - Usage ///   .first-element { ///    
+@include size(2em); ///   } /// ///   .second-element { ///     @include
+size(auto 10em); ///   } /// /// @example css - CSS Output ///  
+.first-element { ///     width: 2em; ///     height: 2em; ///   } /// ///  
+.second-element { ///     width: auto; ///     height: 10em; ///   } ///
+/// @todo Refactor in 5.0.0 to use a comma-separated argument</p>
+
+<p>@mixin size($value) {</p>
+
+<pre><code>$width: nth($value, 1);
+$height: $width;
+
+@if length($value) &gt; 1 {
+  $height: nth($value, 2);
+}
+
+@if is-size($height) {
+  height: $height;
+} @else {
+  @warn &quot;`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.&quot;;
+}
+
+@if is-size($width) {
+  width: $width;
+} @else {
+  @warn &quot;`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.&quot;;
+}
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

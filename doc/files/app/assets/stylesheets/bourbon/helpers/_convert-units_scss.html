@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_convert-units.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _convert-units.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/helpers/_convert-units.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>/                                                                        
+// // Helper function for str-to-num fn. // Source: <a
+href="http://sassmeister.com/gist/9647408">sassmeister.com/gist/9647408</a>
+//                                                                        
+/ @function _convert-units($number, $unit) {</p>
+
+<pre><code>$strings: &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;%&quot;, &quot;ch&quot;, &quot;pica&quot;, &quot;in&quot;, &quot;em&quot;, &quot;rem&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ex&quot;, &quot;vw&quot;, &quot;vh&quot;, &quot;vmin&quot;, &quot;vmax&quot;, &quot;deg&quot;, &quot;rad&quot;, &quot;grad&quot;, &quot;turn&quot;;
+$units:   1px, 1cm, 1mm, 1%, 1ch, 1pica, 1in, 1em, 1rem, 1pt, 1pc, 1ex, 1vw, 1vh, 1vmin, 1vmax, 1deg, 1rad, 1grad, 1turn;
+$index: index($strings, $unit);
+
+@if not $index {
+  @warn &quot;Unknown unit `#{$unit}`.&quot;;
+  @return false;
+}
+
+@if type-of($number) != &quot;number&quot; {
+  @warn &quot;`#{$number} is not a number`&quot;;
+  @return false;
+}
+
+@return $number * nth($units, $index);
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

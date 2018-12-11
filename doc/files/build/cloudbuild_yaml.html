@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>cloudbuild.yaml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            cloudbuild.yaml
+        </h1>
+        <ul class="files">
+            <li>build/cloudbuild.yaml</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>steps:</p>
+
+<pre><code>- name: &#39;gcr.io/cloud-builders/docker&#39;
+  args: [ &#39;build&#39;, &#39;-t&#39;, &#39;gcr.io/works-with-222514/msk-works-with-image&#39;, &#39;.&#39; ]
+  timeout: 500s
+- name: &#39;gcr.io/cloud-builders/docker&#39;
+  args: [&#39;push&#39;, &#39;gcr.io/works-with-222514/msk-works-with-image&#39;]
+- name: &#39;gcr.io/cloud-builders/gcloud&#39;
+  args: [&#39;app&#39;, &#39;deploy&#39;]
+  timeout: 600s
+</code></pre>
+
+<p>images:</p>
+
+<pre><code>- &#39;gcr.io/works-with-222514/msk-works-with-image&#39;
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

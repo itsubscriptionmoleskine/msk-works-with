@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>plugin-f0d451ae7fcfa1f30f73c2d9185c58173e1a8e44d893d752778b226b665f020b.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            plugin-f0d451ae7fcfa1f30f73c2d9185c58173e1a8e44d893d752778b226b665f020b.js
+        </h1>
+        <ul class="files">
+            <li>public/assets/tinymce/plugins/charmap/plugin-f0d451ae7fcfa1f30f73c2d9185c58173e1a8e44d893d752778b226b665f020b.js</li>
+            <li>Last modified: 2018-11-28 11:42:52 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>!function(){“use strict”;var
+e=tinymce.util.Tools.resolve(“tinymce.PluginManager”),i=function(e,t){return
+e.fire(“insertCustomChar”,{chr:t})},l=function(e,t){var
+a=i(e,t).chr;e.execCommand(“mceInsertContent”,!1,a)},a=tinymce.util.Tools.resolve(“tinymce.util.Tools”),r=function(e){return
+e.settings.charmap},n=function(e){return
+e.settings.charmap_append},o=a.isArray,c=function(e){return
+o(e)?[].concat((t=e,a.grep(t,function(e){return
+o(e)&amp;&amp;2===e.length}))):“function”==typeof e?e():[];var
+t},s=function(e){return function(e,t){var a=r(e);a&amp;&amp;(t=c(a));var
+i=n(e);return i?[].concat(t).concat(c(i)):t}(e,[[“160”,“no-break
+space”],[“173”,“soft hyphen”],[“34”,“quotation mark”],[“162”,“cent
+sign”],[“8364”,“euro sign”],[“163”,“pound sign”],[“165”,“yen
+sign”],[“169”,“copyright sign”],[“174”,“registered sign”],[“8482”,“trade
+mark sign”],[“8240”,“per mille sign”],[“181”,“micro sign”],[“183”,“middle
+<a href=""8226","bullet"">dot”],</a>,[“8230”,“three dot
+leader”],[“8242”,“minutes / feet”],[“8243”,“seconds /
+inches”],[“167”,“section sign”],[“182”,“paragraph sign”],[“223”,“sharp s /
+ess-zed”],[“8249”,“single left-pointing angle quotation
+mark”],[“8250”,“single right-pointing angle quotation mark”],[“171”,“left
+pointing guillemet”],[“187”,“right pointing guillemet”],[“8216”,“left
+single quotation mark”],[“8217”,“right single quotation
+mark”],[“8220”,“left double quotation mark”],[“8221”,“right double
+quotation mark”],[“8218”,“single low-9 quotation mark”],[“8222”,“double
+low-9 quotation mark”],[“60”,“less-than sign”],[“62”,“greater-than
+sign”],[“8804”,“less-than or equal to”],[“8805”,“greater-than or equal
+to”],[“8211”,“en dash”],[“8212”,“em <a
+href=""175","macron"">dash”],</a>,[“8254”,“overline”],[“164”,“currency
+sign”],[“166”,“broken <a
+href=""168","diaeresis"">bar”],</a>,[“161”,“inverted exclamation
+mark”],[“191”,“turned question mark”],[“710”,“circumflex
+accent”],[“732”,“small tilde”],[“176”,“degree sign”],[“8722”,“minus
+sign”],[“177”,“plus-minus sign”],[“247”,“division sign”],[“8260”,“fraction
+slash”],[“215”,“multiplication sign”],[“185”,“superscript
+one”],[“178”,“superscript two”],[“179”,“superscript
+three”],[“188”,“fraction one quarter”],[“189”,“fraction one
+half”],[“190”,“fraction three quarters”],[“402”,“function / <a
+href=""8747","integral"">florin”],</a>,[“8721”,“n-ary <a
+href=""8734","infinity"">sumation”],</a>,[“8730”,“square
+root”],[“8764”,“similar to”],[“8773”,“approximately equal
+to”],[“8776”,“almost equal to”],[“8800”,“not equal to”],[“8801”,“identical
+to”],[“8712”,“element of”],[“8713”,“not an element of”],[“8715”,“contains
+as member”],[“8719”,“n-ary product”],[“8743”,“logical
+and”],[“8744”,“logical or”],[“172”,“not <a
+href=""8745","intersection"">sign”],</a>,[“8746”,“union”],[“8706”,“partial
+differential”],[“8704”,“for all”],[“8707”,“there <a
+href=""8709","diameter"">exists”],</a>,[“8711”,“backward
+difference”],[“8727”,“asterisk operator”],[“8733”,“proportional <a
+href=""8736","angle"">to”],</a>,[“180”,“acute <a
+href=""184","cedilla"">accent”],</a>,[“170”,“feminine ordinal
+indicator”],[“186”,“masculine ordinal <a
+href=""8224","dagger"">indicator”],</a>,[“8225”,“double dagger”],[“192”,“A
+- grave”],[“193”,“A - acute”],[“194”,“A - circumflex”],[“195”,“A -
+tilde”],[“196”,“A - diaeresis”],[“197”,“A - ring above”],[“256”,“A -
+macron”],[“198”,“ligature AE”],[“199”,“C - cedilla”],[“200”,“E -
+grave”],[“201”,“E - acute”],[“202”,“E - circumflex”],[“203”,“E -
+diaeresis”],[“274”,“E - macron”],[“204”,“I - grave”],[“205”,“I -
+acute”],[“206”,“I - circumflex”],[“207”,“I - diaeresis”],[“298”,“I - <a
+href=""208","ETH"">macron”],</a>,[“209”,“N - tilde”],[“210”,“O -
+grave”],[“211”,“O - acute”],[“212”,“O - circumflex”],[“213”,“O -
+tilde”],[“214”,“O - diaeresis”],[“216”,“O - slash”],[“332”,“O -
+macron”],[“338”,“ligature OE”],[“352”,“S - caron”],[“217”,“U -
+grave”],[“218”,“U - acute”],[“219”,“U - circumflex”],[“220”,“U -
+diaeresis”],[“362”,“U - macron”],[“221”,“Y - acute”],[“376”,“Y -
+diaeresis”],[“562”,“Y - <a href=""222","THORN"">macron”],</a>,[“224”,“a -
+grave”],[“225”,“a - acute”],[“226”,“a - circumflex”],[“227”,“a -
+tilde”],[“228”,“a - diaeresis”],[“229”,“a - ring above”],[“257”,“a -
+macron”],[“230”,“ligature ae”],[“231”,“c - cedilla”],[“232”,“e -
+grave”],[“233”,“e - acute”],[“234”,“e - circumflex”],[“235”,“e -
+diaeresis”],[“275”,“e - macron”],[“236”,“i - grave”],[“237”,“i -
+acute”],[“238”,“i - circumflex”],[“239”,“i - diaeresis”],[“299”,“i - <a
+href=""240","eth"">macron”],</a>,[“241”,“n - tilde”],[“242”,“o -
+grave”],[“243”,“o - acute”],[“244”,“o - circumflex”],[“245”,“o -
+tilde”],[“246”,“o - diaeresis”],[“248”,“o slash”],[“333”,“o
+macron”],[“339”,“ligature oe”],[“353”,“s - caron”],[“249”,“u -
+grave”],[“250”,“u - acute”],[“251”,“u - circumflex”],[“252”,“u -
+diaeresis”],[“363”,“u - macron”],[“253”,“y - <a
+href=""254","thorn"">acute”],</a>,[“255”,“y - diaeresis”],[“563”,“y - <a
+href=""913","Alpha"">macron”],</a>,[“<a
+href=""915","Gamma"">914”,“Beta”],</a>,[“<a
+href=""917","Epsilon"">916”,“Delta”],</a>,[“<a
+href=""919","Eta"">918”,“Zeta”],</a>,[“<a
+href=""921","Iota"">920”,“Theta”],</a>,[“<a
+href=""923","Lambda"">922”,“Kappa”],</a>,[“<a
+href=""925","Nu"">924”,“Mu”],</a>,[“<a
+href=""927","Omicron"">926”,“Xi”],</a>,[“<a
+href=""929","Rho"">928”,“Pi”],</a>,[“<a
+href=""932","Tau"">931”,“Sigma”],</a>,[“<a
+href=""934","Phi"">933”,“Upsilon”],</a>,[“<a
+href=""936","Psi"">935”,“Chi”],</a>,[“<a
+href=""945","alpha"">937”,“Omega”],</a>,[“<a
+href=""947","gamma"">946”,“beta”],</a>,[“<a
+href=""949","epsilon"">948”,“delta”],</a>,[“<a
+href=""951","eta"">950”,“zeta”],</a>,[“<a
+href=""953","iota"">952”,“theta”],</a>,[“<a
+href=""955","lambda"">954”,“kappa”],</a>,[“<a
+href=""957","nu"">956”,“mu”],</a>,[“<a
+href=""959","omicron"">958”,“xi”],</a>,[“<a
+href=""961","rho"">960”,“pi”],</a>,[“962”,“final <a
+href=""963","sigma"">sigma”],</a>,[“<a
+href=""965","upsilon"">964”,“tau”],</a>,[“<a
+href=""967","chi"">966”,“phi”],</a>,[“<a
+href=""969","omega"">968”,“psi”],</a>,[“8501”,“alef symbol”],[“982”,“pi
+symbol”],[“8476”,“real part symbol”],[“978”,“upsilon - hook
+symbol”],[“8472”,“Weierstrass p”],[“8465”,“imaginary
+part”],[“8592”,“leftwards arrow”],[“8593”,“upwards
+arrow”],[“8594”,“rightwards arrow”],[“8595”,“downwards
+arrow”],[“8596”,“left right arrow”],[“8629”,“carriage
+return”],[“8656”,“leftwards double arrow”],[“8657”,“upwards double
+arrow”],[“8658”,“rightwards double arrow”],[“8659”,“downwards double
+arrow”],[“8660”,“left right double <a
+href=""8756","therefore"">arrow”],</a>,[“8834”,“subset
+of”],[“8835”,“superset of”],[“8836”,“not a subset of”],[“8838”,“subset of
+or equal to”],[“8839”,“superset of or equal to”],[“8853”,“circled
+plus”],[“8855”,“circled <a
+href=""8869","perpendicular"">times”],</a>,[“8901”,“dot
+operator”],[“8968”,“left ceiling”],[“8969”,“right ceiling”],[“8970”,“left
+floor”],[“8971”,“right floor”],[“9001”,“left-pointing angle
+bracket”],[“9002”,“right-pointing angle <a
+href=""9674","lozenge"">bracket”],</a>,[“9824”,“black spade
+suit”],[“9827”,“black club suit”],[“9829”,“black heart
+suit”],[“9830”,“black diamond suit”],[“8194”,“en space”],[“8195”,“em
+space”],[“8201”,“thin space”],[“8204”,“zero width
+non-joiner”],[“8205”,“zero width joiner”],[“8206”,“left-to-right
+mark”],[“8207”,“right-to-left
+mark”]])},t=function(t){return{getCharMap:function(){return
+s(t)},insertChar:function(e){l(t,e)}}},u=function(e){var
+t,a,i,r=Math.min(e.length,25),n=Math.ceil(e.length/r);for(t=&#39;&lt;table
+role=“presentation” cellspacing=“0”
+class=“mce-charmap”&gt;&lt;tbody&gt;&#39;,i=0;i&lt;n;i++){for(t+=“&lt;tr&gt;”,a=0;a&lt;r;a++){var
+o=i*r+a;if(o&lt;e.length){var <a href="o">l=e</a>,<a
+href="0">c=parseInt(l</a>,10),s=l?String.fromCharCode©:“&amp;nbsp;”;t+=&#39;&lt;td
+<a href="1">title=“‘+l</a>+&#39;”&gt;&lt;div tabindex=“-1” <a
+href="1">title=“’+l</a>+&#39;” role=“button”
+data-chr=“&#39;<code>c</code>&#39;”&gt;&#39;<code>s</code>“&lt;/div&gt;&lt;/td&gt;”}else
+t+=“&lt;td /&gt;”}t+=“&lt;/tr&gt;”}return
+t+=“&lt;/tbody&gt;&lt;/table&gt;”},d=function(e){for(;e;){if(“TD”===e.nodeName)return
+e;e=e.parentNode}},m=function(n){var
+o,e={type:“container”,html:u(s(n)),onclick:function(e){var
+t=e.target;if(/^(TD|DIV)$/.test(t.nodeName)){var
+a=d(t).firstChild;if(a&amp;&amp;a.hasAttribute(“data-chr”)){var
+i=a.getAttribute(“data-chr”),r=parseInt(i,10);isNaN®||l(n,String.fromCharCode®),e.ctrlKey||o.close()}}},onmouseover:function(e){var
+t=d(e.target);t&amp;&amp;t.firstChild?(o.find(“#preview”).text(t.firstChild.firstChild.data),o.find(“#previewTitle”).text(t.title)):(o.find(“#preview”).text(“
+”),o.find(“#previewTitle”).text(“
+”))}};o=n.windowManager.open({title:“Special
+character”,spacing:10,padding:10,items:[e,{type:“container”,layout:“flex”,direction:“column”,align:“center”,spacing:5,minWidth:160,minHeight:160,items:[{type:“label”,name:“preview”,text:“
+”,style:“font-size: 40px; text-align:
+center”,border:1,minWidth:140,minHeight:80},{type:“spacer”,minHeight:20},{type:“label”,name:“previewTitle”,text:“
+”,style:“white-space: pre-wrap;”,border:1,minWidth:140}]}],<a
+href="{text:"Close",onclick:function(){o.close()}}">buttons:</a>})},g=function(e){e.addCommand(“mceShowCharmap”,function(){m(e)})},p=function(e){e.addButton(“charmap”,{icon:“charmap”,tooltip:“Special
+character”,cmd:“mceShowCharmap”}),e.addMenuItem(“charmap”,{icon:“charmap”,text:“Special
+character”,cmd:“mceShowCharmap”,context:“insert”})};e.add(“charmap”,function(e){return
+g(e),p(e),t(e)})}();</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>
