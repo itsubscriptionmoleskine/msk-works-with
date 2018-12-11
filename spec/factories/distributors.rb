@@ -10,6 +10,12 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
+    trait :no_badge do
+      badge_image_url {false}
+    end
+    trait :no_icon do
+      icon_id {''}
+    end
     after (:create) do |distrubtor|
       a = build(:app)
       create :distributor_link, app: a, distributor: distrubtor

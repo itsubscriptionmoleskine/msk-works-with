@@ -4,6 +4,6 @@ class DistributorLink < ApplicationRecord
   accepts_nested_attributes_for :distributor
   accepts_nested_attributes_for :app
   def as_json(options={})
-    super(:only => [:name, :badge_image_url, :is_live, :icon_id])
+    super(:only => [:app_id, :distributor_id, :is_live, :link])
   end
 end
