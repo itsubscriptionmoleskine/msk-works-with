@@ -11,4 +11,5 @@ class WorksWith < ApplicationRecord
     super(:only => [:title, :description, :app_id, :offering_id, :is_live, :promo_image_url, :promo_text])
   end
   validates_length_of :promo_text, maximum: 220
+  validates :promo_image_url, image_size: { width: { min: 640 }, height: { min:640 } }
 end
