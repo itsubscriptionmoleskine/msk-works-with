@@ -1,7 +1,8 @@
 class Distributor < ApplicationRecord
-  #has_many :apps, through: :distributor_links
-  # ToDo: fix relationship
+  has_many :distributor_links
+  mount_uploader :badge_image_url, ImageUploader
   def as_json(options={})
-    super(:only => [:link, :distributor_id, :app_id])
+    super(:only => [:name, :badge_image_url, :is_live, :icon_id])
   end
+  validates :badge_image_url, image_size: { width: { min: 280 } }
 end

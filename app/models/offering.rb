@@ -1,7 +1,7 @@
 class Offering < ApplicationRecord
-  #has_many :apps, through: :works_withs
-  # ToDo: fix relationship
+  has_many :works_withs
   def as_json(options={})
     super(:only => [:name, :description, :shop_link, :is_live])
   end
+  validates_length_of :description, maximum: 220
 end

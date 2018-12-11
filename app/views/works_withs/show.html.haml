@@ -28,12 +28,15 @@
             Download
             = @works_with.app.name
           %ul{:class => 'download-app-links'}
-            -#ToDo: Badges?-
             - @works_with.app.distributor_links.each do |store_link|
               %li
-                =icon('fab', store_link.distributor.icon_id)
-                %a{:href=> store_link.link, :tab_index=> 0}
-                  = store_link.distributor.name
+                - if store_link.distributor.badge_image_url
+                  %img{:src=> store_link.distributor.badge_image_url, :alt=>store_link.distributor.name, :onclick =>"location.href='#{store_link.link}'", :class=> 'store-badge', :tab_index=> 0}
+                - else
+                  -if store_link.distributor.icon_id
+                    =icon('fab', store_link.distributor.icon_id)
+                  %a{:href=> store_link.link, :tab_index=> 0}
+                    = store_link.distributor.name
   -#ToDo: Check for length
   - if @related_works_with
     .works-with-related
