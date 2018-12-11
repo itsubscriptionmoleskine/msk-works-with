@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>show.html.haml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            show.html.haml
+        </h1>
+        <ul class="files">
+            <li>app/views/testimonials/show.html.haml</li>
+            <li>Last modified: 2018-12-07 13:59:33 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>-content_for :head do</p>
+
+<pre><code>%meta{:name =&gt;&quot;turbolinks-cache-control&quot;, :content=&gt;&quot;no-cache&quot;}
+</code></pre>
+
+<p>%ul.breadcrumb</p>
+
+<pre><code>= render_breadcrumbs :tag=&gt; :li, :separator =&gt; &quot;&quot;
+</code></pre>
+
+<p>.testimonial</p>
+
+<pre><code>.testimonial-article
+  %h1{:class=&gt; &#39;testimonial-title&#39;}
+    = @testimonial.title
+  %h2{:class=&gt; &#39;testimonial-byline&#39;}
+    = @testimonial.publish_date.strftime(&#39;%b %e %Y&#39;)
+  - if @testimonial.video_embed
+    .video-container
+      .video
+        = @testimonial.video_embed.html_safe
+  %p
+    - if @testimonial.testimonial_slides
+      - t = @testimonial.description.split(&#39;&lt;/p&gt;&#39;)
+      - midway = (t.length/2).floor
+      - paragraph_tracker = 0
+      - t.each do |tp|
+        - paragraph_tracker = paragraph_tracker + 1
+        -if paragraph_tracker == midway
+          - slide_number = @testimonial.testimonial_slides.length
+          - if slide_number &gt; 1
+            .slider
+              - @testimonial.testimonial_slides.each do |slide|
+                .slide
+                  %img{:src=&gt; slide.image_url}
+                  %p
+                    =slide.caption
+          - else
+            - @testimonial.testimonial_slides.each do |slide|
+              .slide-single
+                %img{:src=&gt; slide.image_url}
+                %p
+                  =slide.caption
+        - tp = tp + &#39;&lt;/p&gt;&#39;
+        = tp.html_safe
+    - else
+      = @testimonial.description.html_safe
+.testimonial-sidebar
+  %h3{:class=&gt;&#39;works-with-sidebar-title&#39;}
+    %a{:href=&gt; works_with_path(@testimonial.works_with.id.to_s), :tab_index=&gt; 0}
+      = @testimonial.works_with.title
+  %ul{:class=&gt;&#39;distributor-links&#39;}
+    - @testimonial.works_with.app.distributor_links.each do |dl|
+      %li
+        %a{:href=&gt; dl.link, :tab_index=&gt; 0}
+          = dl.distributor.name
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

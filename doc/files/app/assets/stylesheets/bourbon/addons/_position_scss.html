@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_position.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _position.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/addons/_position.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>@charset “UTF-8”;</p>
+
+<p>/// Provides a quick method for setting an element’s position. Use a `null`
+value to “skip” a side. /// /// @param {Position} $position [relative] /// 
+A CSS position value /// /// @param {Arglist} $coordinates [null null null
+null] ///   List of values that correspond to the 4-value syntax for the
+edges of a box /// /// @example scss - Usage ///   .element { ///    
+@include position(absolute, 0 null null 10em); ///   } /// /// @example css
+- CSS Output ///   .element { ///     left: 10em; ///     position:
+absolute; ///     top: 0; ///   } /// /// @require {function} is-length ///
+@require {function} unpack</p>
+
+<p>@mixin position($position: relative, $coordinates: null null null null) {</p>
+
+<pre><code>@if type-of($position) == list {
+  $coordinates: $position;
+  $position: relative;
+}
+
+$coordinates: unpack($coordinates);
+
+$offsets: (
+  top:    nth($coordinates, 1),
+  right:  nth($coordinates, 2),
+  bottom: nth($coordinates, 3),
+  left:   nth($coordinates, 4)
+);
+
+position: $position;
+
+@each $offset, $value in $offsets {
+  @if is-length($value) {
+    #{$offset}: $value;
+  }
+}
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

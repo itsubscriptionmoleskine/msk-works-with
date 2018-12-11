@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_render-gradients.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _render-gradients.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/helpers/_render-gradients.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>// User for linear and radial gradients within background-image or
+border-image properties</p>
+
+<p>@function _render-gradients($gradient-positions, $gradients,
+$gradient-type, $vendor: false) {</p>
+
+<pre><code>$pre-spec: null;
+$spec: null;
+$vendor-gradients: null;
+@if $gradient-type == linear {
+  @if $gradient-positions {
+    $pre-spec: nth($gradient-positions, 1);
+    $spec:     nth($gradient-positions, 2);
+  }
+}
+@else if $gradient-type == radial {
+  $pre-spec: nth($gradient-positions, 1);
+  $spec:     nth($gradient-positions, 2);
+}
+
+@if $vendor {
+  $vendor-gradients: -#{$vendor}-#{$gradient-type}-gradient(#{$pre-spec} $gradients);
+}
+@else if $vendor == false {
+  $vendor-gradients: &quot;#{$gradient-type}-gradient(#{$spec} #{$gradients})&quot;;
+  $vendor-gradients: unquote($vendor-gradients);
+}
+@return $vendor-gradients;
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

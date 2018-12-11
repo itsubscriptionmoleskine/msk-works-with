@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Gemfile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/github.css" type="text/css" media="screen" />
+<script src="../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            Gemfile
+        </h1>
+        <ul class="files">
+            <li>Gemfile</li>
+            <li>Last modified: 2018-12-07 13:59:33 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>source &#39;<a href="https://rubygems.org">rubygems.org</a>&#39;</p>
+
+<p>git_source(:github) do |repo_name|</p>
+
+<pre><code>repo_name = &#39;#{repo_name}/#{repo_name}&#39; unless repo_name.include?(&#39;/&#39;)
+&#39;https://github.com/#{repo_name}.git&#39;
+</code></pre>
+
+<p>end</p>
+
+<p>gem &#39;activeadmin&#39;, &#39;~&gt; 1.4&#39; gem
+&#39;breadcrumbs_on_rails&#39;, &#39;~&gt; 3.0&#39; gem
+&#39;carrierwave-google-storage&#39;, &#39;~&gt; 0.9.0&#39; gem
+&#39;devise&#39;, &#39;~&gt; 4.5&#39; gem &#39;figaro&#39;, &#39;~&gt;
+1.1&#39; gem &#39;font-awesome-sass&#39;, &#39;~&gt; 5.5&#39; gem
+&#39;haml-rails&#39;, &#39;~&gt; 1.0&#39; gem &#39;inline_svg&#39;,
+&#39;~&gt; 1.3&#39; gem &#39;jbuilder&#39;, &#39;~&gt; 2.5&#39; gem
+&#39;jquery-slick-rails&#39;, &#39;~&gt; 1.9&#39; gem
+&#39;jquery-rails&#39;, &#39;~&gt; 4.3&#39; gem &#39;livingstyleguide&#39;,
+&#39;~&gt; 2.0&#39; gem &#39;mini_racer&#39;, &#39;~&gt; 0.2.4&#39; gem
+&#39;pg&#39;, &#39;~&gt; 1.1&#39; gem &#39;puma&#39;, &#39;~&gt; 3.7&#39;
+gem &#39;rails&#39;, &#39;~&gt; 5.1.2&#39; gem &#39;sass-rails&#39;,
+&#39;~&gt; 5.0&#39; gem &#39;stackdriver&#39;, &#39;~&gt; 0.15.0&#39; gem
+&#39;tinymce-rails&#39;, &#39;~&gt; 4.9&#39; gem &#39;turbolinks&#39;,
+&#39;~&gt; 5.2&#39; gem &#39;uglifier&#39;, &#39;~&gt; 4.1&#39;</p>
+
+<p>group :development, :test do</p>
+
+<pre><code>gem &#39;byebug&#39;, platforms: [:mri, :mingw, :x64_mingw]
+gem &#39;capybara&#39;
+gem &#39;chromedriver-helper&#39;, &#39;~&gt; 2.1&#39;
+gem &#39;database_cleaner&#39;, &#39;~&gt; 1.7&#39;
+gem &#39;erb2haml&#39;, &#39;~&gt; 0.1.5&#39;  #rake haml:replace_erbs / rake haml:convert_erbs
+gem &#39;factory_bot_rails&#39;, &#39;~&gt; 4.11&#39;
+gem &#39;faker&#39;, &#39;~&gt; 1.9&#39;
+gem &#39;rails-controller-testing&#39;, &#39;~&gt; 1.0&#39;
+gem &#39;rspec-rails&#39;
+gem &#39;seed_dump&#39;, &#39;~&gt; 3.3&#39; # rake db:seed:dump
+gem &#39;selenium-webdriver&#39;, &#39;~&gt; 3.141&#39;
+gem &#39;shoulda-matchers&#39;, &#39;~&gt; 3.1&#39;
+gem &#39;table_print&#39;, &#39;~&gt; 1.5&#39;
+</code></pre>
+
+<p>end</p>
+
+<p>group :development do</p>
+
+<pre><code>gem &#39;listen&#39;, &#39;&gt;= 3.0.5&#39;, &#39;&lt; 3.2&#39;
+gem &#39;web-console&#39;, &#39;&gt;= 3.3.0&#39;
+</code></pre>
+
+<p>end</p>
+
+<p>group :doc do</p>
+
+<pre><code>gem &#39;sdoc&#39;
+</code></pre>
+
+<p>end</p>
+
+<p># Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem &#39;tzinfo-data&#39;, platforms: [:mingw, :mswin, :x64_mingw, :jruby]</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

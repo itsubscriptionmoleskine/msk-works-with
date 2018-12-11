@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_border-radius.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _border-radius.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/addons/_border-radius.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>@charset “UTF-8”;</p>
+
+<p>/// Provides a quick method for targeting `border-radius` on both corners
+on the side of a box. /// /// @param {Number} $radii ///   List of
+arguments /// /// @example scss - Usage ///   .element-one { ///    
+@include border-top-radius(5px); ///   } /// ///   .element-two { ///    
+@include border-left-radius(3px); ///   } /// /// @example css - CSS Output
+///   .element-one { ///     border-top-left-radius: 5px; ///    
+border-top-right-radius: 5px; ///   } /// ///   .element-two { ///    
+border-bottom-left-radius: 3px; ///     border-top-left-radius: 3px; ///  
+} /// /// @output `border-radius`</p>
+
+<p>@mixin border-top-radius($radii) {</p>
+
+<pre><code>border-top-left-radius: $radii;
+border-top-right-radius: $radii;
+</code></pre>
+
+<p>}</p>
+
+<p>@mixin border-right-radius($radii) {</p>
+
+<pre><code>border-bottom-right-radius: $radii;
+border-top-right-radius: $radii;
+</code></pre>
+
+<p>}</p>
+
+<p>@mixin border-bottom-radius($radii) {</p>
+
+<pre><code>border-bottom-left-radius: $radii;
+border-bottom-right-radius: $radii;
+</code></pre>
+
+<p>}</p>
+
+<p>@mixin border-left-radius($radii) {</p>
+
+<pre><code>border-bottom-left-radius: $radii;
+border-top-left-radius: $radii;
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

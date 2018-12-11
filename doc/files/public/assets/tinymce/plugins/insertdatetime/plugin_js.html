@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>plugin.js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            plugin.js
+        </h1>
+        <ul class="files">
+            <li>public/assets/tinymce/plugins/insertdatetime/plugin.js</li>
+            <li>Last modified: 2018-11-28 11:42:52 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>!function(){“use strict”;var r=function(e){var t=e,n=function(){return
+t};return{get:n,set:function(e){t=e},clone:function(){return
+r(n())}}},e=tinymce.util.Tools.resolve(“tinymce.PluginManager”),n=function(e){return
+e.getParam(“insertdatetime_timeformat”,e.translate(“%H:%M:%S”))},a=function(e){return
+e.getParam(“insertdatetime_formats”,[“%H:%M:%S”,“%Y-%m-%d”,“%I:%M:%S
+%p”,“%D”])},t=function(e){return
+e.getParam(“insertdatetime_dateformat”,e.translate(“%Y-%m-%d”))},i=n,o=a,u=function(e){var
+t=a(e);return <a href="0">0<t.length?t</a>:n(e)},m=function(e){return
+e.getParam(“insertdatetime_element”,!1)},c=“Sun Mon Tue Wed Thu Fri Sat
+Sun”.split(“ ”),l=“Sunday Monday Tuesday Wednesday Thursday Friday Saturday
+Sunday”.split(“ ”),s=“Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov
+Dec”.split(“ ”),d=“January February March April May June July August
+September October November December”.split(“
+”),p=function(e,t){if((e=“”+e).length&lt;t)for(var
+n=0;n&lt;t-e.length;n++)e=“0”+e;return e},f=function(e,t,n){return n=n||new
+Date,t=(t=(t=(t=(t=(t=(t=(t=(t=(t=(t=(t=(t=(t=(t=(t=t.replace(“%D”,“%m/%d/%Y”)).replace(“%r”,“%I:%M:%S
+%<a
+href="n.getMonth()">p”)).replace(“%Y”,“”+n.getFullYear())).replace(“%y”,“”+n.getYear())).replace(“%m”,p(n.getMonth()+1,2))).replace(“%d”,p(n.getDate(),2))).replace(“%H”,“”+p(n.getHours(),2))).replace(“%M”,“”+p(n.getMinutes(),2))).replace(“%S”,“”+p(n.getSeconds(),2))).replace(“%I”,“”+((n.getHours()+11)%12+1))).replace(“%p”,n.getHours()<12?"AM":"PM")).replace("%B",""+e.translate(d</a>))).<a
+href="n.getMonth()">replace(“%b”,“”+e.translate(s</a>))).<a
+href="n.getDay()">replace(“%A”,“”+e.translate(l</a>))).<a
+href="n.getDay()">replace(“%a”,“”+e.translate(c</a>))).replace(“%%”,“%”)},g=function(e,t){if(m(e)){var
+n=f(e,t),r=void <a
+href="HMSIp">0;r=/%</a>/.test(t)?f(e,“%Y-%m-%dT%H:%M”):f(e,“%Y-%m-%d”);var
+a=e.dom.getParent(e.selection.getStart(),“time”);a?(o=a,u=r,c=n,l=(i=e).dom.create(“time”,{datetime:u},c),o.parentNode.insertBefore(l,o),i.dom.remove(o),i.selection.select(l,!0),i.selection.collapse(!1)):e.insertContent(&#39;&lt;time
+datetime=“&#39;<code>r</code>&#39;”&gt;&#39;<code>n</code>“&lt;/time&gt;”)}else
+e.insertContent(f(e,t));var
+i,o,u,c,l},y=f,M=function(e){e.addCommand(“mceInsertDate”,function(){g(e,t(e))}),e.addCommand(“mceInsertTime”,function(){g(e,i(e))})},v=tinymce.util.Tools.resolve(“tinymce.util.Tools”),S=function(t,n){var
+r,a,e,i=(a=n,e=o(r=t),v.map(e,function(e){return{text:y(r,e),onclick:function(){a.set(e),g(r,e)}}}));t.addButton(“insertdatetime”,{type:“splitbutton”,title:“Insert
+date/time”,menu:i,onclick:function(){var
+e=n.get();g(t,e||u(t))}}),t.addMenuItem(“insertdatetime”,{icon:“date”,text:“Date/time”,menu:i,context:“insert”})};e.add(“insertdatetime”,function(e){var
+t=r(null);M(e),S(e,t)})}();</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

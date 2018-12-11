@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_transition-property-name.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _transition-property-name.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/functions/_transition-property-name.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>// Return vendor-prefixed property names if appropriate // Example:
+transition-property-names((transform, color, background), moz) -&gt;
+-moz-transform, color, background /                                        
+// @function transition-property-names($props, $vendor: false) {</p>
+
+<pre><code>$new-props: ();
+
+@each $prop in $props {
+  $new-props: append($new-props, transition-property-name($prop, $vendor), comma);
+}
+
+@return $new-props;
+</code></pre>
+
+<p>}</p>
+
+<p>@function transition-property-name($prop, $vendor: false) {</p>
+
+<pre><code>// put other properties that need to be prefixed here aswell
+@if $vendor and $prop == transform {
+  @return unquote(&#39;-&#39;+$vendor+&#39;-&#39;+$prop);
+}
+@else {
+  @return $prop;
+}
+</code></pre>
+
+<p>}</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

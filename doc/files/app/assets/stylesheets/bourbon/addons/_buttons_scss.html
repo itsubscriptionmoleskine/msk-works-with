@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>_buttons.scss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            _buttons.scss
+        </h1>
+        <ul class="files">
+            <li>app/assets/stylesheets/bourbon/addons/_buttons.scss</li>
+            <li>Last modified: 2018-12-06 06:19:17 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>@charset “UTF-8”;</p>
+
+<p>/// Generates variables for all buttons. Please note that you must use
+interpolation on the variable: `#{$all-buttons}`. /// /// @example scss -
+Usage ///   #{$all-buttons} { ///     background-color: f00; ///   } ///
+///   #{$all-buttons-focus}, ///   #{$all-buttons-hover} { ///    
+background-color: #0f0; ///   } /// ///   #{$all-buttons-active} { ///    
+background-color: #00f; ///   } /// /// @example css - CSS Output ///  
+button, ///   <a href="type="button"">input</a>, ///   <a
+href="type="reset"">input</a>, ///   <a href="type="submit"">input</a> {
+///     background-color: f00; ///   } /// ///   button:focus, ///   <a
+href="type="button"">input</a>:focus, ///   <a
+href="type="reset"">input</a>:focus, ///   <a
+href="type="submit"">input</a>:focus, ///   button:hover, ///   <a
+href="type="button"">input</a>:hover, ///   <a
+href="type="reset"">input</a>:hover, ///   <a
+href="type="submit"">input</a>:hover { ///     background-color: #0f0; /// 
+} /// ///   button:active, ///   <a href="type="button"">input</a>:active,
+///   <a href="type="reset"">input</a>:active, ///   <a
+href="type="submit"">input</a>:active { ///     background-color: #00f; ///
+} /// /// @require assign-inputs /// /// @type List /// /// @todo Remove
+double assigned variables (Lines 59–62) in v5.0.0</p>
+
+<p>$buttons-list: &#39;button&#39;,</p>
+
+<pre><code>&#39;input[type=&quot;button&quot;]&#39;,
+&#39;input[type=&quot;reset&quot;]&#39;,
+&#39;input[type=&quot;submit&quot;]&#39;;
+</code></pre>
+
+<p>$all-buttons:        assign-inputs($buttons-list); $all-buttons-active:
+assign-inputs($buttons-list, active); $all-buttons-focus: 
+assign-inputs($buttons-list, focus); $all-buttons-hover: 
+assign-inputs($buttons-list, hover);</p>
+
+<p>$all-button-inputs:        $all-buttons; $all-button-inputs-active:
+$all-buttons-active; $all-button-inputs-focus:  $all-buttons-focus;
+$all-button-inputs-hover:  $all-buttons-hover;</p>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>

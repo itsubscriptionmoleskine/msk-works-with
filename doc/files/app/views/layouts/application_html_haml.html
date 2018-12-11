@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>application.html.haml</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="../../../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../../css/github.css" type="text/css" media="screen" />
+<script src="../../../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+        
+        <h1>
+            application.html.haml
+        </h1>
+        <ul class="files">
+            <li>app/views/layouts/application.html.haml</li>
+            <li>Last modified: 2018-12-06 11:49:09 -0500</li>
+        </ul>
+    </div>
+
+    <div id="bodyContent">
+        <div id="content">
+  
+    <div class="description">
+      
+<p>!!! %html</p>
+
+<pre><code>%head
+  %meta{:content =&gt; &quot;text/html; charset=UTF-8&quot;, &quot;http-equiv&quot; =&gt; &quot;Content-Type&quot;}/
+  %meta{ :name=&gt;&#39;viewport&#39;, :content =&gt; &#39;width=device-width, initial-scale=1.0&#39;}
+  %title Works With Moleskine +
+  = stylesheet_link_tag &#39;application&#39;, media: &#39;all&#39;
+  = javascript_include_tag &#39;application&#39;, &#39;data-turbolinks-track&#39; =&gt; true
+  %link{:rel =&gt; &#39;stylesheet&#39;, :href =&gt; &#39;https://use.typekit.net/qbi3bum.css&#39;}
+  = csrf_meta_tags
+  - if content_for?(:head)
+    = yield(:head)
+%body
+  .body-container
+    = render &#39;components/navigation&#39;
+    = yield
+  = render &#39;components/footer&#39;
+</code></pre>
+
+    </div>
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+
+
+    
+
+
+    <!-- Methods -->
+    
+    
+    
+  
+</div>
+
+    </div>
+  </body>
+</html>
