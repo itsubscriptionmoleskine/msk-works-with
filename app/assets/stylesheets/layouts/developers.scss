@@ -4,14 +4,34 @@
    font-size: 3rem;
  }
   .developers-promo-container{
-    @include span-columns(5);
-    h2.developer-promo-title{
-      font-size: 2rem;
-      font-weight: 200;
+    display: flex;
+    .developers-logo-image{
+      @include span-columns(3);
+      @include media($lg-min) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 3rem;
+        width: 3rem;
+        display: inline;
+      }
+      display: none;
     }
-    .view-more{
-      float: right;
+    .developers-promo-info{
+      @include span-columns(5);
+      h2.developers-promo-title{
+        font-size: 2rem;
+        font-weight: 200;
+      }
+      .view-more{
+        float: right;
+      }
     }
+
+
+
+
+
+
   }
 }
 
@@ -23,6 +43,7 @@
     @include media($lg-min) {
       background-repeat: no-repeat;
       background-size: cover;
+      min-height: 3rem;
       @include span-columns(5);
       display: inline;
     }

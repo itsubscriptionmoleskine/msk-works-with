@@ -14,7 +14,7 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
-    trait :promo_text do
+    trait :promo_text_too_long do
       promo_text {Faker::Lorem.sentence(word_count=250)}
     end
     trait :should_not_be_live do
