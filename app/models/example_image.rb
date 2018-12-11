@@ -5,4 +5,5 @@ class ExampleImage < ApplicationRecord
   def as_json(options={})
     super(:only => [:image_url, :caption, :works_with_id, :is_live])
   end
+  validates :image_url, image_size: { width: { min: 1024 }, height: { min:768 } }
 end

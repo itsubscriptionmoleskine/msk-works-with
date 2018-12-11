@@ -69,6 +69,7 @@ class TestimonialsController < ApplicationController
   end
 
   def testimonial_params
-    params.require(:testimonial).permit(:title, :description, :works_with_id, :is_live, :video_embed, :promo_text, :promo_image_url, :publish_date)
+    params.require(:testimonial).permit(:title, :description, :works_with_id, :is_live, :video_embed, :promo_text,
+                                        :promo_image_url, :promo_image_url_cache, :publish_date)
   end
 end

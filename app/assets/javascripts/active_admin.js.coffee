@@ -7,7 +7,7 @@ $(document).ready ->
     theme: "modern"
     menubar:false
     browser_spellcheck: true
-    plugins : 'link'
+    plugins : ['link', 'wordcount']
   return
 
 

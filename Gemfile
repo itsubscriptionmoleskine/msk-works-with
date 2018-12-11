@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-slick-rails', '~> 1.9'
 gem 'jquery-rails', '~> 4.3'
 gem 'livingstyleguide', '~> 2.0'
+gem 'mini_magick', '~> 4.9'
 gem 'mini_racer', '~> 0.2.4'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 3.7'
@@ -54,3 +55,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

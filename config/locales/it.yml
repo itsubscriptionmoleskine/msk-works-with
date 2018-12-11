@@ -1,0 +1,8 @@
+it:
+  activerecord:
+    errors:
+      messages:
+        image:
+          equal_to: "%{length} deve essere uguale a %{count} pixels"
+          greater_than_or_equal_to: "%{length} deve essere maggiore o uguale a %{count} pixels"
+          less_than_or_equal_to: "%{length} deve essere minore o uguale a %{count} pixels"

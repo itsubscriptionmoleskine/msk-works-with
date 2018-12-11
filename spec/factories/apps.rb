@@ -11,6 +11,9 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
+    trait :description_too_long do
+      description {Faker::Lorem.sentence(word_count=250)}
+    end
     after (:create) do |app|
       o = build(:offering)
       d = build(:distributor)
