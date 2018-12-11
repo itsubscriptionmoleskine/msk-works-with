@@ -8,6 +8,9 @@ FactoryBot.define do
     url {Faker::Internet.url}
     is_live {true}
     logo_image_url {Faker::Internet.url}
+    trait :description_too_long do
+      description {Faker::Lorem.sentence(word_count=250)}
+    end
     trait :wip do
       is_live {false}
     end

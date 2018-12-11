@@ -5,4 +5,5 @@ class App < ApplicationRecord
   def as_json(options={})
     super(:only => [:name, :description, :info_url, :is_live, :developer_id])
   end
+  validates_length_of :description, maximum: 220
 end

@@ -14,6 +14,9 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
+    trait :promo_text do
+      promo_text {Faker::Lorem.sentence(word_count=250)}
+    end
     trait :should_not_be_live do
       publish_date {Faker::Date.forward(60)}
     end

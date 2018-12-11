@@ -9,4 +9,7 @@ RSpec.describe Developer, type: :model do
     expect(build(:developer, :wip)).to be_valid
   end
   it {should have_many(:apps)}
+  it 'is not valid when the description is too long' do
+    expect(build(:developer, :description_too_long)).to_not be_valid
+  end
 end

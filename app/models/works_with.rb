@@ -10,4 +10,5 @@ class WorksWith < ApplicationRecord
   def as_json(options={})
     super(:only => [:title, :description, :app_id, :offering_id, :is_live, :promo_image_url, :promo_text])
   end
+  validates_length_of :promo_text, maximum: 220
 end
