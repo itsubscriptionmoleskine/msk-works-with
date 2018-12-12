@@ -7,7 +7,6 @@ end
 
 gem 'activeadmin', '~> 1.4'
 gem 'breadcrumbs_on_rails', '~> 3.0'
-gem 'carrierwave-google-storage', '~> 0.9.0'
 gem 'devise', '~> 4.5'
 gem 'figaro', '~> 1.1'
 gem 'font-awesome-sass', '~> 5.5'
@@ -56,3 +55,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+gem "fog-google", "~> 1.8"
+
+gem "fog", "~> 0.7.2"
+
+gem "carrierwave", "~> 1.2"
+
+gem "dotenv-rails", "~> 2.5"

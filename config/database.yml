@@ -8,10 +8,10 @@ postgresql_settings: &postgresql_settings
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: postgres
-  password: u2xrMBSMvssv
-  host:   35.245.10.148
-  database: works_with_postgresql
+  username: <%= ENV.fetch("DATABASE_USERNAME") %>
+  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  host: <%= ENV.fetch("DATABASE_HOST") %>
+  database: <%= ENV.fetch("DATABASE_NAME") %>
 
 development:
   <<: *postgresql_settings
