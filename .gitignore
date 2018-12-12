@@ -2,6 +2,7 @@
 .idea
 config/secrets.yml.key
 .gcp-keyfile.json
+app.yaml
 .env
 tmp
 /log
