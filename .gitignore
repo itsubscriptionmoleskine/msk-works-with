@@ -2,7 +2,8 @@
 .idea
 config/secrets.yml.key
 .gcp-keyfile.json
-/config/application.yml
+app.yaml
+.env
 tmp
 /log
 .DS_Store

@@ -1,14 +1,9 @@
 CarrierWave.configure do |config|
-  config.storage                             = :gcloud
-  config.gcloud_bucket                       = ENV["GCLOUD_BUCKET"]
-  config.gcloud_bucket_is_public             = true
-  config.gcloud_authenticated_url_expiration = 600
-  config.gcloud_content_disposition          = 'attachment'
-  config.gcloud_attributes = {
-    expires: 600
+  config.fog_provider = 'fog/google'
+  config.fog_credentials = {
+      provider:                         'Google',
+      google_storage_access_key_id:     'GOOGZPQTHMUX23LNHTHTUUBZ',
+      google_storage_secret_access_key: 'BZWAPgIMqoTryTao682ESIhRyq4JTUOfFUasmYRH'
   }
-  config.gcloud_credentials = {
-    gcloud_project: ENV["GCLOUD_PROJECT"],
-    gcloud_keyfile: '.gcp-keyfile.json'
-  }
+  config.fog_directory = 'upload'
 end

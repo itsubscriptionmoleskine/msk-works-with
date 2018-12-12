@@ -1,0 +1,6 @@
+.idea
+config/secrets.yml.key
+.gcp-keyfile.json
+.env
+/log
+.DS_Store
