@@ -1,7 +1,7 @@
 class ImageUploader < CarrierWave::Uploader::Base
   attr_reader :width, :height
   before :cache, :capture_size
-  storage :gcloud
+  storage :fog
   def capture_size(file)
     if version_name.blank?
       if file.path.nil?

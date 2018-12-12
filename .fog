@@ -1,0 +1,6 @@
+my_google_credentials:
+    google_project: <%= ENV["GCLOUD_PROJECT"] %>
+    google_client_email: <%= ENV["GOOGLE_CLIENT_EMAIL"] %>
+    google_json_key_location: <%= ENV["GOOGLE_JSON_KEY"] %>
+	google_storage_access_key_id: <%= ENV["GOOGLE_STORAGE_ACCESS_KEY_ID"] %>
+	google_storage_secret_access_key: <%= ENV["GOOGLE_STORAGE_SECRET_ACCESS_KEY"] %>
