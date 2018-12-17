@@ -6,6 +6,7 @@ FactoryBot.define do
     name {:offering_name}
     description {Faker::Lorem.sentence}
     shop_link {Faker::Internet.url}
+    product_image {Faker::Internet.url}
     is_live {true}
     trait :wip do
       is_live {false}
