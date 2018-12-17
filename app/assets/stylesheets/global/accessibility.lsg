@@ -5,3 +5,6 @@
 '
 <a href="#">All links should have tabbed focus states</a>
 
+## Skip Navigation (Use Keyboard)
+
+<a href="#" class="skip-navigation">Skip Navigation</a>

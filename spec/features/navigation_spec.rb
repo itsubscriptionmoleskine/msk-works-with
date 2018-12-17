@@ -16,5 +16,10 @@ RSpec.describe 'Navigation is available', :type => :feature do
     expect(page).to have_selector(:css, 'a[href="/tos"]')
   end
 
+  it 'checks for "skippable" navigation', :js => true do
+    visit root_path
+    expect(page).to have_selector(:css, 'a[href="#skip-navigation"')
+  end
+
 
 end

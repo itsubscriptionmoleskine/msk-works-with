@@ -1,4 +1,6 @@
 %header.navigation{:role => "banner"}
+  %a{:href=> '#skip-navigation', :tab-index=> 0, :class=>'skip-navigation'}
+    Skip Navigation
   .navigation-wrapper
     .moleskine-header
       %a.logo{:href => "javascript:void(0)"}
@@ -15,3 +17,4 @@
           %a{:href=> developers_path, :tab_index=> 0, :class=>'link'} Partners
         %li{:class=> 'item'}
           %a{:href=> testimonials_path, :tab_index=> 0, :class=>'link'} Made with Moleskine+
+    %a{:name => 'skip-navigation'}
