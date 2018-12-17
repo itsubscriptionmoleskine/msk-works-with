@@ -16,4 +16,19 @@ a{
   }
 }
 
+.skip-navigation{
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top:-3000px;
+  &:focus{
+    opacity: 1;
+    width: 4rem;
+    height: 1.25rem;
+    position: inherit;
+    top: 0;
+  }
+}
+
 //#ToDo: Feature Spec for links focus state
