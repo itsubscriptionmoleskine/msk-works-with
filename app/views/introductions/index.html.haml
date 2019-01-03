@@ -1,0 +1,7 @@
+%ul.breadcrumb
+  = render_breadcrumbs :tag=> :li, :separator => ""
+.introduction-page
+  %p
+    = Faker::Lorem.sentence
+  %a{:href=> home_path}
+    Return Home
