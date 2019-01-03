@@ -1,8 +1,8 @@
 FactoryBot.define do
-  factory :distributor_link do
+  factory :app_store_link do
     link {Faker::Internet.url}
     is_live {true}
-    distributor
+    app_store
     app
     trait :wip do
       is_live {false}

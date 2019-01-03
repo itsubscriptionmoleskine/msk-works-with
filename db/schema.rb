@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190103151322) do
+ActiveRecord::Schema.define(version: 20190103152420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,27 @@ ActiveRecord::Schema.define(version: 20190103151322) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "app_store_links", force: :cascade do |t|
+    t.string "link"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "app_store_id"
+    t.bigint "app_id"
+    t.index ["app_id"], name: "index_app_store_links_on_app_id"
+    t.index ["app_store_id", "app_id"], name: "index_app_store_links_on_app_store_id_and_app_id"
+    t.index ["app_store_id"], name: "index_app_store_links_on_app_store_id"
+  end
+
+  create_table "app_stores", force: :cascade do |t|
+    t.string "name"
+    t.string "badge_image_url"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "icon_id"
+  end
+
   create_table "apps", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -60,27 +81,6 @@ ActiveRecord::Schema.define(version: 20190103151322) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "logo_image_url"
-  end
-
-  create_table "distributor_links", force: :cascade do |t|
-    t.string "link"
-    t.boolean "is_live"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "distributor_id"
-    t.bigint "app_id"
-    t.index ["app_id"], name: "index_distributor_links_on_app_id"
-    t.index ["distributor_id", "app_id"], name: "index_distributor_links_on_distributor_id_and_app_id"
-    t.index ["distributor_id"], name: "index_distributor_links_on_distributor_id"
-  end
-
-  create_table "distributors", force: :cascade do |t|
-    t.string "name"
-    t.string "badge_image_url"
-    t.boolean "is_live"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "icon_id"
   end
 
   create_table "example_images", force: :cascade do |t|

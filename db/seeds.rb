@@ -2,7 +2,7 @@ AdminUser.create!(email: 'admin@example.com', password: 'password', password_con
 Developer.create(name: Faker::Color.color_name, url: Faker::Internet.url, description:Faker::Lorem.sentence, is_live: true)
 App.create(name: Faker::Name.name, description:Faker::Lorem.sentence, is_live:true, info_url:Faker::Internet.url, developer_id:1)
 Distributor.create(name: Faker::Dessert.variety, badge_image_url:Faker::Internet.url, is_live:true)
-DistributorLink.create(link:Faker::Internet.url, distributor_id:1, app_id: 1, is_live: true)
+DistributorLink.create(link:Faker::Internet.url, app_store_id:1, app_id: 1, is_live: true)
 Product.create(name: Faker::Fallout.character, description: Faker::Lorem.sentence, shop_link:Faker::Internet.url, is_live:true)
 WorksWith.create(title:Faker::Lorem.sentence, description: Faker::Lorem.sentence, is_live: true, product_id:1, app_id: 1, promo_text:Faker::Lorem.sentence, promo_image_url:Faker::Internet.url)
 Testimonial.create(title: Faker::Lorem.sentence, description:Faker::Lorem.sentence, promo_text:Faker::Lorem.sentence, promo_image_url:Faker::Internet.url, is_live: true, works_with_id: 1, publish_date: Faker::Date.backward(2))

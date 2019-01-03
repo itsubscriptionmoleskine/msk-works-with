@@ -42,8 +42,8 @@
     %h3{:class=>'works-with-sidebar-title'}
       %a{:href=> works_with_path(@testimonial.works_with.id.to_s), :tab_index=> 0}
         = @testimonial.works_with.title
-    %ul{:class=>'distributor-links'}
-      - @testimonial.works_with.app.distributor_links.each do |dl|
+    %ul{:class=>'app-store-links'}
+      - @testimonial.works_with.app.app_store_links.each do |dl|
         %li
           %a{:href=> dl.link, :tab_index=> 0}
-            = dl.distributor.name
+            = dl.app_store.name

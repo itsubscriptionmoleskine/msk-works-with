@@ -5,7 +5,7 @@ RSpec.describe App, type: :model do
     expect(build(:app)).to be_valid
   end
   it { should belong_to(:developer)}
-  it { should have_many(:distributor_links)}
+  it { should have_many(:app_store_links)}
   it 'is not valid when the description is too long' do
     expect(build(:app, :description_too_long)).to_not be_valid
   end

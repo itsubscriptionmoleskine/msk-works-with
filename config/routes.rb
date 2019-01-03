@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :example_images
   resources :products
   resources :use_cases
-  resources :distributor_links
-  resources :distributors
+  resources :app_store_links
+  resources :app_stores
   resources :apps
   resources :developers
   devise_for :admin_users, ActiveAdmin::Devise.config

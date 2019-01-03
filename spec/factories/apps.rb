@@ -16,9 +16,9 @@ FactoryBot.define do
     end
     after (:create) do |app|
       o = build(:product)
-      d = build(:distributor)
+      d = build(:app_store)
       create :works_with, app: app, product: o
-      create :distributor_link, app: app, distributor: d
+      create :app_store_link, app: app, app_store: d
     end
   end
 end
