@@ -1,4 +1,4 @@
-ActiveAdmin.register Offering do
+ActiveAdmin.register Product do
 
   permit_params :name, :description, :shop_link, :is_live, :product_image
 

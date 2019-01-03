@@ -1,59 +1,59 @@
 require 'rails_helper'
 
-RSpec.describe OfferingsController, type: :controller do
+RSpec.describe ProductsController, type: :controller do
   describe 'GET #index' do
-    it 'assigns all offerings as @offerings' do
-      offering = FactoryBot.create(:offering)
+    it 'assigns all products as @products' do
+      product = FactoryBot.create(:product)
       get :index
-      expect(assigns(:offerings)).to eq([offering])
+      expect(assigns(:products)).to eq([product])
     end
   end
 
   describe 'GET #show' do
-    it 'assigns the requested offering as @offering' do
-      offering = FactoryBot.create(:offering)
-      get :show, params: {:id => offering.to_param}
-      expect(assigns(:offering)).to eq(offering)
+    it 'assigns the requested product as @product' do
+      product = FactoryBot.create(:product)
+      get :show, params: {:id => product.to_param}
+      expect(assigns(:product)).to eq(product)
     end
   end
 
 
   describe 'PUT #update' do
     context 'with valid params' do
-      it 'updates the requested offering' do
-        offering = FactoryBot.create(:offering)
-        put :update, params: {:id => offering.to_param, :offering => FactoryBot.attributes_for(:offering)}
-        offering.reload
+      it 'updates the requested product' do
+        product = FactoryBot.create(:product)
+        put :update, params: {:id => product.to_param, :product => FactoryBot.attributes_for(:product)}
+        product.reload
       end
 
-      it 'assigns the requested offering as @offering' do
-        offering = FactoryBot.create(:offering)
-        put :update, params: {:id => offering.to_param, :offering => FactoryBot.attributes_for(:offering)}
-        expect(assigns(:offering)).to eq(offering)
+      it 'assigns the requested product as @product' do
+        product = FactoryBot.create(:product)
+        put :update, params: {:id => product.to_param, :product => FactoryBot.attributes_for(:product)}
+        expect(assigns(:product)).to eq(product)
       end
 
-      it 'redirects to the offering' do
-        offering = FactoryBot.create(:offering)
-        put :update, params: {:id => offering.to_param, :offering => FactoryBot.attributes_for(:offering)}
-        expect(response).to redirect_to(offering)
+      it 'redirects to the product' do
+        product = FactoryBot.create(:product)
+        put :update, params: {:id => product.to_param, :product => FactoryBot.attributes_for(:product)}
+        expect(response).to redirect_to(product)
       end
     end
 
   end
 
   describe 'DELETE #destroy' do
-    it 'destroys the requested offering' do
-      offering = FactoryBot.create(:offering)
+    it 'destroys the requested product' do
+      product = FactoryBot.create(:product)
       expect {
-        delete :destroy, params: {:id => offering.to_param}
-      }.to change(Offering, :count).by(-1)
+        delete :destroy, params: {:id => product.to_param}
+      }.to change(Product, :count).by(-1)
     end
 
-    it 'redirects to the offerings list' do
-      offering = FactoryBot.create(:offering)
-      aid = offering.to_param
+    it 'redirects to the products list' do
+      product = FactoryBot.create(:product)
+      aid = product.to_param
       delete :destroy, params: {:id => aid}
-      expect(response).to redirect_to(offerings_path)
+      expect(response).to redirect_to(products_path)
     end
   end
 

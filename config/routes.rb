@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :testimonials
   resources :works_withs
   resources :example_images
-  resources :offerings
+  resources :products
   resources :use_cases
   resources :distributor_links
   resources :distributors

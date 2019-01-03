@@ -1,4 +1,4 @@
-class Offering < ApplicationRecord
+class Product < ApplicationRecord
   has_many :works_withs
   mount_uploader :product_image, ImageUploader
   def as_json(options={})

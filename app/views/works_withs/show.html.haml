@@ -17,12 +17,12 @@
           .description
             = @works_with.description.html_safe
           %hr{:class=>'description-column-rule'}
-          .offering-promotion
-            %img{:src => @works_with.offering.product_image}
-            %a{:href =>  @works_with.offering.shop_link}
-            = @works_with.offering.name
+          .product-promotion
+            %img{:src => @works_with.product.product_image}
+            %a{:href =>  @works_with.product.shop_link}
+            = @works_with.product.name
             %p
-              = @works_with.offering.description.html_safe
+              = @works_with.product.description.html_safe
           %hr{:class=>'description-column-rule'}
           .developer-promotion
             %span{:class=>'developer-promotion-attribution'}

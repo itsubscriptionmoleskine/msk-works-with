@@ -1,9 +1,9 @@
 FactoryBot.define do
-  sequence :offering_name do |n|
+  sequence :product_name do |n|
     Faker::Name.name + n.to_s
   end
-  factory :offering do
-    name {:offering_name}
+  factory :product do
+    name {:product_name}
     description {Faker::Lorem.sentence}
     shop_link {Faker::Internet.url}
     product_image {Faker::Internet.url}
@@ -14,9 +14,9 @@ FactoryBot.define do
     trait :description_too_long do
       description {Faker::Lorem.sentence(word_count=250)}
     end
-    after (:create) do |offering|
+    after (:create) do |product|
       a = build(:app)
-      create :works_with, app: a, offering: offering
+      create :works_with, app: a, product: product
     end
   end
 end
