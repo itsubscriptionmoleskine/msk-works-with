@@ -15,10 +15,10 @@ FactoryBot.define do
       description {Faker::Lorem.sentence(word_count=250)}
     end
     after (:create) do |app|
-      o = build(:offering)
-      d = build(:distributor)
-      create :works_with, app: app, offering: o
-      create :distributor_link, app: app, distributor: d
+      o = build(:product)
+      d = build(:app_store)
+      create :works_with, app: app, product: o
+      create :app_store_link, app: app, app_store: d
     end
   end
 end

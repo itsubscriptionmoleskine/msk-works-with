@@ -14,9 +14,9 @@
           .works-with-divider
             works with
           .offering-group
-            %img{:src => works_with.offering.product_image, :class=> 'product-image-mini'}
-            %a{:href =>  works_with.offering.shop_link, :class=> 'combo-link', :tab_index=> 0}
-              = works_with.offering.name
+            %img{:src => works_with.product.product_image, :class=> 'product-image-mini'}
+            %a{:href =>  works_with.product.shop_link, :class=> 'combo-link', :tab_index=> 0}
+              = works_with.product.name
       .text-side
         %h2{:class => 'works-with-title'}
           = works_with.title

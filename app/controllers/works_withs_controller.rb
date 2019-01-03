@@ -74,6 +74,6 @@ class WorksWithsController < ApplicationController
   end
 
   def works_with_params
-    params.require(:works_with).permit(:title, :description, :app_id, :offering_id, :is_live, :promo_image_url, :promo_text)
+    params.require(:works_with).permit(:title, :description, :app_id, :product_id, :is_live, :promo_image_url, :promo_text)
   end
 end

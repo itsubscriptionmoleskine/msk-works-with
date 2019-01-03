@@ -4,16 +4,17 @@ Rails.application.routes.draw do
   resources :testimonials
   resources :works_withs
   resources :example_images
-  resources :offerings
+  resources :products
   resources :use_cases
-  resources :distributor_links
-  resources :distributors
+  resources :app_store_links
+  resources :app_stores
   resources :apps
   resources :developers
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'home#index'
   get 'home' => 'home#index'
+  get 'intro' => 'introductions#index'
   get 'tos' => 'terms_of_service#index'
   get 'privacy' => 'privacy_policy#index'
   get 'style-guide', :to => redirect('/assets/styleguide.html')

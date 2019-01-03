@@ -6,7 +6,7 @@ FactoryBot.define do
     title {:works_with_title}
     description {Faker::Lorem.sentence}
     is_live {true}
-    offering
+    product
     app
     promo_image_url {Faker::Internet.url}
     promo_text {Faker::Lorem.sentence}
