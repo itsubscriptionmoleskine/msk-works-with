@@ -6,8 +6,7 @@ ActiveAdmin.register Testimonial do
     f.inputs do
       f.input :title
       f.input :promo_text, :input_html => {:class => 'tinymce'}, :label => 'Promo Copy, 1 paragraph only.'
-      f.input :promo_image_url, :as => :file, :label=> 'Promo Image'
-      f.input :promo_image_url_cache, :as => :hidden
+      f.input :promo_image_url, :label=> 'Promo Image'
       f.input :publish_date, :as => :datepicker, :label=> 'Publish Date'
       f.input :description, :input_html => {:class => 'tinymce'}, :label => 'Testimonial Main Copy'
       f.input :works_with_id, :label => 'Which "Works With" does this support?', :as => :select, :collection => WorksWith.all.map{|w| ["#{w.title}", w.id]}
