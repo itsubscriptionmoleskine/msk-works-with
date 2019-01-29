@@ -7,8 +7,7 @@ ActiveAdmin.register Developer do
       f.input :name
       f.input :description, :input_html => {:class => 'tinymce'}, :label => 'Description'
       f.input :url
-      f.input :logo_image_url, :as => :file
-      f.input :logo_image_url_cache, :as => :hidden
+      f.input :logo_image_url
       f.input :is_live, :label => 'Publish?', :as => :radio
     end
     f.actions
