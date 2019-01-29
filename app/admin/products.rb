@@ -7,8 +7,7 @@ ActiveAdmin.register Product do
       f.input :name
       f.input :description, :label => 'Description', :input_html => {:class => 'tinymce'}
       f.input :shop_link
-      f.input :product_image, :as => :file
-      f.input :product_image_cache, :as => :hidden
+      f.input :product_image
       f.input :is_live, :label => 'Publish?', :as => :radio
     end
     f.actions
