@@ -44,14 +44,3 @@
                     =icon('fab', store_link.app_store.icon_id)
                   %a{:href=> store_link.link, :tab_index=> 0}
                     = store_link.app_store.name
-  -#ToDo: Check for length
-  - if @related_works_with
-    .works-with-related
-      .related-inner
-        %h2.made-with-related-title
-          Get more out of Moleskine+
-        .works-with-card-holder
-          -@related_works_with.each do |card|
-            .works-with-card{:style => "background-image:url(#{card.promo_image_url})", :onclick =>"location.href='#{works_withs_path + '/' + card.id.to_s}'", :tab_index=> 0}
-              %h2.card-title
-                = card.title

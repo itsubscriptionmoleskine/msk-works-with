@@ -33,14 +33,3 @@
       .rounded-corner
         %h3
           = x.title
-  -#ToDo: Check for length
-  - if @testimonial_promos
-    .testimonial-promo
-      .testimonial-promo-inner
-        %h2.testimonial-promo-title
-          Made with Moleskine+
-        .testimonial-promo-card-holder
-          -@testimonial_promos.each do |card|
-            .testimonial-promo-card{:style => "background-image:url(#{card.promo_image_url})", :tab_index=> 0, :onclick =>"location.href='#{testimonials_path + '/' + card.id.to_s}'"}
-              %h2.card-title
-                = card.title
