@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.5.3"
+
 git_source(:github) do |repo_name|
   repo_name = '#{repo_name}/#{repo_name}' unless repo_name.include?('/')
   'https://github.com/#{repo_name}.git'
@@ -19,7 +21,7 @@ gem 'livingstyleguide', '~> 2.0'
 gem 'mini_racer', '~> 0.2.4'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.2'
+gem 'rails', '~> 5.2'
 gem 'sass-rails', '~> 5.0'
 gem 'stackdriver', '~> 0.15.0'
 gem 'tinymce-rails', '~> 4.9'
