@@ -8,6 +8,9 @@ class App < ApplicationRecord
   def to_slug(string)
     string.parameterize.truncate(80, omission: '')
   end
+  def to_param
+    slug
+  end
   validates_presence_of :slug
   validates_length_of :description, maximum: 220
 end

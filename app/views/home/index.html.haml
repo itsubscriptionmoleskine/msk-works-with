@@ -29,7 +29,7 @@
           %a{:href=> intro_path, :class=>'read-more-link'}
             Read More
   -@featured_example.each do |x|
-    .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_withs_path + '/' + x.id.to_s}'"}
+    .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
       .rounded-corner
         %h3
           = x.title

@@ -1,5 +1,9 @@
 ActiveAdmin.register Developer do
 
+  controller do
+    defaults :finder => :find_by_slug
+  end
+
   permit_params :name, :description, :url, :is_live, :logo_image_url, :slug
 
   form(:html => {:multipart => true}) do |f|

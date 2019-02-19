@@ -1,5 +1,9 @@
 ActiveAdmin.register App do
 
+  controller do
+    defaults :finder => :find_by_slug
+  end
+
   permit_params :name, :description, :info_url, :is_live, :developer_id, :slug
 
   form(:html => {:multipart => true}) do |f|

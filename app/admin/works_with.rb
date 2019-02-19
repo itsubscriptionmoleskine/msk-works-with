@@ -1,5 +1,9 @@
 ActiveAdmin.register WorksWith do
 
+  controller do
+    defaults :finder => :find_by_slug
+  end
+
   permit_params :title, :description, :app_id, :product_id, :is_live, :promo_image_url, :promo_text, :slug
 
   form(:html => {:multipart => true}) do |f|

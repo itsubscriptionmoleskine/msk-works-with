@@ -8,7 +8,7 @@ FactoryBot.define do
     info_url {Faker::Internet.url}
     is_live {true}
     developer
-    slug {Faker::Movies::Hobbit.character}
+    slug { 'a fake slug'}
     trait :wip do
       is_live {false}
     end

@@ -65,7 +65,7 @@ class AppsController < ApplicationController
   private
 
   def set_app
-    @app = App.find(params[:slug])
+    @app = App.find_by(slug: params[:slug])
   end
 
   def app_params

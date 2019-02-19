@@ -1,1 +1,4 @@
-json.array! @works_withs, partial: 'works_withs/works_with', as: :works_with
+json.array!(@works_withs) do |ww|
+  json.extract! ww, :slug
+  json.url developer_url(ww, format: :json)
+end

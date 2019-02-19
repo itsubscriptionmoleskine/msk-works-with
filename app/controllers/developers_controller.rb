@@ -75,7 +75,7 @@ class DevelopersController < ApplicationController
   private
 
   def set_developer
-    @developer = Developer.find(params[:slug])
+    @developer = Developer.find_by(slug: params[:slug])
   end
 
   def developer_params

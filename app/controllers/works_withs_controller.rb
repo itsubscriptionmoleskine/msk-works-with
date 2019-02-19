@@ -70,7 +70,7 @@ class WorksWithsController < ApplicationController
   private
 
   def set_works_with
-    @works_with = WorksWith.find(params[:slug])
+    @works_with = WorksWith.find_by(slug: params[:slug])
   end
 
   def works_with_params
