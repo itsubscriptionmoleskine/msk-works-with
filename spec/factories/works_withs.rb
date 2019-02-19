@@ -10,6 +10,7 @@ FactoryBot.define do
     app
     promo_image_url {Faker::Internet.url}
     promo_text {Faker::Lorem.sentence}
+    slug {Faker::Movies::Hobbit.character}
     trait :promo_text_too_long do
       promo_text {Faker::Lorem.sentence(word_count=250)}
     end

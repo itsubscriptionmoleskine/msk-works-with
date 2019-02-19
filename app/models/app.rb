@@ -5,5 +5,9 @@ class App < ApplicationRecord
   def as_json(options={})
     super(:only => [:name, :description, :info_url, :is_live, :developer_id])
   end
+  def to_slug(string)
+    string.parameterize.truncate(80, omission: '')
+  end
+  validates_presence_of :slug
   validates_length_of :description, maximum: 220
 end

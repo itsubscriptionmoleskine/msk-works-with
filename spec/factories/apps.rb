@@ -8,8 +8,12 @@ FactoryBot.define do
     info_url {Faker::Internet.url}
     is_live {true}
     developer
+    slug {Faker::Movies::Hobbit.character}
     trait :wip do
       is_live {false}
+    end
+    trait :no_slug do
+      slug { }
     end
     trait :description_too_long do
       description {Faker::Lorem.sentence(word_count=250)}

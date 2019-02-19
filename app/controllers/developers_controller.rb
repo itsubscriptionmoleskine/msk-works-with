@@ -15,7 +15,7 @@ class DevelopersController < ApplicationController
   def show
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Developers', developers_path
-    add_breadcrumb @developer.name, developer_path(@developer.id)
+    add_breadcrumb @developer.name, developer_path(@developer.slug)
 
     @developer_works_withs = []
 
@@ -75,10 +75,10 @@ class DevelopersController < ApplicationController
   private
 
   def set_developer
-    @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:slug])
   end
 
   def developer_params
-    params.require(:developer).permit(:name, :description, :url, :is_live, :logo_image_url)
+    params.require(:developer).permit(:name, :description, :url, :is_live, :logo_image_url, :slug)
   end
 end

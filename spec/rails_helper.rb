@@ -41,3 +41,7 @@ end
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
+
+def test_to_slug(string)
+  string.parameterize.truncate(80, omission: '')
+end

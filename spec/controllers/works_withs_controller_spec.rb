@@ -14,7 +14,7 @@ RSpec.describe WorksWithsController, type: :controller do
   describe 'GET #show' do
     it 'assigns the requested works_with as @works_with' do
       works_with = FactoryBot.create(:works_with)
-      get :show, params: {:id => works_with.to_param}
+      get :show, params: {:slug => works_with.to_param}
       expect(assigns(:works_with)).to eq(works_with)
     end
   end
@@ -23,19 +23,19 @@ RSpec.describe WorksWithsController, type: :controller do
     context 'with valid params' do
       it 'updates the requested works_with' do
         works_with = FactoryBot.create(:works_with)
-        put :update, params: {:id => works_with.to_param, :works_with => FactoryBot.attributes_for(:works_with)}
+        put :update, params: {:slug => works_with.to_param, :works_with => FactoryBot.attributes_for(:works_with)}
         works_with.reload
       end
 
       it 'assigns the requested works_with as @works_with' do
         works_with = FactoryBot.create(:works_with)
-        put :update, params: {:id => works_with.to_param, :works_with => FactoryBot.attributes_for(:works_with)}
+        put :update, params: {:slug => works_with.to_param, :works_with => FactoryBot.attributes_for(:works_with)}
         expect(assigns(:works_with)).to eq(works_with)
       end
 
       it 'redirects to the works_with' do
         works_with = FactoryBot.create(:works_with)
-        put :update, params: {:id => works_with.to_param, :works_with => FactoryBot.attributes_for(:works_with)}
+        put :update, params: {:slug => works_with.to_param, :works_with => FactoryBot.attributes_for(:works_with)}
         expect(response).to redirect_to(works_with)
       end
     end
@@ -46,14 +46,14 @@ RSpec.describe WorksWithsController, type: :controller do
     it 'destroys the requested works_with' do
       works_with = FactoryBot.create(:works_with)
       expect {
-        delete :destroy, params: {:id => works_with.to_param}
+        delete :destroy, params: {:slug => works_with.to_param}
       }.to change(WorksWith, :count).by(-1)
     end
 
     it 'redirects to the works_withs list' do
       works_with = FactoryBot.create(:works_with)
-      aid = works_with.to_param
-      delete :destroy, params: {:id => aid}
+      works_with_param = works_with.to_param
+      delete :destroy, params: {:slug => works_with_param}
       expect(response).to redirect_to(works_withs_path)
     end
   end
