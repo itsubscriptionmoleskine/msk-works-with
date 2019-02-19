@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190103152420) do
+ActiveRecord::Schema.define(version: 2019_02_18_192828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20190103152420) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "developer_id"
+    t.string "slug"
     t.index ["developer_id"], name: "index_apps_on_developer_id"
   end
 
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20190103152420) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "logo_image_url"
+    t.string "slug"
   end
 
   create_table "example_images", force: :cascade do |t|
@@ -125,6 +127,7 @@ ActiveRecord::Schema.define(version: 20190103152420) do
     t.string "promo_image_url"
     t.text "promo_text"
     t.date "publish_date"
+    t.string "slug"
     t.index ["works_with_id"], name: "index_testimonials_on_works_with_id"
   end
 
@@ -135,6 +138,7 @@ ActiveRecord::Schema.define(version: 20190103152420) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "works_with_id"
+    t.string "slug"
     t.index ["works_with_id"], name: "index_use_cases_on_works_with_id"
   end
 
@@ -148,6 +152,7 @@ ActiveRecord::Schema.define(version: 20190103152420) do
     t.bigint "product_id"
     t.string "promo_image_url"
     t.text "promo_text"
+    t.string "slug"
     t.index ["app_id"], name: "index_works_withs_on_app_id"
     t.index ["product_id", "app_id"], name: "index_works_withs_on_product_id_and_app_id"
     t.index ["product_id"], name: "index_works_withs_on_product_id"

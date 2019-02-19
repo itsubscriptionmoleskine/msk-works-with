@@ -13,5 +13,5 @@
     %ul.apps-by-this-developer
       -@developer_works_withs.each do |w|
         %li
-          %a{:href=> works_withs_path + "/" + w.id.to_s}
+          %a{:href=> works_with_path(w.slug)}
             = w.title

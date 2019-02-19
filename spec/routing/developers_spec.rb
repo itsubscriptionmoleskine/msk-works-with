@@ -12,11 +12,11 @@ RSpec.describe DevelopersController, type: :routing do
     end
 
     it 'routes to #show' do
-      expect(:get => '/developers/1').to route_to('developers#show', :id => '1')
+      expect(:get => '/developers/test-slug').to route_to('developers#show', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #edit' do
-      expect(:get => '/developers/1/edit').to route_to('developers#edit', :id => '1')
+      expect(:get => '/developers/test-slug/edit').to route_to('developers#edit', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #create' do
@@ -24,15 +24,15 @@ RSpec.describe DevelopersController, type: :routing do
     end
 
     it 'routes to #update via PUT' do
-      expect(:put => '/developers/1').to route_to('developers#update', :id => '1')
+      expect(:put => '/developers/test-slug').to route_to('developers#update', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #update via PATCH' do
-      expect(:patch => '/developers/1').to route_to('developers#update', :id => '1')
+      expect(:patch => '/developers/test-slug').to route_to('developers#update', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #destroy' do
-      expect(:delete => '/developers/1').to route_to('developers#destroy', :id => '1')
+      expect(:delete => '/developers/test-slug').to route_to('developers#destroy', :slug => test_to_slug('test slug'))
     end
 
   end

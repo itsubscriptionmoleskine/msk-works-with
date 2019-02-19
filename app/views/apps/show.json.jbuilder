@@ -1,1 +1,1 @@
-json.partial! "apps/app", app: @app
+json.extract! @app, :id, :name, :description, :info_url, :is_live, :developer_id, :slug, :created_at, :updated_at

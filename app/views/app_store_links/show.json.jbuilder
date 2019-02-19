@@ -1,1 +1,1 @@
-json.partial! 'app_store_links/app_store_link', app_store_link: @app_store_link
+json.extract! @app_store_link, :id, :link, :app_store_id, :app_id, :created_at, :updated_at

@@ -1,1 +1,1 @@
-json.extract! @testimonial, :id, :description, :is_live, :works_with_id, :video_embed, :created_at, :updated_at
+json.extract! @testimonial, :id, :description, :is_live, :works_with_id, :video_embed, :slug, :created_at, :updated_at

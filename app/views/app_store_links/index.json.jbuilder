@@ -1,1 +1,4 @@
-json.array! @app_store_links, partial: 'app_store_links/app_store_link', as: :app_store_link
+json.array!(@app_store_links) do |app_store_link|
+  json.extract! app_store_link, :id
+  json.url developer_url(app_store_link, format: :json)
+end

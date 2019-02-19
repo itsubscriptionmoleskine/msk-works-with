@@ -10,5 +10,5 @@
           = developer.name
         %p
           = developer.description.html_safe
-        %a{:href => developers_path + "/" + developer.id.to_s, :class=> 'view-more'}
+        %a{:href => developer_path(developer.slug), :class=> 'view-more'}
           View

@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
   resources :testimonial_slides
-  resources :testimonials
-  resources :works_withs
+  resources :testimonials, param: :slug
+  resources :works_withs, param: :slug
   resources :example_images
   resources :products
-  resources :use_cases
+  resources :use_cases, param: :slug
   resources :app_store_links
   resources :app_stores
-  resources :apps
-  resources :developers
+  resources :apps, param: :slug
+  resources :developers, param: :slug
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'home#index'
