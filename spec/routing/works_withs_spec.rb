@@ -12,11 +12,11 @@ RSpec.describe WorksWithsController, type: :routing do
     end
 
     it 'routes to #show' do
-      expect(:get => '/works_withs/1').to route_to('works_withs#show', :id => '1')
+      expect(:get => '/works_withs/test-slug').to route_to('works_withs#show', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #edit' do
-      expect(:get => '/works_withs/1/edit').to route_to('works_withs#edit', :id => '1')
+      expect(:get => '/works_withs/test-slug/edit').to route_to('works_withs#edit', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #create' do
@@ -24,15 +24,15 @@ RSpec.describe WorksWithsController, type: :routing do
     end
 
     it 'routes to #update via PUT' do
-      expect(:put => '/works_withs/1').to route_to('works_withs#update', :id => '1')
+      expect(:put => '/works_withs/test-slug').to route_to('works_withs#update', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #update via PATCH' do
-      expect(:patch => '/works_withs/1').to route_to('works_withs#update', :id => '1')
+      expect(:patch => '/works_withs/test-slug').to route_to('works_withs#update', :slug => test_to_slug('test slug'))
     end
 
     it 'routes to #destroy' do
-      expect(:delete => '/works_withs/1').to route_to('works_withs#destroy', :id => '1')
+      expect(:delete => '/works_withs/test-slug').to route_to('works_withs#destroy', :slug => test_to_slug('test slug'))
     end
 
   end

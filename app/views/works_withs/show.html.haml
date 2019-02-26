@@ -28,7 +28,7 @@
             %span{:class=>'developer-promotion-attribution'}
               = @works_with.app.name
               created by:
-            %a{:href=> developer_path(@works_with.app.developer.id), :class=>'developer-promotion-link', :tab_index=> 0}
+            %a{:href=> developer_path(@works_with.app.developer.slug), :class=>'developer-promotion-link', :tab_index=> 0}
               =@works_with.app.developer.name
         .download-column
           %h3{:class=>'download-header'}

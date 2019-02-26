@@ -15,7 +15,7 @@ class AppsController < ApplicationController
   def show
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Apps', apps_path
-    add_breadcrumb @app.name, apps_path(@app.id)
+    add_breadcrumb @app.name, apps_path(@app.slug)
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @app}
@@ -65,10 +65,10 @@ class AppsController < ApplicationController
   private
 
   def set_app
-    @app = App.find(params[:id])
+    @app = App.find_by(slug: params[:slug])
   end
 
   def app_params
-    params.require(:app).permit(:name, :description, :info_url, :is_live, :developer_id)
+    params.require(:app).permit(:name, :description, :info_url, :is_live, :developer_id, :slug)
   end
 end

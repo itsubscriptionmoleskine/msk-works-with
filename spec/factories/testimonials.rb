@@ -14,6 +14,10 @@ FactoryBot.define do
     trait :wip do
       is_live {false}
     end
+    slug {Faker::Movies::Hobbit.character}
+    trait :no_slug do
+      slug { }
+    end
     trait :promo_text_too_long do
       promo_text {Faker::Lorem.sentence(word_count=250)}
     end

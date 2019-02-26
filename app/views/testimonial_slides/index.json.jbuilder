@@ -1,1 +1,4 @@
-json.array! @testimonial_slides, partial: 'testimonial_slides/testimonial_slide', as: :testimonial_slide
+json.array!(@testimonial_slides) do |slide|
+  json.extract! slide, :id
+  json.url developer_url(slide, format: :json)
+end

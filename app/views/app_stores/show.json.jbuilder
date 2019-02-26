@@ -1,1 +1,1 @@
-json.partial! "app_stores/app_store", app_store: @app_store
+json.extract! @app_store, :name, :badge_image_url, :is_live, :icon_id, :created_at, :updated_at

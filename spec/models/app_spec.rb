@@ -6,6 +6,7 @@ RSpec.describe App, type: :model do
   end
   it { should belong_to(:developer)}
   it { should have_many(:app_store_links)}
+  it { should validate_presence_of(:slug) }
   it 'is not valid when the description is too long' do
     expect(build(:app, :description_too_long)).to_not be_valid
   end

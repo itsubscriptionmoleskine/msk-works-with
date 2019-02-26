@@ -15,7 +15,7 @@ class WorksWithsController < ApplicationController
   def show
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Works With', works_withs_path
-    add_breadcrumb  @works_with.title, works_with_path(@works_with.id)
+    add_breadcrumb  @works_with.title, works_with_path(@works_with.slug)
 
     #ToDo: When more content is available this should use UseCase to build related works with
 
@@ -70,10 +70,10 @@ class WorksWithsController < ApplicationController
   private
 
   def set_works_with
-    @works_with = WorksWith.find(params[:id])
+    @works_with = WorksWith.find_by(slug: params[:slug])
   end
 
   def works_with_params
-    params.require(:works_with).permit(:title, :description, :app_id, :product_id, :is_live, :promo_image_url, :promo_text)
+    params.require(:works_with).permit(:title, :description, :app_id, :product_id, :is_live, :promo_image_url, :promo_text, :slug)
   end
 end

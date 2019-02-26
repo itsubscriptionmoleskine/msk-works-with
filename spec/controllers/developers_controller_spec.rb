@@ -12,7 +12,7 @@ RSpec.describe DevelopersController, type: :controller do
   describe 'GET #show' do
     it 'assigns the requested developer as @developer' do
       developer = FactoryBot.create(:developer)
-      get :show, params: {:id => developer.to_param}
+      get :show, params: {:slug => developer.to_param}
       expect(assigns(:developer)).to eq(developer)
     end
   end
@@ -22,19 +22,19 @@ RSpec.describe DevelopersController, type: :controller do
     context 'with valid params' do
       it 'updates the requested developer' do
         developer = FactoryBot.create(:developer)
-        put :update, params: {:id => developer.to_param, :developer => FactoryBot.attributes_for(:developer)}
+        put :update, params: {:slug => developer.to_param, :developer => FactoryBot.attributes_for(:developer)}
         developer.reload
       end
 
       it 'assigns the requested developer as @developer' do
         developer = FactoryBot.create(:developer)
-        put :update, params: {:id => developer.to_param, :developer => FactoryBot.attributes_for(:developer)}
+        put :update, params: {:slug => developer.to_param, :developer => FactoryBot.attributes_for(:developer)}
         expect(assigns(:developer)).to eq(developer)
       end
 
       it 'redirects to the developer' do
         developer = FactoryBot.create(:developer)
-        put :update, params: {:id => developer.to_param, :developer => FactoryBot.attributes_for(:developer)}
+        put :update, params: {:slug => developer.to_param, :developer => FactoryBot.attributes_for(:developer)}
         expect(response).to redirect_to(developer)
       end
     end
@@ -45,14 +45,14 @@ RSpec.describe DevelopersController, type: :controller do
     it 'destroys the requested developer' do
       developer = FactoryBot.create(:developer)
       expect {
-        delete :destroy, params: {:id => developer.to_param}
+        delete :destroy, params: {:slug => developer.to_param}
       }.to change(Developer, :count).by(-1)
     end
 
     it 'redirects to the developers list' do
       developer = FactoryBot.create(:developer)
-      aid = developer.to_param
-      delete :destroy, params: {:id => aid}
+      developer_param = developer.to_param
+      delete :destroy, params: {:slug => developer_param}
       expect(response).to redirect_to(developers_path)
     end
   end

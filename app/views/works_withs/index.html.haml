@@ -9,7 +9,7 @@
         .img-container{:style => "background-image:url(#{works_with.promo_image_url})"}
         .combo
           .app-title
-            %a{:href => apps_path + '/' + works_with.app.id.to_s, :class=> 'combo-link', :tab_index=> 0}
+            %a{:href => works_with_path(works_with.slug), :class=> 'combo-link', :tab_index=> 0}
               = works_with.app.name
           .works-with-divider
             works with
@@ -22,5 +22,5 @@
           = works_with.title
         %p
           = works_with.promo_text.html_safe
-        %a{:href => works_withs_path + '/' + works_with.id.to_s, :class=> 'view-more-link', :tab_index=> 0}
+        %a{:href => works_with_path(works_with.slug), :class=> 'view-more-link', :tab_index=> 0}
           View More
