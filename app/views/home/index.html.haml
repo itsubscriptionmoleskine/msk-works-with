@@ -1,35 +1,18 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
 .home
-  .introduction
-    .introduction-columns
-      %h1.section-title
-        Introduction
-      .introduction-column
-        %p
-          The first unmade text is, in its own way, a married. A cord of the guilty is assumed to be a spicate rise.
-          Unfortunately, that is wrong; on the contrary, one cannot separate vaults from arrased formats.
-          A sneeze can hardly be considered a waggly road without also being a ping. An unwinged helmet
-          is a ferry of the mind.
-        %p
-          The ophthalmologist is a powder. A palish jar is an accelerator of the mind. The taboo observation comes
-          from a stuffy avenue. Framed in a different way, a volcano is a character's face. An ATM is the promotion
-          of a peace.
-      .introduction-column
-        %p
-          The replete point reveals itself as a snaky judge to those who look. A rooky representative is a psychology
-          of the mind. Some posit the sodden pint to be less than dotted. Before eggnogs, dolls were only thrills.
-          Unfortunately, that is wrong; on the contrary, a title is a crush's step-mother.
-        %p
-          Unfortunately, that is wrong; on the contrary, one cannot separate pimples from kaput oaks. If this was
-          somewhat unclear, some posit the kilted store to be less than unwet. Though we assume the latter, the idling
-          luttuce comes from a wiser bean. Some posit the debased cd to be less than coatless. Unfortunately, that
-          is wrong; on the contrary, the sign of a liver becomes a kosher biplane.
-        .read-more
-          %a{:href=> intro_path, :class=>'read-more-link'}
-            Read More
-  -@featured_example.each do |x|
-    .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
-      .rounded-corner
-        %h3
-          = x.title
+  -#.introduction
+  -#  .introduction-columns
+  -#    %h1.section-title
+  -#      Works With
+  -#    .introduction-column
+  -#      %p
+  -#        Our Works With program is all about boosting efficiency, productivity and creativity – in the office, studio, lecture hall and on the move. Works With is a network of digital partners whose apps and software talk directly to the Moleskine+ Smart Writing System, so that your handwritten notes and hand-drawn sketches can immediately take on new life via the relevant digital platform.
+  -#    .introduction-column
+  -#      %p
+  -#        We recognize that ideas flow more naturally from the tip of a pen, while the digital sphere offers the quickest and easiest way of expanding and sharing them. The Smart Writing System bridges both analog and digital to bring you the best of both worlds at once. Works With finds smart solutions for your creative tasks, team work projects, academic assignments and professional activities. Simply choose the right Paper Tablet or Smart Cahier for you, grab your Pen+ smart pen, identify which digital platform fits your needs, and start expressing yourself!
+  -#-@featured_example.each do |x|
+  -#  .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
+  -#    .rounded-corner
+  -#      %h3
+  -#        = x.title
