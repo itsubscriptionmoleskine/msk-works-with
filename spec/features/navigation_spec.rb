@@ -10,10 +10,4 @@ RSpec.describe 'Navigation is available', :type => :feature do
     # expect(page).to have_selector(:css, 'a[href="/testimonials"]')
   end
 
-  it 'checks for footer navigation', :js => true  do
-    visit root_path
-    expect(page).to have_selector(:css, 'a[href="/privacy"]')
-    expect(page).to have_selector(:css, 'a[href="/tos"]')
-  end
-  
 end
