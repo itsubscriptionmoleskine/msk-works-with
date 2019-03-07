@@ -1,0 +1,1 @@
+json.extract! @partner, :id, :name, :url, :description, :slug,:created_at, :updated_at

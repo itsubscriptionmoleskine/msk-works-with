@@ -29,12 +29,12 @@
             %p
               = @works_with.product.description.html_safe
           %hr{:class=>'description-column-rule'}
-          .developer-promotion
-            %span{:class=>'developer-promotion-attribution'}
+          .partner-promotion
+            %span{:class=>'partner-promotion-attribution'}
               = @works_with.app.name
               created by:
-            %a{:href=> developer_path(@works_with.app.developer.slug), :class=>'developer-promotion-link', :tab_index=> 0}
-              =@works_with.app.developer.name
+            %a{:href=> partner_path(@works_with.app.partner.slug), :class=>'partner-promotion-link', :tab_index=> 0}
+              =@works_with.app.partner.name
         .download-column
           %h3{:class=>'download-header'}
             Download
