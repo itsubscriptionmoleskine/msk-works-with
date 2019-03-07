@@ -1,0 +1,61 @@
+.partners{
+  margin-left: 1rem;
+ h1.page-title{
+   font-size: 3rem;
+ }
+  .partners-promo-container{
+    display: flex;
+    .partners-logo-image{
+      @include span-columns(3);
+      @include media($lg-min) {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 3rem;
+        width: 3rem;
+        display: inline;
+      }
+      display: none;
+    }
+    .partners-promo-info{
+      @include span-columns(5);
+      h2.partners-promo-title{
+        font-size: 2rem;
+        font-weight: 200;
+      }
+      .view-more{
+        float: right;
+      }
+    }
+
+
+
+
+
+
+  }
+}
+
+.partner{
+  margin-left: 1rem;
+  display: flex;
+  margin-bottom: 2rem;
+  .partner-logo-image{
+    @include media($lg-min) {
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 3rem;
+      @include span-columns(5);
+      display: inline;
+    }
+    display: none;
+  }
+  .partner-promo-info{
+    @include span-columns(7);
+    h1.page-title{
+      font-size: 2rem;
+    }
+    ul.apps-by-this-partner{
+      list-style: none;
+    }
+  }
+}
