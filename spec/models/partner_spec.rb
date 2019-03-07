@@ -10,4 +10,7 @@ RSpec.describe Partner, type: :model do
   end
   it {should have_many(:apps)}
   it { should validate_presence_of(:slug) }
+  it 'is not valid when the promo text is too long' do
+    expect(build(:product, :promo_text_too_long)).to_not be_valid
+  end
 end
