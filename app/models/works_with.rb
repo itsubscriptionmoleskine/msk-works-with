@@ -2,6 +2,7 @@ class WorksWith < ApplicationRecord
   has_many :use_cases
   has_many :testimonials
   has_many :example_images
+  has_many :videos
   belongs_to :app
   belongs_to :product
   accepts_nested_attributes_for :app

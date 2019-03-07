@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :videos
   resources :testimonial_slides
   resources :testimonials, param: :slug
   resources :works_withs, param: :slug
