@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_07_135549) do
+ActiveRecord::Schema.define(version: 2019_03_07_183625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,20 +69,9 @@ ActiveRecord::Schema.define(version: 2019_03_07_135549) do
     t.boolean "is_live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "developer_id"
+    t.bigint "partner_id"
     t.string "slug"
-    t.index ["developer_id"], name: "index_apps_on_developer_id"
-  end
-
-  create_table "developers", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "url"
-    t.boolean "is_live"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "logo_image_url"
-    t.string "slug"
+    t.index ["partner_id"], name: "index_apps_on_partner_id"
   end
 
   create_table "example_images", force: :cascade do |t|
@@ -93,6 +82,17 @@ ActiveRecord::Schema.define(version: 2019_03_07_135549) do
     t.datetime "updated_at", null: false
     t.bigint "works_with_id"
     t.index ["works_with_id"], name: "index_example_images_on_works_with_id"
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "url"
+    t.boolean "is_live"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "logo_image_url"
+    t.string "slug"
   end
 
   create_table "products", force: :cascade do |t|

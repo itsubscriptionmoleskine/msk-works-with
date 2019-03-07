@@ -1,0 +1,14 @@
+%ul.breadcrumb
+  = render_breadcrumbs :tag=> :li, :separator => ""
+.partners
+  %h1.page-title Partners
+  - @partners.each do |partner|
+    .partners-promo-container
+      .partners-logo-image{:style => "background-image:url(#{partner.logo_image_url})"}
+      .partners-promo-info
+        %h2.partners-promo-title
+          = partner.name
+        %p
+          = partner.description.html_safe
+        %a{:href => partner_path(partner.slug), :class=> 'view-more'}
+          View

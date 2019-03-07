@@ -1,0 +1,17 @@
+%ul.breadcrumb
+  = render_breadcrumbs :tag=> :li, :separator => ""
+.partner
+  .partner-logo-image{:style =>  "background-image:url(#{@partner.logo_image_url})"}
+  .partner-promo-info
+    %h1.page-title
+      = @partner.name
+    %p
+      = @partner.description.html_safe
+    %h2
+      Created by
+      = @partner.name
+    %ul.apps-by-this-partner
+      -@partner_works_withs.each do |w|
+        %li
+          %a{:href=> works_with_path(w.slug)}
+            = w.title

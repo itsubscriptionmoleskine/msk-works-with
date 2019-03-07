@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :app_store_links
   resources :app_stores
   resources :apps, param: :slug
-  resources :developers, param: :slug
+  resources :partners, param: :slug
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'home#index'

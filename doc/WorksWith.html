@@ -133,7 +133,7 @@
 
           
           <div class="method-source-code" id="as_json-source">
-            <pre><span class="ruby-comment"># File app/models/works_with.rb, line 9</span>
+            <pre><span class="ruby-comment"># File app/models/works_with.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">as_json</span>(<span class="ruby-identifier">options</span>={})
   <span class="ruby-keyword">super</span>(<span class="ruby-value">:only</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:title</span>, <span class="ruby-value">:description</span>, <span class="ruby-value">:app_id</span>, <span class="ruby-value">:product_id</span>, <span class="ruby-value">:is_live</span>, <span class="ruby-value">:promo_image_url</span>, <span class="ruby-value">:promo_text</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -166,7 +166,7 @@
 
           
           <div class="method-source-code" id="to_param-source">
-            <pre><span class="ruby-comment"># File app/models/works_with.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/models/works_with.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_param</span>
   <span class="ruby-identifier">slug</span>
 <span class="ruby-keyword">end</span></pre>
@@ -199,7 +199,7 @@
 
           
           <div class="method-source-code" id="to_slug-source">
-            <pre><span class="ruby-comment"># File app/models/works_with.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/models/works_with.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_slug</span>(<span class="ruby-identifier">string</span>)
   <span class="ruby-identifier">string</span>.<span class="ruby-identifier">parameterize</span>.<span class="ruby-identifier">truncate</span>(<span class="ruby-value">80</span>, <span class="ruby-value">omission:</span> <span class="ruby-string">&#39;&#39;</span>)
 <span class="ruby-keyword">end</span></pre>

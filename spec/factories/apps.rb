@@ -7,7 +7,7 @@ FactoryBot.define do
     description {Faker::Lorem.sentence}
     info_url {Faker::Internet.url}
     is_live {true}
-    developer
+    partner
     slug { 'a fake slug'}
     trait :wip do
       is_live {false}

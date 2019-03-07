@@ -1,9 +1,9 @@
 class App < ApplicationRecord
-  belongs_to :developer
-  accepts_nested_attributes_for :developer
+  belongs_to :partner
+  accepts_nested_attributes_for :partner
   has_many :app_store_links
   def as_json(options={})
-    super(:only => [:name, :description, :info_url, :is_live, :developer_id])
+    super(:only => [:name, :description, :info_url, :is_live, :partner_id])
   end
   def to_slug(string)
     string.parameterize.truncate(80, omission: '')
