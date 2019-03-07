@@ -17,7 +17,12 @@
           .description
             = @works_with.description.html_safe
           %hr{:class=>'description-column-rule'}
+
           .product-promotion
+            -@works_with.videos.each do |v|
+              %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => v.youtube_url, :width => "560"}
+              %p
+                = v.description.html_safe
             %img{:src => @works_with.product.product_image}
             %a{:href =>  @works_with.product.shop_link}
             = @works_with.product.name

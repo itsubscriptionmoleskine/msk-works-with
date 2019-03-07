@@ -1,0 +1,1 @@
+json.extract! @video, :id, :youtube_url, :description, :works_with_id, :is_live, :created_at, :updated_at

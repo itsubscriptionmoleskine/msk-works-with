@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_18_192828) do
+ActiveRecord::Schema.define(version: 2019_03_07_135549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -140,6 +140,14 @@ ActiveRecord::Schema.define(version: 2019_02_18_192828) do
     t.bigint "works_with_id"
     t.string "slug"
     t.index ["works_with_id"], name: "index_use_cases_on_works_with_id"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "youtube_url"
+    t.text "description"
+    t.boolean "is_live"
+    t.bigint "works_with_id"
+    t.index ["works_with_id"], name: "index_videos_on_works_with_id"
   end
 
   create_table "works_withs", force: :cascade do |t|
