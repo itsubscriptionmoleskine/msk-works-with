@@ -1,9 +1,10 @@
 .home{
   .introduction{
-
+    margin-bottom: 1rem;
     .introduction-columns{
-      h1.section-title{
-        font-size: 1.5rem;
+      h1.introduction-title{
+        font-size: 2.25rem;
+        font-weight: 400;
         margin-top: 0.75rem;
       }
       padding: 0.5rem;
@@ -21,7 +22,7 @@
     @include media($md-min) {
       margin: 0 1rem 0 1rem;
       .introduction-columns{
-        h1.section-title{
+        h1.introduction-title{
           font-size: 2rem;
         }
         display: flex;
@@ -30,14 +31,6 @@
           padding: 0.5rem;
           @include span-columns(4);
           @include shift(1);
-        }
-        .read-more{
-          display: flex;
-          justify-content: flex-end;
-          .read-more-link{
-            font-size: 1rem;
-            font-weight: 400;
-          }
         }
       }
     }
@@ -49,6 +42,9 @@
     justify-content: flex-end;
     height: 500px;
     flex-direction: row-reverse;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
     &:hover{
       cursor: pointer;
       .rounded-corner{

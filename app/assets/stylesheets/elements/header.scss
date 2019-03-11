@@ -1,6 +1,6 @@
 @import "neat/grid/media";
 .navigation-wrapper{
-  background-color: setcolor('creme','alt');
+  background-color: setcolor('grey');
 }
 
 .moleskine-header{
@@ -11,13 +11,24 @@
   .moleskine-logo{
     fill: $white;
   }
-  .navigation-menu-button{
-    color: $white;
-    #mobile-nav-icon{
-      font-size: 1.45rem;
+  .right-group{
+    display: flex;
+    justify-content: space-between;
+    .works-with{
+      color: setcolor('white');
+      margin-right: 1rem;
+      span.brand{
+        text-transform: uppercase;
+      }
     }
-    @include media($lg-min){
-      display: none;
+    .navigation-menu-button{
+      color: $white;
+      #mobile-nav-icon{
+        font-size: 1.45rem;
+      }
+      @include media($lg-min){
+        display: none;
+      }
     }
   }
 }
@@ -31,7 +42,7 @@ nav{
     &.show{
       display: flex;
     }
-    max-width: 50%;
+    max-width: 25%;
     @include media ($lg-min) {
       display: flex;
     }

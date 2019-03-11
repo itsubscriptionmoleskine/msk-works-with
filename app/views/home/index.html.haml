@@ -1,18 +1,16 @@
-%ul.breadcrumb
-  = render_breadcrumbs :tag=> :li, :separator => ""
 .home
-  -#.introduction
-  -#  .introduction-columns
-  -#    %h1.section-title
-  -#      Works With
-  -#    .introduction-column
-  -#      %p
-  -#        Our Works With program is all about boosting efficiency, productivity and creativity – in the office, studio, lecture hall and on the move. Works With is a network of digital partners whose apps and software talk directly to the Moleskine+ Smart Writing System, so that your handwritten notes and hand-drawn sketches can immediately take on new life via the relevant digital platform.
-  -#    .introduction-column
-  -#      %p
-  -#        We recognize that ideas flow more naturally from the tip of a pen, while the digital sphere offers the quickest and easiest way of expanding and sharing them. The Smart Writing System bridges both analog and digital to bring you the best of both worlds at once. Works With finds smart solutions for your creative tasks, team work projects, academic assignments and professional activities. Simply choose the right Paper Tablet or Smart Cahier for you, grab your Pen+ smart pen, identify which digital platform fits your needs, and start expressing yourself!
-  -#-@featured_example.each do |x|
-  -#  .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
-  -#    .rounded-corner
-  -#      %h3
-  -#        = x.title
+  .introduction
+    .introduction-columns
+      %h1.introduction-title
+        Works With
+      .introduction-column
+        %p
+          Our Works With program is all about boosting efficiency, productivity and creativity – in the office, studio, lecture hall and on the move. Works With is a network of digital partners whose apps and software talk directly to the Moleskine+ Smart Writing System, so that your handwritten notes and hand-drawn sketches can immediately take on new life via the relevant digital platform.
+      .introduction-column
+        %p
+          We recognize that ideas flow more naturally from the tip of a pen, while the digital sphere offers the quickest and easiest way of expanding and sharing them. The Smart Writing System bridges both analog and digital to bring you the best of both worlds at once. Works With finds smart solutions for your creative tasks, team work projects, academic assignments and professional activities. Simply choose the right Paper Tablet or Smart Cahier for you, grab your Pen+ smart pen, identify which digital platform fits your needs, and start expressing yourself!
+  -@featured_example.each do |x|
+    .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
+      .rounded-corner
+        %h3
+          = x.title
