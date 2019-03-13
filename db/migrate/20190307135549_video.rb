@@ -1,10 +1,11 @@
 class Video < ActiveRecord::Migration[5.2]
+
   def self.up
-    create_table :videos do |v|
-      v.string :youtube_url
-      v.text :description
-      v.boolean :is_live
-      v.references :works_with, index: true
+    create_table :videos do |t|
+      t.string :youtube_url
+      t.text :description
+      t.boolean :is_live
+      t.references :works_with, index: true
     end
   end
 
