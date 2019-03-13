@@ -1,13 +1,18 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
 .partner
-  .partner-logo-image{:style =>  "background-image:url(#{@partner.logo_image_url})"}
+  .partner-logo-image
+    %a{:href=> @partner.url}
+      %img{:src=> @partner.logo_image_url, :alt=> @partner.name}
   .partner-promo-info
     %h1.page-title
       = @partner.name
     %p
       = @partner.description.html_safe
-    %h2
+    %h2.apps-created-header
+      Works with
+      %span{:class=> 'brand'}
+        Moleskine
       Created by
       = @partner.name
     %ul.apps-by-this-partner

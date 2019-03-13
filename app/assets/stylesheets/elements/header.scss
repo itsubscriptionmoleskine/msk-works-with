@@ -1,6 +1,6 @@
 @import "neat/grid/media";
 .navigation-wrapper{
-  background-color: setcolor('creme','alt');
+  background-color: setcolor('grey');
 }
 
 .moleskine-header{
@@ -11,13 +11,25 @@
   .moleskine-logo{
     fill: $white;
   }
-  .navigation-menu-button{
-    color: $white;
-    #mobile-nav-icon{
-      font-size: 1.45rem;
+  .right-group{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    .works-with-nav-label{
+      color: setcolor('white');
+      margin-right: 1rem;
+      span.brand{
+        text-transform: uppercase;
+      }
     }
-    @include media($lg-min){
-      display: none;
+    .navigation-menu-button{
+      color: $white;
+      #mobile-nav-icon{
+        font-size: 1.45rem;
+      }
+      @include media($lg-min){
+        display: none;
+      }
     }
   }
 }
@@ -28,12 +40,33 @@ nav{
     justify-content: space-between;
     flex-wrap: nowrap;
     margin-left: 1rem;
+    padding: 1rem;
     &.show{
       display: flex;
     }
-    max-width: 50%;
+    max-width: 25%;
+    .item.with-icon{
+      margin-top: 0;
+      .icon-text-alt{
+        display: initial;
+      }
+      .icon{
+        display: none;
+      }
+    }
     @include media ($lg-min) {
       display: flex;
+      padding: 0;
+      .item.with-icon {
+        margin-top: 0.5rem;
+        .icon-text-alt {
+          display: none;
+        }
+        .icon {
+          display: initial;
+          font-size: 1.25rem;
+        }
+      }
     }
     li{
       color: $black;
@@ -45,5 +78,4 @@ nav{
       }
     }
   }
-
 }

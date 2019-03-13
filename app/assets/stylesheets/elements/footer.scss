@@ -2,9 +2,7 @@ footer{
   background-color: $grey-4;
   padding: 1rem;
   flex-shrink: 0;
-  @include media($md-min){
-    text-align: center;
-  }
+  padding-bottom: 5rem;
   .first-row{
     @include media($lg-min){
       display: flex;

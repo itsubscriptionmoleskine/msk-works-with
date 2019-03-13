@@ -4,7 +4,9 @@
   %h1.page-title Partners
   - @partners.each do |partner|
     .partners-promo-container
-      .partners-logo-image{:style => "background-image:url(#{partner.logo_image_url})"}
+      .partners-logo-image
+        %a{:href=> partner.url}
+          %img{:src=> partner.logo_image_url, :alt=> partner.name}
       .partners-promo-info
         %h2.partners-promo-title
           = partner.name

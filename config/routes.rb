@@ -15,6 +15,5 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'home#index'
   get 'home' => 'home#index'
-  get 'intro' => 'introductions#index'
   get 'style-guide', :to => redirect('/assets/styleguide.html')
 end
