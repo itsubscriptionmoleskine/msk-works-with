@@ -1,23 +1,29 @@
 .partners{
   margin-left: 1rem;
+  margin-top: 1rem;
  h1.page-title{
    font-size: 3rem;
  }
   .partners-promo-container{
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
     .partners-logo-image{
-      @include span-columns(3);
       @include media($lg-min) {
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 3rem;
-        width: 3rem;
-        display: inline;
+        @include span-columns(3);
       }
       display: none;
+
+      img{
+        max-width: 15.625rem;
+      }
     }
     .partners-promo-info{
-      @include span-columns(5);
+      @include media($lg-min) {
+        @include span-columns(5);
+      }
+      @include span-columns(10);
       h2.partners-promo-title{
         font-size: 2rem;
         font-weight: 200;
@@ -26,33 +32,35 @@
         float: right;
       }
     }
-
-
-
-
-
-
   }
 }
 
 .partner{
-  margin-left: 1rem;
+  margin: 2rem 0 0 2rem;
   display: flex;
   margin-bottom: 2rem;
   .partner-logo-image{
     @include media($lg-min) {
-      background-repeat: no-repeat;
-      background-size: cover;
-      min-height: 3rem;
-      @include span-columns(5);
-      display: inline;
+      @include span-columns(3);
     }
     display: none;
+    img{
+      max-width: 15.625rem;
+    }
   }
   .partner-promo-info{
-    @include span-columns(7);
+    @include media($lg-min) {
+      @include span-columns(5);
+    }
+    @include span-columns(10);
     h1.page-title{
       font-size: 2rem;
+    }
+    h2.apps-created-header{
+      font-size: 1.25rem;
+      span.brand{
+        text-transform: uppercase;
+      }
     }
     ul.apps-by-this-partner{
       list-style: none;

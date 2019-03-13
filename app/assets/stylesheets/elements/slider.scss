@@ -1,0 +1,20 @@
+.slider{
+  .slick-dots{
+    li.slick-active{
+      button{
+        &:before{
+          color: setcolor('red-orange');
+        }
+
+      }
+    }
+    li{
+      button{
+        &:before {
+          font-size: 1rem;
+          color: setcolor('space-grey');
+        }
+      }
+    }
+  }
+}

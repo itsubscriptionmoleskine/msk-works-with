@@ -1,4 +1,4 @@
-@mixin video-wrapper($max-width: 600px){
+@mixin video-wrapper($max-width: 600px, $color: '#333333'){
   max-width: $max-width;
   margin: 0 auto;
   .video{
@@ -12,5 +12,12 @@
       width: 100%;
       height: 100%;
     }
+  }
+  .video-caption{
+    padding: 1rem;
+    font-weight: 100;
+    font-size: 1rem;
+    font-style: italic;
+    color: $color;
   }
 }

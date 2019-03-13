@@ -2,25 +2,26 @@
   = render_breadcrumbs :tag=> :li, :separator => ""
 .works-withs
   %h1.page-title
-    Works With Moleskine+
-  -@works_withs.each do |works_with|
-    .works-with-promo-listing
-      .visual-side
-        .img-container{:style => "background-image:url(#{works_with.promo_image_url})"}
-        .combo
-          .app-title
-            %a{:href => works_with_path(works_with.slug), :class=> 'combo-link', :tab_index=> 0}
-              = works_with.app.name
-          .works-with-divider
-            works with
-          .offering-group
-            %img{:src => works_with.product.product_image, :class=> 'product-image-mini'}
-            %a{:href =>  works_with.product.shop_link, :class=> 'combo-link', :tab_index=> 0}
-              = works_with.product.name
-      .text-side
-        %h2{:class => 'works-with-title'}
-          = works_with.title
-        %p
-          = works_with.promo_text.html_safe
-        %a{:href => works_with_path(works_with.slug), :class=> 'view-more-link', :tab_index=> 0}
-          View More
+    Works with
+    %span{:class=> 'brand'}
+      Moleskine
+  -@works_withs.each do |x|
+    .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
+      .rounded-corner.long
+        %h3
+          = x.title
+        .description
+          = x.promo_text.html_safe
+  .m-plus-promo-container
+    .m-plus-promo
+      %a{:href=>'https://us.moleskine.com/en/moleskine-plus'}
+        %span.brand
+          Moleskine
+        %span.analog
+          analog
+        to
+        %span.digital
+          digital
+        to
+        %span.analog
+          analog

@@ -64,6 +64,6 @@ class AppStoreLinksController < ApplicationController
   end
 
   def app_store_link_params
-    params.require(:app_store_link).permit(:link, :app_store_id, :app_id)
+    params.require(:app_store_link).permit(:link, :app_store_id, :app_id, :is_live)
   end
 end

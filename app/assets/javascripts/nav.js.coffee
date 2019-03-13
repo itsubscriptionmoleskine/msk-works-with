@@ -20,5 +20,6 @@ $(document).on 'page:load', ->
   return
 
 $(window).resize ->
+  $('#js-navigation-menu').removeAttr 'style'
   mobileNav()
   return
