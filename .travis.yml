@@ -4,7 +4,7 @@ rvm:
 sudo: false
 
 before_install:
-  - gem install bundler -v
+  - gem install bundler -v 1.17.1
 
 install:
   - bundle install
