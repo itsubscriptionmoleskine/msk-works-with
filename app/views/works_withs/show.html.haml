@@ -3,56 +3,52 @@
 %ul.breadcrumb
   = render_breadcrumbs :tag=> :li, :separator => ""
 .works-with
-  .slider
-    -@works_with.example_images.each do |e|
-      .slide
-        %img{:src=> e.image_url}
-
-
-
-  -#.main
-    -#.left
-    -#  .slider
-    -#    -@works_with.example_images.each do |e|
-    -#      .slide
-    -#        %img{:src=> e.image_url}
-    -#.right
-    -#  %h1.page-title
-    -#    = @works_with.title
-    -#  .right-columns
-    -#    .description-column
-    -#      .description
-    -#        = @works_with.description.html_safe
-    -#      %hr{:class=>'description-column-rule'}
-    -#
-    -#      .product-promotion
-    -#        -@works_with.videos.each do |v|
-    -#          %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => v.youtube_url, :width => "560"}
-    -#          %p
-    -#            = v.description.html_safe
-    -#        %img{:src => @works_with.product.product_image}
-    -#        %a{:href =>  @works_with.product.shop_link}
-    -#        = @works_with.product.name
-    -#        %p
-    -#          = @works_with.product.description.html_safe
-    -#      %hr{:class=>'description-column-rule'}
-    -#      .partner-promotion
-    -#        %span{:class=>'partner-promotion-attribution'}
-    -#          = @works_with.app.name
-    -#          created by:
-    -#        %a{:href=> partner_path(@works_with.app.partner.slug), :class=>'partner-promotion-link', :tab_index=> 0}
-    -#          =@works_with.app.partner.name
-    -#    .download-column
-    -#      %h3{:class=>'download-header'}
-    -#        Download
-    -#        = @works_with.app.name
-    -#      %ul{:class => 'download-app-links'}
-    -#        - @works_with.app.app_store_links.each do |store_link|
-    -#          %li
-    -#            - if store_link.app_store.badge_image_url
-    -#              %img{:src=> store_link.app_store.badge_image_url, :alt=>store_link.app_store.name, :onclick =>"location.href='#{store_link.link}'", :class=> 'store-badge', :tab_index=> 0}
-    -#            - else
-    -#              -if store_link.app_store.icon_id
-    -#                =icon('fab', store_link.app_store.icon_id)
-    -#              %a{:href=> store_link.link, :tab_index=> 0}
-    -#                = store_link.app_store.name
+  .slider-wrapper
+    .slider
+      -@works_with.example_images.each do |e|
+        .slide
+          %img{:src=> e.image_url}
+  .main
+    .title
+      = @works_with.title
+    .main-columns
+      .description-column
+        .description
+          = @works_with.description.html_safe
+        .promotion-video
+          -@works_with.videos.each do |v|
+            .video
+              %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :src => v.youtube_url}
+            .video-caption
+              = v.description.html_safe
+      .download-column
+        %h3{:class=>'download-header'}
+          Download
+          = @works_with.app.name
+          %ul{:class => 'download-app-links'}
+            - @works_with.app.app_store_links.each do |store_link|
+              %li
+                - if store_link.app_store.badge_image_url
+                  %img{:src=> store_link.app_store.badge_image_url, :alt=>store_link.app_store.name, :onclick =>"location.href='#{store_link.link}'", :class=> 'store-badge', :tab_index=> 0}
+                - else
+                  -if store_link.app_store.icon_id
+                    =icon('fab', store_link.app_store.icon_id)
+                  %a{:href=> store_link.link, :tab_index=> 0}
+                    = store_link.app_store.name
+        .partner-promotion
+          %span{:class=>'partner-promotion-attribution'}
+            = @works_with.app.name
+            created in partnership with:
+          %a{:href=> partner_path(@works_with.app.partner.slug), :class=>'partner-promotion-link', :tab_index=> 0}
+            =@works_with.app.partner.name
+  .product-promotion-container
+    .product-promotion-text
+      %h2
+        About the
+        = @works_with.product.name
+      = @works_with.product.description.html_safe
+      .promotion-link-container
+        %a{:href=> @works_with.product.shop_link, :tab_index=>0}
+          Find out more
+    .product-promotion-image
+      %img{:src => @works_with.product.product_image}

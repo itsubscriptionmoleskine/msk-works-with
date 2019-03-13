@@ -1,0 +1,50 @@
+.feature{
+  border-top: 0.25rem solid transparentize(setcolor('space-grey'), 0.9);
+  @include box-shadow();
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 30rem;
+  flex-direction: row-reverse;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  &:hover{
+    cursor: pointer;
+    .rounded-corner{
+      opacity: 0.9;
+      h3{
+        color: $orange;
+      }
+    }
+  }
+  .rounded-corner{
+    @include transition(opacity .5s ease .2s);
+    background-color: $white;
+    @include media($lg-min){
+      border-top-right-radius: 1.5625rem;
+      width: 23.75rem;
+    }
+    width: 100%;
+    z-index: 4;
+    height: 10.3125rem;
+    opacity: 0.8;
+    padding: 2rem;
+    h3{
+      @include transition(color .5s ease .2s);
+      color: $grey-3;
+      font-weight: 100;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+    &.long{
+      @include media($lg-min){
+        width: 34.375rem;
+      }
+      width: 100%;
+      .description{
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

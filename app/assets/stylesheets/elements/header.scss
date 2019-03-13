@@ -14,7 +14,8 @@
   .right-group{
     display: flex;
     justify-content: space-between;
-    .works-with{
+    margin-right: 1rem;
+    .works-with-nav-label{
       color: setcolor('white');
       margin-right: 1rem;
       span.brand{
@@ -39,12 +40,33 @@ nav{
     justify-content: space-between;
     flex-wrap: nowrap;
     margin-left: 1rem;
+    padding: 1rem;
     &.show{
       display: flex;
     }
     max-width: 25%;
+    .item.with-icon{
+      margin-top: 0;
+      .icon-text-alt{
+        display: initial;
+      }
+      .icon{
+        display: none;
+      }
+    }
     @include media ($lg-min) {
       display: flex;
+      padding: 0;
+      .item.with-icon {
+        margin-top: 0.5rem;
+        .icon-text-alt {
+          display: none;
+        }
+        .icon {
+          display: initial;
+          font-size: 1.25rem;
+        }
+      }
     }
     li{
       color: $black;
@@ -56,5 +78,4 @@ nav{
       }
     }
   }
-
 }

@@ -4,7 +4,7 @@ class WorksWithsController < ApplicationController
 
   def index
     add_breadcrumb 'Home', home_path
-    add_breadcrumb 'Works With', works_withs_path
+    add_breadcrumb 'Works with MOLESKINE', works_withs_path
     @works_withs = WorksWith.all
     respond_to do |format|
       format.html { render :index}
@@ -14,7 +14,7 @@ class WorksWithsController < ApplicationController
 
   def show
     add_breadcrumb 'Home', home_path
-    add_breadcrumb 'Works With', works_withs_path
+    add_breadcrumb 'Works with MOLESKINE', works_withs_path
     add_breadcrumb  @works_with.title, works_with_path(@works_with.slug)
 
     #ToDo: When more content is available this should use UseCase to build related works with

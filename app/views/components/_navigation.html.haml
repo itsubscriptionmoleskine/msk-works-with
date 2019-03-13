@@ -3,10 +3,10 @@
     Skip Navigation
   .navigation-wrapper
     .moleskine-header
-      %a.logo{:href => "javascript:void(0)"}
+      %a.logo{:href => "http://www.moleskine.com"}
         = inline_svg 'logo-desktop.svg', class:'moleskine-logo'
       .right-group
-        .works-with
+        .works-with-nav-label
           Works with
           %span.brand
             Moleskine
@@ -14,8 +14,10 @@
           =icon('fas', 'bars', id:'mobile-nav-icon')
     %nav{:role => "navigation"}
       %ul#js-navigation-menu.navigation-menu.show
-        %li{:class=> 'item'}
-          %a{:href=> home_path, :tab_index=> 0, :class=>'link'} Home
+        %li{:class=> 'item with-icon'}
+          %a{:href=> home_path, :tab_index=> 0, :class=>'link icon'}
+            =icon('fas', 'home', alt:'home')
+          %a{:href=> home_path, :tab_index=> 0, :class=>'link icon-text-alt'} Home
         %li{:class=> 'item'}
           %a{:href=> works_withs_path, :tab_index=> 0, :class=>'link'}
             Works with
