@@ -1,5 +1,11 @@
 # Video Wrapper
 
-'
-'
-'
+```
+<div class="video-wrapper-example">
+    <div class="video">
+        <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/7Xn0yAYXmwg"></iframe>
+    </div>
+    <div class="video-caption">
+        <p>Discover tools that condense the creative process into a few simple steps and provide a solution that offers an unprecedented level of integration from start to finish.</p>
+    </div>
+</div>

@@ -250,7 +250,7 @@
             <pre><span class="ruby-comment"># File app/controllers/works_withs_controller.rb, line 5</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
   <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;Home&#39;</span>, <span class="ruby-identifier">home_path</span>
-  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;Works With&#39;</span>, <span class="ruby-identifier">works_withs_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;Works with MOLESKINE&#39;</span>, <span class="ruby-identifier">works_withs_path</span>
   <span class="ruby-ivar">@works_withs</span> = <span class="ruby-constant">WorksWith</span>.<span class="ruby-identifier">all</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-value">:index</span>}
@@ -322,7 +322,7 @@
             <pre><span class="ruby-comment"># File app/controllers/works_withs_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
   <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;Home&#39;</span>, <span class="ruby-identifier">home_path</span>
-  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;Works With&#39;</span>, <span class="ruby-identifier">works_withs_path</span>
+  <span class="ruby-identifier">add_breadcrumb</span> <span class="ruby-string">&#39;Works with MOLESKINE&#39;</span>, <span class="ruby-identifier">works_withs_path</span>
   <span class="ruby-identifier">add_breadcrumb</span>  <span class="ruby-ivar">@works_with</span>.<span class="ruby-identifier">title</span>, <span class="ruby-identifier">works_with_path</span>(<span class="ruby-ivar">@works_with</span>.<span class="ruby-identifier">slug</span>)
 
   <span class="ruby-comment">#ToDo: When more content is available this should use UseCase to build related works with</span>
