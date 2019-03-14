@@ -1,4 +1,4 @@
-class ChangeDevelopersToPartners < ActiveRecord::Migration[5.2]
+class ChangeDevelopersToPartners < ActiveRecord::Migration[5.1]
   def self.up
     rename_table :developers, :partners
     rename_column :apps, :developer_id, :partner_id
