@@ -21,3 +21,17 @@
   width: 2rem;
   @include responsive-border();
 }
+
+
+.style-guide-header{
+  display: flex;
+  justify-content: center;
+  h1{
+    font-size: 1.5rem;
+  }
+  margin-top: 2rem;
+}
+
+.lsg{
+  background: transparent !important;
+}
