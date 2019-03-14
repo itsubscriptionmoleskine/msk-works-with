@@ -1,16 +1,15 @@
-#language: ruby
-#rvm:
-#  - 2.5.3
-#
-#sudo: false
-#
-#before_install:
-#  - gem install bundler
-#
-#install:
-#  - bundle install
-#
-#script:
-#  - RAILS_ENV=test bundle exec rake db:create db:migrate
-#  - bundle exec rake db:test:prepare
-#  - bundle exec rake spec:travis
+language: ruby
+rvm:
+  - 2.5.3
+sudo: false
+
+before_install:
+  - gem install bundler -v 1.17.1
+
+install:
+  - bundle install
+
+script:
+  - RAILS_ENV=test bundle exec rake db:create db:migrate
+  - bundle exec rake db:test:prepare
+  - bundle exec rake spec:travis

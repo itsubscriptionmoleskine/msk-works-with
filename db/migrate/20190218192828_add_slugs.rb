@@ -1,4 +1,4 @@
-class AddSlugs< ActiveRecord::Migration[5.2]
+class AddSlugs< ActiveRecord::Migration[5.1]
 
   def self .up
     add_column :apps, :slug, :string
