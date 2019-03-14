@@ -1,14 +1,13 @@
+require 'pry'; binding.pry
+
 class Video < ActiveRecord::Migration[5.2]
-
   def self.up
-
-    create_table :promo_videos do |t|
-      t.string :youtube_url
-      t.text :description
-      t.boolean :is_live
-      t.references :works_with, index: true
+    create_table :promo_videos do |v|
+      v.string :youtube_url
+      v.text :description
+      v.boolean :is_live
+      v.references :works_with, index: true
     end
-
   end
 
   def self.down

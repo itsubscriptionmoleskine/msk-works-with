@@ -27,6 +27,7 @@ gem 'stackdriver', '~> 0.15.0'
 gem 'tinymce-rails', '~> 4.9'
 gem 'turbolinks', '~> 5.2'
 gem 'uglifier', '~> 4.1'
+gem 'pry', '~> 0.12.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
