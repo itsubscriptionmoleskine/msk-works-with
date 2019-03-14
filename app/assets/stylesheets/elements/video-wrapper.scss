@@ -21,3 +21,8 @@
     color: $color;
   }
 }
+
+
+.video-wrapper-example{
+  @include video-wrapper();
+}

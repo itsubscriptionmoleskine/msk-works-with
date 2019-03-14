@@ -41,7 +41,8 @@ $moleskine_pallette: (
 $background-grey: rgba(0,0,0,0.8);
 $ghostly-grey: rgba(127, 141, 146, 80%);
 
-$orange: setcolor('red-orange','dark');
+$orange: setcolor('orange');
+$red-orange: setcolor('red-orange');
 $ivory: setcolor('creme');
 $gunmetal: setcolor('gunmetal');
 $black: setcolor('black');
@@ -52,4 +53,8 @@ $grey-2: setcolor('grey', darker);
 $grey-3: setcolor('grey', darkerstill);
 $grey-4: setcolor('grey', darkest);
 $blue: setcolor('blue-pet');
-$brown: setcolor('brown', dark)
+$brown: setcolor('brown', 'dark');
+$space-grey: setcolor('space-grey');
+$space-grey-dark: setcolor('space-grey', 'dark');
+
+
