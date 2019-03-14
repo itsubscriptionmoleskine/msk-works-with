@@ -21,11 +21,11 @@ gcloud app deploy
 ```
 
 ## Admin
-    1. The admin tool can be view from the app at [the active admin panel](http://localhost:3000/admin) .
+    1. The admin tool can be view from the app at the active admin panel. (http://localhost:3000/admin
 
 ## Documentation
-    1. The Rdoc generated documentation can be found [here](http://localhost:63342/msk-works-with/doc/index.html) .
+    1. The Rdoc generated documentation can be found here: http://localhost:63342/msk-works-with/doc/index.html 
 
 ## Style Guide
-    1. A style guide can be found [here](http://localhost:3000/assets/styleguide.html) .
+    1. A style guide can be found here: (http://localhost:3000/assets/styleguide.html
 
