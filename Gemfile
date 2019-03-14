@@ -28,6 +28,7 @@ gem 'tinymce-rails', '~> 4.9'
 gem 'turbolinks', '~> 5.2'
 gem 'uglifier', '~> 4.1'
 gem 'pry', '~> 0.12.2'
+gem 'travis', '~> 1.8'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -56,3 +57,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
