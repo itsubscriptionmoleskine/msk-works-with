@@ -1,5 +1,12 @@
 # Features
-
-'
-'
-'
+```
+<div class="feature" onclick="location.href='/works_withs/papertube-works-with-moleskine-pen-plus'" style="background-image:url(https://storage.cloud.google.com/msk-works-with-uploads/papertube1.jpg)">
+    <div class="rounded-corner long">
+        <h3>
+        The Smart Writing System Works With Papertube
+        </h3>
+        <div class="description">
+            <p>For dynamic presentations that incorporate video with simultaneous handwritten content.</p>
+        </div>
+    </div>
+</div>

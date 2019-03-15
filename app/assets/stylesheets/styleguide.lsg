@@ -1,4 +1,11 @@
 @scss application.scss
 @title Works with Moleskine StyleGuide
 @import */*.lsg
+@style background-color: white;
 
+@header {
+  <div class="style-guide-header">
+    <h1>Works with Moleskine StyleGuide</h1>
+  </div>
+  <hr/>
+}
