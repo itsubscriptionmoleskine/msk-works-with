@@ -27,5 +27,5 @@ gcloud app deploy
     1. The Rdoc generated documentation can be found here: http://localhost:63342/msk-works-with/doc/index.html 
 
 ## Style Guide
-    1. A style guide can be found here: (http://localhost:3000/assets/styleguide.html
+    1. A style guide can be found here: http://localhost:3000/assets/styleguide.html
 
