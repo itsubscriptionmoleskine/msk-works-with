@@ -4,6 +4,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{ :name=>'viewport', :content => 'width=device-width, initial-scale=1.0'}
     = display_meta_tags site: 'Moleskine'
+    %script{:async=> 'true', :src=> "https://www.googletagmanager.com/gtag/js?id=UA-96349706-13"}
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     %link{:rel => 'stylesheet', :href => 'https://use.typekit.net/qbi3bum.css'}
