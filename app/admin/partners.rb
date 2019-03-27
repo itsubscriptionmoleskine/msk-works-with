@@ -4,7 +4,7 @@ ActiveAdmin.register Partner do
     defaults :finder => :find_by_slug
   end
 
-  permit_params :name, :description, :promo_text, :url, :is_live, :logo_image_url, :slug, :meta_title
+  permit_params :name, :description, :promo_text, :url, :is_live, :logo_image_url, :slug, :meta_title, :meta_keywords, :meta_description
 
   form(:html => {:multipart => true}) do |f|
     f.inputs do
@@ -15,6 +15,8 @@ ActiveAdmin.register Partner do
       f.input :url, :label => 'Partners website'
       f.input :logo_image_url
       f.input :meta_title, :label => 'Page Meta-Data Title'
+      f.input :meta_description, :label => 'Page Meta-Data Description'
+      f.input :meta_keywords, :label => 'Keywords, space delimited'
       f.input :is_live, :label => 'Publish?', :as => :radio
     end
     f.actions

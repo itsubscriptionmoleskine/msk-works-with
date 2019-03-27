@@ -13,6 +13,8 @@ FactoryBot.define do
     promo_text {Faker::Lorem.sentence}
     slug { 'a fake slug'}
     meta_title {:works_with_title}
+    meta_description {Faker::Lorem.sentence}
+    meta_keywords {Faker::Lorem.word}
     trait :promo_text_too_long do
       promo_text {Faker::Lorem.sentence(word_count=250)}
     end
@@ -27,6 +29,8 @@ FactoryBot.define do
     end
     trait :no_meta_data do
       meta_title {}
+      meta_description {}
+      meta_keywords {}
     end
   end
 end
