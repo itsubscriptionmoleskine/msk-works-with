@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_07_190601) do
+ActiveRecord::Schema.define(version: 2019_03_27_115548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 2019_03_07_190601) do
     t.string "logo_image_url"
     t.string "slug"
     t.string "promo_text"
+    t.string "meta_title"
   end
 
   create_table "products", force: :cascade do |t|
@@ -163,6 +164,7 @@ ActiveRecord::Schema.define(version: 2019_03_07_190601) do
     t.string "promo_image_url"
     t.text "promo_text"
     t.string "slug"
+    t.string "meta_title"
     t.index ["app_id"], name: "index_works_withs_on_app_id"
     t.index ["product_id", "app_id"], name: "index_works_withs_on_product_id_and_app_id"
     t.index ["product_id"], name: "index_works_withs_on_product_id"

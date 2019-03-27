@@ -6,6 +6,7 @@ class PartnersController < ApplicationController
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Partners', partners_path
     @partners = Partner.all.where(is_live: true)
+    @page_title = 'Partners creating apps for smart pens and digital paper.'
     respond_to do |format|
       format.html { render :index}
       format.json { render :json => @partners}
@@ -16,7 +17,7 @@ class PartnersController < ApplicationController
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Partners', partners_path
     add_breadcrumb @partner.name, partner_path(@partner.slug)
-
+    @page_title = @partner.meta_title
     @partner_works_withs = []
 
     @partner.apps.each do |app|
@@ -79,6 +80,6 @@ class PartnersController < ApplicationController
   end
 
   def partner_params
-    params.require(:partner).permit(:name, :description, :promo_text, :url, :is_live, :logo_image_url, :slug)
+    params.require(:partner).permit(:name, :description, :promo_text, :url, :is_live, :logo_image_url, :slug, :meta_title)
   end
 end

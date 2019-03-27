@@ -10,5 +10,6 @@ class Partner < ApplicationRecord
     slug
   end
   validates_presence_of :slug
+  validates_presence_of :meta_title
   validates_length_of :promo_text, maximum: 220
 end

@@ -1,1 +1,1 @@
-json.extract! @partner, :id, :name, :url, :description, :promo_text, :slug,:created_at, :updated_at
+json.extract! @partner, :id, :meta_title, :name, :url, :description, :promo_text, :slug,:created_at, :updated_at
