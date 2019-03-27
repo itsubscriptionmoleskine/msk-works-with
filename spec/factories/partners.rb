@@ -10,6 +10,9 @@ FactoryBot.define do
     is_live {true}
     logo_image_url {Faker::Internet.url}
     slug { 'a fake slug'}
+    meta_title {:partner_name}
+    meta_description {Faker::Lorem.sentence}
+    meta_keywords {Faker::Lorem.word}
     trait :wip do
       is_live {false}
     end
@@ -18,6 +21,11 @@ FactoryBot.define do
     end
     trait :promo_text_too_long do
       promo_text {Faker::Lorem.sentence(word_count=250)}
+    end
+    trait :no_meta_data do
+      meta_title {}
+      meta_description {}
+      meta_keywords {}
     end
   end
 end
