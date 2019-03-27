@@ -5,6 +5,9 @@ class WorksWithsController < ApplicationController
   def index
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Works with MOLESKINE', works_withs_path
+    @page_title = t('pages.works_with.meta.title')
+    @page_description = t('pages.works_with.meta.description')
+    @page_keywords = t('pages.works_with.meta.keywords')
     @works_withs = WorksWith.all
     respond_to do |format|
       format.html { render :index}
@@ -16,11 +19,11 @@ class WorksWithsController < ApplicationController
     add_breadcrumb 'Home', home_path
     add_breadcrumb 'Works with MOLESKINE', works_withs_path
     add_breadcrumb  @works_with.title, works_with_path(@works_with.slug)
-
     #ToDo: When more content is available this should use UseCase to build related works with
-
+    @page_title = @works_with.meta_title
+    @page_description = @works_with.meta_description
+    @page_keywords = @works_with.meta_keywords
     @related_works_with = WorksWith.all.last(3)
-
     respond_to do |format|
       format.html { render :show}
       format.json { render :json => @works_with}
@@ -74,6 +77,6 @@ class WorksWithsController < ApplicationController
   end
 
   def works_with_params
-    params.require(:works_with).permit(:title, :description, :app_id, :product_id, :is_live, :promo_image_url, :promo_text, :slug)
+    params.require(:works_with).permit(:title, :description, :app_id, :product_id, :is_live, :promo_image_url, :promo_text, :slug, :meta_title, :meta_keywords, :meta_description)
   end
 end

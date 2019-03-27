@@ -6,3 +6,19 @@ it:
           equal_to: "%{length} deve essere uguale a %{count} pixels"
           greater_than_or_equal_to: "%{length} deve essere maggiore o uguale a %{count} pixels"
           less_than_or_equal_to: "%{length} deve essere minore o uguale a %{count} pixels"
+  pages:
+    homepage:
+      meta:
+        title: "App e software per l'acquisizione e il disegno di note digitali."
+        description: "Works With è una rete di partner digitali le cui app e software parlano direttamente al sistema di scrittura intelligente Moleskine +. Scopri di più!"
+        keywords: "moleskine smart writing set, smart writing set"
+    partners:
+      meta:
+        title: "artner che creano app per penne intelligenti e carta digitale."
+        description: "Il nostro programma Works With è incentrato sull'aumento dell'efficienza, della produttività e della creatività. Scopri i nostri partner!"
+        keywords: "moleskine, adobe, neolab"
+    works_with:
+      meta:
+        title: "App e software per l'acquisizione e il disegno di note digitali."
+        description: "Moleskine e i suoi partner condividono il desiderio di trovare modi nuovi ed efficaci per dare vita alle idee."
+        keywords: "papertube, adobe illustrator, adobe creative cloud illustrator, adobe cc illustrator, illustrator, plugin, plug-in, extension"
