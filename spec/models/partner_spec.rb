@@ -10,7 +10,13 @@ RSpec.describe Partner, type: :model do
   end
   it {should have_many(:apps)}
   it { should validate_presence_of(:slug) }
+  it { should validate_presence_of(:meta_title) }
+  it { should validate_presence_of(:meta_keywords) }
+  it { should validate_presence_of(:meta_description) }
   it 'is not valid when the promo text is too long' do
-    expect(build(:product, :promo_text_too_long)).to_not be_valid
+    expect(build(:partner, :promo_text_too_long)).to_not be_valid
+  end
+  it 'is not valid without meta-data' do
+    expect(build(:partner, :no_meta_data)).to_not be_valid
   end
 end
