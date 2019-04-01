@@ -62,7 +62,9 @@
 .works-with{
   margin-top: 1rem;
   .slider-wrapper{
-    @include box-shadow();
+    @include media($md-min){
+      @include box-shadow();
+    }
     border-top: 0.25rem solid transparentize(setcolor('space-grey'), 0.9);
     .slider{
       .slide{

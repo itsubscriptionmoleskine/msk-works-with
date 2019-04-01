@@ -7,7 +7,7 @@ FactoryBot.define do
     description {Faker::Lorem.sentence}
     promo_text {Faker::Lorem.sentence}
     shop_link {Faker::Internet.url}
-    product_image {Faker::Internet.url}
+    product_image { 'https://www.domain.com/image.jpg' }
     is_live {true}
     trait :wip do
       is_live {false}

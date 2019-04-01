@@ -3,7 +3,7 @@
 .partner
   .partner-logo-image
     %a{:href=> @partner.url}
-      %img{:src=> @partner.logo_image_url, :alt=> @partner.name}
+      %img.lazyload{:src=> @partner.logo_image_url, :alt=> @partner.name}
   .partner-promo-info
     %h1.page-title
       = @partner.name

@@ -6,7 +6,7 @@
     %span{:class=> 'brand'}
       Moleskine
   -@works_withs.each do |x|
-    .feature{:style => "background-image:url(#{x.promo_image_url})", :onclick =>"location.href='#{works_with_path(x.slug)}'"}
+    .feature.lazyload{:data=>{:bgset=> get_src_set(x.promo_image_url,[1200,992,768])},:onclick =>"location.href='#{works_with_path(x.slug)}'"}
       .rounded-corner.long
         %h3
           = x.title

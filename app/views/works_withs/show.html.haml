@@ -7,7 +7,7 @@
     .slider
       -@works_with.example_images.each do |e|
         .slide
-          %img{:src=> e.image_url}
+          %img.lazyload{:data=>{:srcset=> get_src_set(e.image_url, [1200,768,992]),:sizes=>'auto', :parent=> {:fit=>'cover'}}}
   .main
     .title
       = @works_with.title
@@ -29,7 +29,7 @@
             - @works_with.app.app_store_links.each do |store_link|
               %li
                 - if store_link.app_store.badge_image_url
-                  %img{:src=> store_link.app_store.badge_image_url, :alt=>store_link.app_store.name, :onclick =>"location.href='#{store_link.link}'", :class=> 'store-badge', :tab_index=> 0}
+                  %img.lazyload{:data=>{:src=> store_link.app_store.badge_image_url}, :alt=>store_link.app_store.name, :onclick =>"location.href='#{store_link.link}'", :class=> 'store-badge', :tab_index=> 0}
                 - else
                   -if store_link.app_store.icon_id
                     =icon('fab', store_link.app_store.icon_id)
@@ -51,4 +51,4 @@
         %a{:href=> @works_with.product.shop_link, :tab_index=>0}
           Find out more
     .product-promotion-image
-      %img{:src => @works_with.product.product_image}
+      %img.lazyload{:src => @works_with.product.product_image}
