@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :testimonial_slide do
-    image_url {Faker::Internet.url}
+    image_url {'https://www.domain.com/image.jpg'}
     caption {Faker::Lorem.sentence}
     is_live {true}
     testimonial

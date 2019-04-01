@@ -8,7 +8,7 @@ FactoryBot.define do
     is_live {true}
     works_with
     video_embed {'<iframe width="560" height="315" src="https://www.youtube.com/embed/EOikwtpWcjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}
-    promo_image_url {Faker::Internet.url}
+    promo_image_url {'https://www.domain.com/image.jpg'}
     promo_text {Faker::Lorem.sentence}
     publish_date {Faker::Date.backward(1)}
     trait :wip do

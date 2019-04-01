@@ -4,7 +4,7 @@ FactoryBot.define do
   end
   factory :app_store do
     name {:app_store_name}
-    badge_image_url {Faker::Internet.url}
+    badge_image_url { 'https://www.domain.com/image.jpg' }
     icon_id {'apple'}
     is_live {true}
     trait :wip do
