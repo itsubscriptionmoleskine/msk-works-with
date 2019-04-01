@@ -6,7 +6,7 @@
     .partners-promo-container
       .partners-logo-image
         %a{:href=> partner.url}
-          %img{:src=> partner.logo_image_url, :alt=> partner.name}
+          %img.lazyload{:src=> partner.logo_image_url, :alt=> partner.name}
       .partners-promo-info
         %h2.partners-promo-title
           = partner.name

@@ -8,7 +8,7 @@ FactoryBot.define do
     promo_text {Faker::Lorem.sentence}
     url {Faker::Internet.url}
     is_live {true}
-    logo_image_url {Faker::Internet.url}
+    logo_image_url { 'https://www.domain.com/image.jpg' }
     slug { 'a fake slug'}
     meta_title {:partner_name}
     meta_description {Faker::Lorem.sentence}

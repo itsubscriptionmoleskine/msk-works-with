@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :example_image do
-    image_url {Faker::Internet.url}
+    image_url { 'https://www.domain.com/image.jpg' }
     caption {Faker::Lorem.sentence}
     is_live {true}
     works_with
