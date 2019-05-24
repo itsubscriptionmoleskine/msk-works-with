@@ -1,0 +1,16 @@
+.cookie-bar{
+  background-color: setcolor('red-orange');
+  color: setcolor('white');
+  &.hidden-default{
+    display: none;
+  }
+  .cookie-bar-inner{
+    padding: 2rem;
+    .policy-link-container{
+      float: right;
+      .policy-link{
+
+      }
+    }
+  }
+}
