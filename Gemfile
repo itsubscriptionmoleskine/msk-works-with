@@ -15,8 +15,8 @@ gem 'font-awesome-sass', '~> 5.5'
 gem 'haml-rails', '~> 1.0'
 gem 'inline_svg', '~> 1.3'
 gem 'jbuilder', '~> 2.5'
-gem 'jquery-slick-rails', '~> 1.9'
 gem 'jquery-rails', '~> 4.3'
+gem 'jquery-slick-rails', '~> 1.9'
 gem 'livingstyleguide', '~> 2.0'
 gem 'mini_racer', '~> 0.2.4'
 gem 'pg', '~> 1.1'
@@ -58,3 +58,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+

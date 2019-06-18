@@ -41,9 +41,6 @@ nav{
     flex-wrap: nowrap;
     margin-left: 1rem;
     padding: 1rem;
-    &.show{
-      display: flex;
-    }
     max-width: 25%;
     .item.with-icon{
       margin-top: 0;
@@ -55,7 +52,6 @@ nav{
       }
     }
     @include media ($lg-min) {
-      display: flex;
       padding: 0;
       .item.with-icon {
         margin-top: 0.5rem;

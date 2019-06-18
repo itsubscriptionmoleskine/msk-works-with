@@ -17,7 +17,6 @@ checkCookie = (cookieName) ->
   if constent == 'true'
     $('#cookieBar').hide()
   else
-    console.log('no cookie')
     $('#cookieBar').show()
   return
 
@@ -35,6 +34,9 @@ $(document).ready ->
   checkCookie('consent')
   $('#iConsent').on 'click', ->
     setCookie('consent', true, 14)
+    return
+  $('#iRevoke').on 'click', ->
+    setCookie('consent', false, 14)
     return
   return
 
