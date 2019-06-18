@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'home#index'
   get 'home' => 'home#index'
+  get 'cookie-policy' => 'cookie_policy#index'
+  get 'cookies' => 'cookie_policy#index'
   get 'style-guide', :to => redirect('/assets/styleguide.html')
 end
