@@ -1,6 +1,5 @@
 mobileNav = () ->
   menuToggle = $('#js-navigation-mobile-menu').unbind()
-  $('#js-navigation-menu').removeClass 'show'
   menuToggle.on 'click', (e) ->
     e.preventDefault()
     $('#js-navigation-menu').slideToggle ->
@@ -10,16 +9,14 @@ mobileNav = () ->
     return
   return
 
-
 $(document).ready ->
   mobileNav()
   return
 
-$(document).on 'page:load', ->
+$(document).on 'turbolinks:load', ->
   mobileNav()
   return
 
 $(window).resize ->
-  $('#js-navigation-menu').removeAttr 'style'
   mobileNav()
   return

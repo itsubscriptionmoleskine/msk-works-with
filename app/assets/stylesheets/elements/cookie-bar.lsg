@@ -1,0 +1,11 @@
+# Cookie Bar
+
+```
+<div class="cookie-bar">
+    <div class="cookie-bar-inner">
+        This website uses profiling cookies. This component is used to display the consent for cookies.
+        <div class="policy-link-container">
+            <a href="#" class="policy-link">Policy Link</a>
+         </div>
+     </div>
+ </div>
