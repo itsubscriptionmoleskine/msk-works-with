@@ -27,9 +27,9 @@
     }
     width: 100%;
     z-index: 4;
-    height: 10.3125rem;
     opacity: 0.8;
     padding: 2rem;
+    height: auto;
     h3{
       @include transition(color .5s ease .2s);
       color: $grey-3;
