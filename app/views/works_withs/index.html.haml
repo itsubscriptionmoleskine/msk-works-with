@@ -6,22 +6,10 @@
     %span{:class=> 'brand'}
       Moleskine
   -@works_withs.each do |x|
-    .feature.lazyload{:data=>{:bgset=> get_src_set(x.promo_image_url,[1200,992,768])},:onclick =>"location.href='#{works_with_path(x.slug)}'"}
+    .feature{:onclick =>"location.href='#{works_with_path(x.slug)}'"}
+      %img.lazyload{:data=>{:srcset=> get_src_set(x.promo_image_url, [1920,768,992]),:sizes=>'auto', :parent=> {:fit=>'cover'}}}
       .rounded-corner.long
         %h3
           = x.title
         .description
           = x.promo_text.html_safe
-  .m-plus-promo-container
-    .m-plus-promo
-      %a{:href=>'https://us.moleskine.com/en/moleskine-plus'}
-        %span.brand
-          Moleskine
-        %span.analog
-          analog
-        to
-        %span.digital
-          digital
-        to
-        %span.analog
-          analog
