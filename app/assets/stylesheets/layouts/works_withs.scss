@@ -1,5 +1,4 @@
 .works-withs{
-  margin-top: 1rem;
   h1.page-title{
     margin-left: 1rem;
     font-size: 3rem;
@@ -7,62 +6,9 @@
       text-transform: uppercase;
     }
   }
-  .m-plus-promo-container{
-    float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .m-plus-promo{
-      margin: 2rem 1rem 2rem 0;
-      font-size: 1.25rem;
-      font-style: italic;
-      font-weight: 400;
-      a{
-        opacity: 0.4;
-        color: setcolor('silver-grey');
-        @include transition(opacity .5s ease .5s);
-        @include transition(color .6s ease .5s);
-      }
-      &:hover{
-        a{
-          color: setcolor('silver-grey', 'dark');
-          opacity: 0.7;
-          span{
-            &.analog{
-              color: setcolor('orange');
-            }
-            &.digital{
-              color: setcolor('blue-pet');
-            }
-          }
-        }
-      }
-      span{
-        &.brand{
-          text-transform: uppercase;
-          &:after{
-            content: '+';
-          }
-        }
-        &.analog{
-          @include transition(color .8s ease .5s);
-          text-transform: uppercase;
-          font-weight: 100;
-        }
-        &.digital{
-          @include transition(color .5s ease .8s);
-          text-transform: uppercase;
-          font-weight: 600;
-        }
-      }
-    }
-  }
 }
 
 .works-with{
-  @include media($lg-min){
-    margin-top: 1rem;
-  }
   margin-bottom: 1rem;
   .slider-wrapper{
     @include media($lg-min){
@@ -72,11 +18,8 @@
     .slider{
       .slide{
         @include media($lg-min){
-          max-height: 20rem;
           height: auto;
-          img{
-            margin-top:-10rem;
-          }
+          max-height: 32rem;
         }
       }
     }
