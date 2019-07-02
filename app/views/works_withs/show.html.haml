@@ -7,7 +7,7 @@
     .slider
       -@works_with.example_images.each do |e|
         .slide
-          %img.lazyload{:data=>{:srcset=> get_src_set(e.image_url, [1200,768,992]),:sizes=>'auto', :parent=> {:fit=>'cover'}}}
+          %img.lazyload{:data=>{:srcset=> get_src_set(e.image_url, [1920,768,992]),:sizes=>'auto', :parent=> {:fit=>'cover'}}}
   .main
     .title
       = @works_with.title

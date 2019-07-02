@@ -1,94 +1,46 @@
 .works-withs{
-  margin-top: 1rem;
   h1.page-title{
+    margin-top: 1rem;
     margin-left: 1rem;
-    font-size: 3rem;
+    @include media($lg-min){
+      font-size: 3rem;
+    }
+    font-size: 1.5rem;
     span.brand{
       text-transform: uppercase;
-    }
-  }
-  .m-plus-promo-container{
-    float: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .m-plus-promo{
-      margin: 2rem 1rem 2rem 0;
-      font-size: 1.25rem;
-      font-style: italic;
-      font-weight: 400;
-      a{
-        opacity: 0.4;
-        color: setcolor('silver-grey');
-        @include transition(opacity .5s ease .5s);
-        @include transition(color .6s ease .5s);
-      }
-      &:hover{
-        a{
-          color: setcolor('silver-grey', 'dark');
-          opacity: 0.7;
-          span{
-            &.analog{
-              color: setcolor('orange');
-            }
-            &.digital{
-              color: setcolor('blue-pet');
-            }
-          }
-        }
-      }
-      span{
-        &.brand{
-          text-transform: uppercase;
-          &:after{
-            content: '+';
-          }
-        }
-        &.analog{
-          @include transition(color .8s ease .5s);
-          text-transform: uppercase;
-          font-weight: 100;
-        }
-        &.digital{
-          @include transition(color .5s ease .8s);
-          text-transform: uppercase;
-          font-weight: 600;
-        }
-      }
     }
   }
 }
 
 .works-with{
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   .slider-wrapper{
-    @include media($md-min){
+    @include media($lg-min){
       @include box-shadow();
+      border-top: 0.25rem solid transparentize(setcolor('space-grey'), 0.9);
     }
-    border-top: 0.25rem solid transparentize(setcolor('space-grey'), 0.9);
     .slider{
       .slide{
-        max-height: 14rem;
-        img{
-          margin-top:-7rem;
-        }
         @include media($lg-min){
-          max-height: 20rem;
-          img{
-            margin-top:-10rem;
-          }
+          height: auto;
+          max-height: 32rem;
         }
       }
     }
   }
   .main{
     @include clearhax();
-    margin-top: 3rem;
+
+    @include media($lg-min) {
+      margin-top: 5rem;
+    }
+    margin-top: 4rem;
     margin-left: 1rem;
     .title{
       font-size: 2rem;
       font-weight: 100;
       text-transform: capitalize;
+      margin-bottom: 1rem;
     }
     .main-columns{
       display: flex;
@@ -98,7 +50,7 @@
       }
       flex-direction: column;
       .description-column{
-       padding:0 1rem 0 0.5rem;
+       padding:0 1rem 0 0;
         @include media($lg-min) {
           @include span-columns(5);
         }
@@ -156,7 +108,6 @@
     }
     .product-promotion-image{
       @include media($lg-min) {
-        @include shift(1);
         @include span-columns(6);
       }
     }

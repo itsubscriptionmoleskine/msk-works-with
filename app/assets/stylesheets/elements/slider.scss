@@ -1,4 +1,7 @@
 .slider{
+  button.slick-arrow{
+    display: none !important;
+  }
   .slide{
     display: flex !important;
     width: 100%;

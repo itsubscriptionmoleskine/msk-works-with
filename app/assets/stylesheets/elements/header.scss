@@ -8,6 +8,7 @@
   justify-content: space-between;
   background-color: setcolor('gunmetal','dark');
   padding: 0.75rem;
+  width: 100%;
   .moleskine-logo{
     fill: $white;
   }
@@ -18,6 +19,10 @@
     .works-with-nav-label{
       color: setcolor('white');
       margin-right: 1rem;
+      display:none;
+      @include media($sm-min){
+        display:inline-block;
+      }
       span.brand{
         text-transform: uppercase;
       }
@@ -35,6 +40,20 @@
 }
 nav{
   ul.navigation-menu{
+    padding: 0.5rem;
+    li {
+      margin-right: 1rem;
+      &:nth-child(1){
+        margin-left: 0.5rem;
+      }
+    }
+    @include media ($lg-min) {
+      display: flex;
+      list-style: none;
+    }
+    display: none;
+  }
+  ul.mobile-navigation-menu{
     list-style: none;
     display: none;
     justify-content: space-between;
