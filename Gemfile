@@ -9,7 +9,7 @@ end
 
 gem 'activeadmin', '~> 1.4'
 gem 'breadcrumbs_on_rails', '~> 3.0'
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.7'
 gem 'dotenv-rails', '~> 2.5'
 gem 'font-awesome-sass', '~> 5.5'
 gem 'haml-rails', '~> 1.0'
